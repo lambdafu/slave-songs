@@ -1,4 +1,4 @@
-# Slave Songs of the United States, 1867 =
+# Slave Songs of the United States, 1867
 
 Digital Edition 2007, Version 1.0 ALPHA
 

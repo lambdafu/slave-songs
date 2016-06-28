@@ -1,0 +1,5640 @@
+% Copyright (C) 2007  Marcus Brinkmann <marcus@gnu.org>
+%
+% This song book is free software; you can redistribute it and/or
+% modify it under the terms of the Creative Commons Legal Code
+% Attribution-ShareALike as published by Creative Commons; either
+% version 2.0 of the License, or (at your option) any later version.
+%
+% This song book is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% Creative Commons Legal Code Attribution-ShareALike for more details.
+%
+% You should have received a copy of the Creative Commons Legal Code
+% Attribution-ShareALike along with this score sheet; if not, write to
+% Creative Commons, 543 Howard Street, 5th Floor,
+% San Francisco, CA 94105-3013  United States
+
+\documentclass[a5paper,10pt]{book}
+% Lilypond uses New Century Schoolbook for lyrics.
+\usepackage{newcent}
+%% FIXME: We use footnotes, ``numbered'' per page.  Not symbolic,
+%% because we can't get those into the lilypond score sheet without
+%% the disfunctional TeX backend.
+%%\usepackage[perpage,symbol*]{footmisc}
+\usepackage[perpage]{footmisc}
+\usepackage{chngpage}
+\usepackage{multicol}
+%% \usepackage{movie15}
+%% \usepackage{hyperref}
+%% \usepackage{graphicx}
+
+%% FIXME: It would be a good idea to have some padding on a word that
+%% carries a footnote marker in lyrics.
+%% Uppercase section (and part) headings.
+
+\begin{document}
+%% Some gobal style settings.
+%% We don't really want to use chapters.
+\renewcommand \thesection {\arabic{section}.}
+
+%% We need this for the title page.
+%% FIXME: Doesn't work with dvips (ps and pdf are missing the font).
+%% NOTE: Can be fixed by installing the Type1 fonts for ygoth.
+%% NOTE: Let's not worry about this.
+%%\newfont{\go}{ygoth.tfm scaled 1200}
+\newcommand \go {\large}
+
+
+%% Title page.
+
+\title{{\Huge SLAVE SONGS}\\
+\bigskip
+{\small OF THE}\\
+\bigskip
+{\huge UNITED STATES.}}
+
+\author{{\go New York:}\\A. SIMPSON \& CO.,}
+
+%\date{\oldstylenums{1867}.}
+\date{1867.}
+
+\maketitle
+
+\vfill
+
+Digital Edition Version 1.0 ALPHA
+
+Copyright \copyright\ 2007 by Marcus Brinkmann
+
+This song book is free software; you can redistribute it and/or modify
+it under the terms of the Creative Commons Legal Code
+Attribution-ShareALike as published by Creative Commons; either
+version 2.0 of the License, or (at your option) any later version.
+
+This song book is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the Creative
+Commons Legal Code Attribution-ShareALike for more details.
+
+You should have received a copy of the Creative Commons Legal Code
+Attribution-ShareALike along with this score sheet; if not, write to
+Creative Commons, 543 Howard Street, 5th Floor, San Francisco, CA
+94105-3013 United States.
+
+\tableofcontents
+
+\chapter{Introduction.}
+
+\pagenumbering{roman}
+
+
+\textsc{The} musical capacity of the negro race has been recognized
+for so many years that it is hard to explain why no systematic effort
+has hitherto been made to collect and preserve their melodies.  More
+than thirty years ago those plantation songs made their appearance
+which were so extraordinarily popular for a while; and if ``Coal-black
+Rose,'' ``Zip Coon'' and ``Ole Virginny nebber tire'' have been
+succeeded by spurious imitations, manufactured to suit the somewhat
+sentimental taste of our community, the fact that these were called
+``negro melodies'' was itself a tribute to the musical genius of the
+race.\footnote{It is not generally known that the beautiful air ``Long
+time ago,'' or ``Near the lake where drooped the willow,'' was
+borrowed from the negroes, by whom it was sung to words beginning,
+``Way down in Raccoon Hollow.''}
+
+The public had well-nigh forgotten these genuine slave songs, and with
+them the creative power from which they sprung, when a fresh interest
+was excited through the educational mission to the Port Royal islands,
+in 1861.  The agents of this mission were not long in discovering the
+rich vein of music that existed in these half-barbarous people, and
+when visitors from the North were on the islands, there was nothing
+that seemed better worth their while than to see a ``shout'' or hear
+the ``people'' sing their ``sperichils.''  A few of these last, of
+special merit,\footnote{The first seven spirituals in this collection,
+which were regularly sung at the church.} soon became established
+favorites among the whites, and hardly a Sunday passed at the church
+on St.~Helena without ``Gabriel's Trumpet,'' ``I hear from Heaven
+to-day,'' or ``Jehovah Hallelujah.''  The last time I myself heard
+these was at the Fourth of July celebration, at the church, in 1864.
+All of them were sung, and then the glorious shout, ``I can't stay
+behind, my Lord,'' was struck up, and sung by the entire multitude
+with a zest and spirit, a swaying of the bodies and nodding of the
+heads and lighting of the countenances and rhythmical movement of the
+hands, which I think no one present will ever forget.
+
+Attention was, I believe, first publicly directed to these songs in a
+letter from Miss McKim, of Philadelphia, to \emph{Dwight's Journal of
+Music}, Nov.~8, 1862, from which some extracts will presently be
+given.  At about the same time, Miss McKim arranged and published two
+of them, ``Roll, Jordan'' (No.~1) and ``Poor Rosy'' (No.~8)---probably
+on all accounts the two best specimens that could be selected.
+Mr.~H.~G.~Spaulding not long after gave some well-chosen specimens of
+the music in an article entitled ``Under the Palmetto,'' in the
+\emph{Continental Monthly} for August, 1863, among them, ``O Lord,
+remember me'' (No.~15), and ``The Lonesome Valley'' (No.~7).  Many
+other persons interested themselves in the collection of words and
+tunes, and it seems time at last that the partial collections in the
+possession of the editors, and known by them to be in the possession
+of others, should not be forgotten and lost, but that these relics of
+a state of society which has passed away should be preserved while it
+is still possible.\footnote{Only this last spring a valuable
+collection of songs made at Richmond, Va., was lost in the
+\emph{Wagner}.  No copy had been made from the original manuscript, so
+that the labor of their collection was lost.  We had hoped to have the
+use of them in preparing the present work.}
+
+The greater part of the music here presented has been taken down by
+the editors from the lips of the colored people themselves; when we
+have obtained it from other sources, we have given credit in the table
+of contents.  The largest and most accurate single collection in
+existence is probably that made by Mr.~Charles P.~Ware, chiefly at
+Coffin's Point, St.~Helena Island.  We have thought it best to give
+this collection in its entirety, as the basis of the present work; it
+includes all the hymns as far as No.~43.  Those which follow, as far
+as No.~55, were collected by myself on the Capt.~John Fripp and
+neighboring plantations, on the same island.  In all cases we have
+added words from other sources and other localities, when they could
+be obtained, as well as variations of the tunes wherever they were of
+sufficient importance to warrant it.  Of the other hymns and songs we
+have given the locality whenever it could be ascertained.
+
+The difficulty experienced in attaining absolute correctness is
+greater than might be supposed by those who have never tried the
+experiment, and we are far from claiming that we have made no
+mistakes.  I have never felt quite sure of my notation without a fresh
+comparison with the singing, and have then often found that I had made
+some errors.  I feel confident, however, that there are no mistakes of
+importance.  What may appear to some to be an incorrect rendering, is
+very likely to be a variation; for these variations are endless, and
+very entertaining and instructive.
+
+Neither should any one be repelled by any difficulty in adapting the
+words to the tunes.  The negroes keep exquisite time in singing, and
+do not suffer themselves to be daunted by any obstacle in the words.
+The most obstinate Scripture phrases or snatches from hymns they will
+force to do duty with any tune they please, and will dash heroically
+through a trochaic tune at the head of a column of iambs with
+wonderful skill.  We have in all cases arranged one set of words
+carefully to each melody; for the rest, one must make them fit the
+best he can, as the negroes themselves do.
+
+The best that we can do, however, with paper and types, or even with
+voices, will convey but a faint shadow of the original.  The voices of
+the colored people have a peculiar quality that nothing can imitate;
+and the intonations and delicate variations of even one singer cannot
+be reproduced on paper.  And I despair of conveying any notion of the
+effect of a number singing together, especially in a complicated
+shout, like ``I can't stay behind, my Lord'' (No.~8), or ``Turn,
+sinner, turn O!'' (No.~48).  There is no singing in
+\emph{parts,}\footnote{``The high voices, all in unison, and the
+admirable time and true accent with which their responses are made,
+always make me wish that some great musical composer could hear these
+semi-savage performances.  With a very little skilful adaptation and
+instrumentation, I think one or two barbaric chants and choruses might
+be evoked from them that would make the fortune of an
+opera.''---\emph{Mrs.~Kemble's ``Life on a Georgian Plantation,''
+p.~218.}} as we understand it, and yet no two appear to be singing the
+same thing---the leading singer starts the words of each verse, often
+improvising, and the others, who ``base'' him, as it is called, strike
+in with the refrain, or even join in the solo, when the words are
+familiar.  When the ``base'' begins, the leader often stops, leaving
+the rest of his words to be guessed at, or it may be they are taken up
+by one of the other singers.  And the ``basers'' themselves seem to
+follow their own whims, beginning when they please and leaving off
+when they please, striking an octave above or below (in case they have
+pitched the tune too low or too high), or hitting some other note that
+chords, so as to produce the effect of a marvellous complication and
+variety, and yet with the most perfect time, and rarely with any
+discord.  And what makes it all the harder to unravel a thread of
+melody out of this strange network is that, like birds, they seem not
+infrequently to strike sounds that cannot be precisely represented by
+the gamut, and abound in ``slides from one note to another, and turns
+and cadences not in articulated notes.''  ``It is difficult,'' writes
+Miss~McKim, ``to express the entire character of these negro ballads
+by mere musical notes and signs.  The odd turns made in the throat,
+and the curious rhythmic effect produced by single voices chiming in
+at different irregular intervals, seem almost as impossible to place
+on the score as the singing of birds or the tones of an \AE{}olian
+Harp.''  There are also apparent irregularities in the time, which it
+is no less difficult to express accurately, and of which Nos.~10, 130,
+131, and (eminently) 128, are examples.
+
+Still, the chief part of the negro music is \emph{civilized} in its
+character---partly composed under the influence of association with
+the whites, partly actually imitated from their music.  In the main it
+appears to be original in the best sense of the word, and the more we
+examine the subject, the more genuine it appears to us to be.  In a
+very few songs, as Nos.~19, 23, and 25, strains of familiar tunes are
+readily traced; and it may easily be that others contain strains of
+less familiar music, which the slaves heard their masters sing or
+play.\footnote{We have rejected as spurious ``Give me Jesus,'' ``Climb
+Jacob's Ladder,'' (both sung at Port Royal), and ``I'll take the wings
+of the morning,'' which we find in Methodist hymn-books.  A few
+others, the character of which seemed somewhat suspicious, we have not
+%% CHANGED: I appended a full stop.
+felt at liberty to reject without direct evidence.}
+
+On the other hand there are very few which are of an intrinsically
+barbaric character, and where this character does appear, it is
+chiefly in short passages, intermingled with others of a different
+character.  Such passages may be found perhaps in Nos.~10, 12, and 18;
+and ``Becky Lawton,'' for instance (No.~29), ``Shall I die?'' (No.~52)
+``Round the corn, Sally'' (No.~87), and ``O'er the crossing'' (No.~93)
+may very well be purely African in origin.  Indeed, it is very likely
+that if we had found it possible to get at more of their secular
+music, we should have come to another conclusion as to the proportion
+of the barbaric element.  A gentleman in Delaware writes:
+
+``We must look among their non-religious songs for the purest
+specimens of negro minstrelsy, It is remarkable that they have
+themselves transferred the best of these to the uses of their
+churches---I suppose on Mr.~Wesley's principle that `it is not right
+the Devil should have all the good tunes.'  Their leaders and
+preachers have not found this change difficult to effect; or at least
+they have taken so little pains about it that one often detects the
+profane \emph{cropping out,} and revealing the origin of their most
+solemn `hymns,' in spite of the best intentions of the poet and
+artist.  Some of the best \emph{pure negro} songs I have ever heard
+were those that used to be sung by the black stevedores, or perhaps
+the crews themselves, of the West India vessels, loading and unloading
+at the wharves in Philadelphia and Baltimore.  I have stood for more
+than an hour, often, listening to them, as they hoisted and lowered
+the hogsheads and boxes of their cargoes; one man taking the burden of
+the song (and the slack of the rope) and the others striking in with
+the chorus.  They would sing in this way more than a dozen different
+songs in an hour; most of which might indeed be warranted to contain
+`nothing religious'---a few of them, `on the contrary, quite the
+reverse'---but generally rather innocent and proper in their language,
+and strangely attractive in their music; and with a volume of voice
+that reached a square or two away.  That plan of labor has now passed
+away, in Philadelphia at least, and the songs, I suppose, with it.  So
+that these performances are to be heard only among black sailors on
+%% CHANGED: I inserted a hyphen between ``of'' and ``the''.
+their vessels, or 'long-shore men in out-of-the-way place, where
+opportunities for respectable persons to hear them are rather few.''
+
+These are the songs that are still heard upon the Mississippi
+steamboats---wild and strangely fascinating---one of which we have
+been so fortunate as to secure for this collection.  This, too, is no
+doubt the music of the colored firemen of Savannah, graphically
+described by Mr.~Kane~O'Donnel, in a letter to the Philadelphia
+\emph{Press,} and one of which he was able to contribute for our use.
+Mr.~E.~S.~Philbrick was struck with the resemblance of some of the
+rowing tunes at Port-Royal to the boatmen's songs he had heard upon
+the Nile.
+
+The greater number of the songs which have come into our possession
+seem to be the natural and original production of a race of remarkable
+musical capacity and very teachable, which has been long enough
+associated with the more cultivated race to have become imbued with
+the mode and spirit of European music---often, nevertheless, retaining
+a distinct tinge of their native Africa.
+
+The words are, of course, in a large measure taken from Scripture, and
+from the hymns heard at church; and for this reason these religious
+songs do not by any means illustrate the full extent of the debasement
+of the dialect.  Such expressions as ``Cross Jordan,'' ``O Lord,
+remember me,'' ``I'm going home,'' ``There's room enough in Heaven for
+you,'' we find abundantly in Methodist hymn-books; but with much
+searching I have been able to find hardly a trace of the tunes.  The
+words of the fine hymn, ``Praise, member'' (No.~5), are found, with
+very little variation, in ``Choral Hymns'' (No.~138).  The editor of
+this collection informs us, however, that many of his songs were
+learned from negroes in Philadelphia, and Lt.-Col.~Trowbridge tells us
+that he heard this hymn, before the war, among the colored people of
+Brooklyn.\footnote{We have generally preserved the words as sung, even
+where clearly nonsensical, as in No.~89; so ``Why don't you move so
+slow?'' (No.~22).  We will add that ``Paul and Silas, bound in jail''
+(No.~4) is often sung ``Bounden Cyrus born in jail,'' and the words of
+No.~11 would appear as ``I take my tex in Matchew and by de
+Revolutions---I know you by your gammon,'' \&c.; so ``Ringy Rosy Land''
+for ``Ring Jerusalem.''}  For some very comical specimens of the way
+in which half-understood words and phrases are distorted by them, see
+Nos.~22, 23.  Another illustration is given by
+Col.~Higginson:\footnote{\emph{Atlantic Monthly,} June 1867.}
+
+``The popular camp-song of `Marching Along' was entirely new to them
+until our quartermaster taught it to them at my request.  The words
+`Gird on the armor' were to them a stumbling-block, and no wonder,
+until some ingenious ear substituted `Guide on de army,' which was at
+once accepted and became universal.  `We'll guide on de army, and be
+marching along,' is now the established version on the Sea Islands.''
+
+I never fairly heard a secular song among the Port Royal freedmen, and
+never saw a musical instrument among them.  The last violin, owned by
+a ``worldly man,'' disappeared from Coffin's Point ``de year gun shoot
+at Bay Pint.''\footnote{\emph{i.~e.}, November, 1861, when Hilton Head
+was taken by Admiral Dupont---a great date on the islands.}  In other
+parts of the South, ``fiddle-sings,'' ``devil-songs,'' ``corn-songs,''
+``jig-tunes,'' and what not, are common; all the world knows the
+banjo, and the ``Jim Crow'' songs of thirty years ago.  We have
+succeeded in obtaining only a very few songs of this character.  Our
+intercourse with the colored people has been chiefly through the work
+of the Freedmen's Commission, which deals with the serious and earnest
+side of the negro character.  It is often, indeed, no easy matter to
+persuade them to sing their old songs, even as a curiosity, such is
+the sense of dignity that has come with freedom.  It is earnestly to
+be desired that some person, who has the opportunity, should make a
+collection of these now, before it is too late.
+
+In making the present collection, we have only gleaned upon the
+surface, and in a very narrow field.  The wealth of material still
+awaiting the collector can be guessed from a glance at the localities
+of those we have, and from the fact, mentioned above, that of the
+first forty-three of the collection most were sung upon a single
+plantation, and that it is very certain that the stores of this
+plantation were by no means exhausted.  Of course there was constant
+intercourse between neighboring plantations; also between different
+States, by the sale of slaves from one to another.  But it is
+surprising how little this seems to have affected local songs, which
+are different even upon adjoining plantations.  The favorite of them
+all, ``Roll, Jordan'' (No.~1), is sung in Florida, but not, I believe,
+in North Carolina.  ``Gabriel's Trumpet'' (No.~4) and ``Wrestle on,
+%% CHANGED: Added a period to No.
+Jacob'' (No.~6) probably came from Virginia, where they are sung
+without much variation from the form usual at Port Royal; No.~6 is
+also sung in Maryland.\footnote{It is worthy of notice that a song
+much resembling ``Poor Rosy'' was heard last Spring from the boat
+hands of an Ohio River steamboat---the only words caught being ``Poor
+Molly, poor gal.''}  ``John, John of the Holy Order'' (No.~22) is
+traced in Georgia and North Carolina, and ``O'er the Crossing''
+(No.~93) appears to be the Virginia original, variations of which are
+found in South Carolina, Georgia, and Tennessee.  As illustrations of
+the slowness with which these songs travel, it may be mentioned that
+the ``Graveyard'' (No.~21), which was frequently sung on
+Capt.~John~Fripp's plantation in the winter of 1863--4, did not reach
+Coffin's Point (five miles distant) until the following Spring.  I
+heard it myself at Pine Grove, two miles from the latter place, in
+March.  Somewhere upon this journey this tune was strikingly altered,
+as will be seen from the variation given, which is the form in which I
+was accustomed to hear it.  Nos.~38, 41, 42, 43, 118, 119, 122, 123,
+were brought to Coffin's Point after Mr.~Ware left, by refugees
+returning to the plantation from ``town'' and the Main.  No.~74,
+likewise, ``Nobody knows the trouble I see,'' which was common in
+Charleston in 1865, has since been carried to Coffin's Point, very
+little altered.
+
+These hymns will be found peculiarly interesting in illustrating the
+feelings, opinions and habits of the slaves.  Of the dialect I shall
+presently speak at some length.  One of their customs, often alluded
+to in the songs (as in No.~19), is that of wandering through the woods
+and swamps, when under religious excitement, like the ancient
+bacchantes.  To get religion is with them to ``fin' dat ting.''  Molsy
+described thus her sister's experience in searching for religion:
+``Couldn't fin' dat leetle ting---hunt for 'em---huntin' for 'em all
+de time---las' foun' 'em.''  And one day, on our way to see a
+``shout,'' we asked Bristol whether he was going:---''No, ma'am,
+wouldn't let me in---hain't foun' dat ting yet---hain't been on my
+knees in de swamp.''  Of technical religious expressions, ``seeker,''
+``believer,'' ``member,'' \&c., the songs are full.
+
+The most peculiar and interesting of their customs is the ``shout,''
+an excellent description of which we are permitted to copy from the
+N.~Y.~\emph{Nation} of May~30, 1867:
+
+``This is a ceremony which the white clergymen are inclined to
+discountenance, and even of the colored elders some of the more
+discreet try sometimes to put on a face of discouragement; and
+although, if pressed for Biblical warrant for the shout, they
+generally seem to think `he in de Book,' or `he dere-da in Matchew,'
+still it is not considered blasphemous or improper if `de chillen' and
+`dem young gal' carry it on in the evening for amusement's sake, and
+with no well-defined intention of `praise.'  But the true `shout'
+takes place on Sundays or on `praise'-nights through the week, and
+either in the praise-house or in some cabin in which a regular
+religious meeting has been held.  Very likely more than half the
+population of the plantation is gathered together.  Let it be the
+evening, and a light-wood fire burns red before the door of the house
+and on the hearth.  For some time one can hear, though at a good
+distance, the vociferous exhortation or prayer of the presiding elder
+or of the brother who has a gift that way, and who is not `on the back
+seat,'---a phrase, the interpretation of which is, `under the censure
+of the church authorities for bad behavior;'---and at regular
+intervals one hears the elder `deaconing' a hymn-book hymn, which is
+sung two lines at a time, and whose wailing cadences, borne on the
+night air, are indescribably melancholy.  But the benches are pushed
+back to the wall when the formal meeting is over, and old and young,
+men and women, sprucely-dressed young men, grotesquely half-clad
+field-hands---the women generally with gay handkerchiefs twisted about
+their heads and with short skirts---boys with tattered shirts and
+men's trousers, young girls barefooted, all stand up in the middle of
+the floor, and when the `sperichil' is struck up, begin first walking
+and by-and-by shuffling round, one after the other, in a ring.  The
+foot is hardly taken from the floor, and the progression is mainly due
+to a jerking, hitching motion, which agitates the entire shouter, and
+soon brings out streams of perspiration.  Sometimes they dance
+silently, sometimes as they shuffle they sing the chorus of the
+spiritual, and sometimes the song itself is also sung by the dancers.
+But more frequently a band, composed of some of the best singers and
+of tired shouters, stand at the side of the room to `base' the others,
+singing the body of the song and clapping their hands together or on
+the knees.  Song and dance are alike extremely energetic, and often,
+when the shout lasts into the middle of the night, the monotonous
+thud, thud of the feet prevents sleep within half a mile of the
+praise-house.''
+
+In the form here described, the ``shout'' is probably confined to
+South Carolina and the States south of it.  It appears to be found in
+Florida, but not in North Carolina or Virginia.  It is, however, an
+interesting fact that the term ``shouting'' is used in Virginia in
+reference to a peculiar motion of the body not wholly unlike the
+Carolina shouting.  It is not unlikely that this remarkable religious
+ceremony is a relic of some native African dance, as the Romaika is of
+the classical Pyrrhic.  Dancing in the usual way is regarded with
+great horror by the people of Port Royal, but they enter with infinite
+zest into the movements of the ``shout.''  It has its connoisseurs,
+too.  ``Jimmy great shouter,'' I was told; and Jimmy himself remarked
+to me, as he looked patronizingly on a ring of young people, ``Dese
+yere worry deyseff---we don't worry weseff.''  And indeed, although
+the perspiration streamed copiously down his shiny face, he shuffled
+round the circle with great ease and grace.
+
+The shouting may be to any tune, and perhaps all the Port Royal hymns
+here given are occasionally used for this purpose; so that our cook's
+classification into ``sperichils'' and ``runnin' sperichils''
+(shouts), or the designation of certain ones as sung ``just sittin'
+round, you know,'' will hardly hold in strictness.  In practice,
+however, a distinction is generally observed.  The first seven, for
+instance, favorite hymns in the St. Helena church, would rarely, if
+ever, be used for shouting; while probably on each plantation there is
+a special set in common use.  On my plantation I oftenest heard ``Pray
+all de member'' (No.~47), ``Bell da ring'' (No.~46), ``Shall I die?''
+(No.~52), and ``I can't stay behind, my Lord'' (No.~8).  The shouting
+step varied with the tune; one could hardly dance with the same spirit
+to ``Turn, sinner,'' or ``My body rock 'long fever,'' as to ``Rock o'
+Jubilee,'' or ``O Jerusalem, early in de morning.''  So far as I can
+learn, the shouting is confined to the Baptists; and it is, no doubt,
+to the overwhelming preponderance of this denomination on the Sea
+Islands that we owe the peculiar richness and originality of the music
+%% CHANGED: I appended a full stop.
+there.
+
+The same songs are used for rowing as for shouting.  I know only one
+pure boat-song, the fine lyric, ``Michael row the boat ashore''
+(No.~31); and this I have no doubt is a real spiritual---it being the
+archangel Michael that is addressed.  Among the most common rowing
+tunes were Nos.~5, 14, 17, 27, 28, 29, 30, 31, 32, 33, 36, 46.  ``As I
+have written these tunes,'' says Mr.~Ware, ``two measures are to be
+sung to each stroke, the first measure being accented by the beginning
+of the stroke, the second by the rattle of the oars in the row-locks.
+On the passenger boat at the [Beaufort] ferry, they rowed from sixteen
+to thirty strokes a minute; twenty-four was the average.  Of the tunes
+I have heard, I should say that the most lively were `Heaven bell
+a-ring' (No.~27), `Jine 'em' (No.~28), `Rain fall' (No.~29), `No man'
+(No.~14), `Bell da ring' (No.~46), and `Can't stay behind;' and that
+`Lay this body down' (No.~26), `Religion so sweet' (No.~17), and
+`Michael row' (No.~31), were used when the load was heavy or the tide
+was against us.  I think that the long hold on `Oh,' in `Rain fall,'
+was only used in rowing.  When used as a `shout' I am quite sure that
+it occupied only one measure, as in the last part of the verse.  One
+noticeable thing about their boat-songs was that they seemed often to
+be sung just a trifle behind time; in `Rain fall,' for instance,
+`Believer cry holy' would seem to occupy more than its share of the
+stroke, the `holy' being prolonged till the very beginning of the next
+stroke; indeed, I think Jerry often hung on his oar a little just
+there before dipping it again.''\footnote{For another curious
+circumstance in rowing, see note to ``Rain fall,'' No.~29.}
+
+As to the composition of these songs, ``I always wondered,'' says
+Col.~Higginson, ``whether they had always a conscious and definite
+origin in some leading mind, or whether they grew by gradual
+accretion, in an almost unconscious way.''  On this point I could get
+no information, though I asked many questions, until at last, one day
+when I was being rowed across from Beaufort to Ladies' Island, I found
+myself, with delight, on the actual trail of a song.  One of the
+oarsmen, a brisk young fellow, not a soldier, on being asked for his
+theory of the matter, dropped out a coy confession.  `Some good
+sperituals,' he said, `are start jess out o' curiosity.  I been
+a-raise a sing, myself, once.'
+
+``My dream was fulfilled, and I had traced out, not the poem alone,
+but the poet.  I implored him to proceed.
+
+``{}`Once we boys,' he said, `went for tote some rice, and de
+nigger-driver, he keep a-callin' on us; and I say, `O, de ole
+nigger-driver!'  Den anudder said, `Fust ting my mammy told me was,
+notin' so bad as nigger-drivers.'  Den I made a sing, just puttin' a
+word, and den anudder word.'
+
+``Then he began singing, and the men, after listening a moment, joined
+in the chorus as if it were an old acquaintance, though they evidently
+had never heard it before.  I saw how easily a new `sing' took root
+among them.''
+
+A not inconsistent explanation is that given on page~12 of an
+``Address delivered by J.~Miller McKim, in Sansom Hall, Philadelphia,
+July~9, 1862.''
+
+``I asked one of these blacks---one of the most intelligent of them
+[Prince Rivers, Sergeant 1st Reg.~S.~C.~V.]---where they got these
+songs.  `Dey make 'em, sah.'  `How do they make them?'  After a pause,
+evidently casting about for an explanation, he said: `I'll tell you,
+it's dis way.  My master call me up, and order me a short peck of corn
+and a hundred lash.  My friends see it, and is sorry for me.  When dey
+come to de praise-meeting dat night dey sing about it.  Some's very
+good singers and know how; and dey work it in---work it in, you know,
+till they get it right; and dat's de way.'  A very satisfactory
+explanation; at least so it seemed to me.''
+
+We were not so fortunate as Col.~Higginson in our search for a poet.
+Cuffee at Pine Grove did, to be sure, confess himself the author of
+``Climb Jacob's Ladder;''---unfortunately, we afterwards found it in a
+Northern hymn book.  And if you try to trace out a new song, and ask,
+``Where did you hear that?'' the answer will be, ``One strange man
+come from Eding's las' praise-night and sing 'em in praise-house, and
+de people catch 'em;'' or ``Titty 'Mitta [sister Amaritta] fetch 'em
+from Polawana, where she tuk her walk gone spend Sunday.  Some of her
+fahmly sing 'em yonder.''  ``But what does `Ringy rosy land' [Ring
+Jerusalem, No.~21] mean?'' ``Me dunno.''
+
+Our title, ``Slave Songs,'' was selected because it best described the
+contents of the book.  A few of those here given (Nos.~64, 59) were,
+to be sure, composed since the proclamation of emancipation, but even
+these were inspired by slavery.  ``All, indeed, are valuable as an
+expression of the character and life of the race which is playing such
+a conspicuous part in our history.  The wild, sad strains tell, as the
+sufferers themselves could, of crushed hopes, keen sorrow, and a dull,
+daily misery, which covered them as hopelessly as the fog from the
+rice swamps.  On the other hand, the words breathe a trusting faith in
+rest for the future---in `Canaan's air and happy land,' to which their
+eyes seem constantly turned.''
+
+Our original plan hardly contemplated more than the publication of the
+Port Royal spirituals, some sixty in all, which we had supposed we
+could obtain, with perhaps a few others in an appendix.  As new
+materials came into our hands, we enlarged our plan to the present
+dimensions.  Next to South Carolina, we have the largest number from
+Virginia; from the other States comparatively few.  Few as they are,
+however, they appear to indicate a very distinct character in
+different States.  Contrary to what might be expected, the songs from
+Virginia are the most wild and strange.  ``O'er the Crossing,''
+(No.~93) is peculiarly so; but ``Sabbath has no end'' (No.~89),
+``Hypocrite and Concubine'' (No.~91), ``O shout away'' (No.~92), and
+``Let God's saints come in'' (No.~99), are all distinguished by odd
+intervals and a frequent use of chromatics.  The songs from North
+Carolina are also very peculiar, although in a different way, and make
+one wish for more specimens from that region.  Those from Tennessee
+and Florida are most like the music of the whites.
+
+We had hoped to obtain enough secular songs to make a division by
+themselves; there are, however, so few of these that it has been
+decided to intersperse them with the spirituals under their respective
+States.  They are highly characteristic, and will be found not the
+least interesting of the contents of this work.
+
+It is, we repeat, already becoming difficult to obtain these songs.
+Even the ``spirituals'' are going out of use on the plantations,
+superseded by the new style of religious music, ``closely imitated
+from the white people, which is solemn, dull and nasal, consisting in
+repeating two lines of a hymn and then singing it, and then two more,
+\emph{ad infinitum}.  They use for this sort of worship that one
+everlasting melody, which may be remembered by all persons familiar
+with Western and Southern camp-meetings, as applying equally well to
+long, short or common metre.  This style of proceeding they evidently
+consider the more dignified style of the two, as being a closer
+imitation of white, genteel worship---having in it about as little
+soul as most stereotyped religious forms of well instructed
+congregations.''\footnote{Mrs.~H.~B.~Stowe, in \emph{Watchman and
+Reflector,} April 1867.}
+
+It remains to speak of points connected with the typography of the
+songs.
+
+We have aimed to give all the characteristic variations which have
+come into our hands, whether as single notes or whole lines, or even
+longer passages; and of words as well as tunes.  Many of these will be
+found very interesting and instructive.  The variations in words are
+given as foot-notes---the word or group of words in the note, to be
+generally substituted for that which precedes the mark: and it may be
+observed, although it seems hardly necessary, that these variations
+are endless; such words as ``member,'' ``believer,'' ``seeker,'' and
+all names, male and female, may be brought in wherever appropriate.
+%% EDITED: I apppended a semi-colon.
+We have not always given all the sets of words that we have received;
+often they are improvised to such an extent that this would be almost
+impracticable.  In Nos.~16, 17, 19, etc., we have given them very
+copiously, for illustration; in others we have omitted the least
+interesting ones.  In spelling, we proposed to ourselves the rule well
+stated by Col.~Higginson at the commencement of his collection: ``The
+words will be here given, as nearly as possible, in the original
+dialect; and if the spelling seems sometimes inconsistent, or the
+misspelling insufficient, it is because I could get no nearer.''
+
+As the negroes have no part-singing, we have thought it best to print
+only the melody; what appears in some places as harmony is really
+variations in single notes.  And, in general, a succession of such
+notes turned in the same direction indicates a single longer
+variation.  Words in a parenthesis, with small notes, (as ``Brudder
+Sammy'' in No.~21), are interjaculatory; it has not, however, been
+possible to maintain entire consistency in this matter.  Sometimes, as
+``no man'' and ``O no man,'' in No.~14, interchangeable forms are put,
+for convenience sake, in different parts of the tune.
+
+It may sometimes be a little difficult, for instance in Nos.~9, 10, 20
+and 27, to determine precisely which part of the tune each verse
+belongs to; in these cases we have endeavored to indicate it as
+clearly as is in our power.  However much latitude the reader may take
+in all such matters, he will hardly take more than the negroes
+themselves do.  In repeating, it may be observed that the custom at
+Port Royal is to repeat the first part of the tune over and over, it
+may be a dozen times, before passing to the ``turn,'' and then to do
+the same with that.  In the Virginia songs, on the other hand, the
+chorus is usually sung twice after each verse---often the second time
+with some such interjaculatory expression as ``I say now,'' ``God say
+you must,'' as given in No.~99.
+
+We had some thought of indicating with each the \emph{tempo} of the
+different songs, but have concluded to print special directions for
+singing by themselves.  It should be remarked, however, that the same
+tune varied in quickness on different occasions.  ``As the same
+songs,'' writes Miss McKim, ``are sung at every sort of work, of
+course the \emph{tempo} is not always alike.  On the water, the oars
+dip `Poor Rosy' to an even \emph{andante;} a stout boy and girl at the
+hominy mill will make the same `Poor Rosy' fly, to keep up with the
+whirling stone; and in the evening, after the day's work is done,
+`Heab'n shall-a be my home' peals up slowly and mournfully from the
+distant quarters.  One woman, a respectable house-servant, who had
+lost all but one of her twenty-two children, said to me: `Pshaw! don't
+har to dese yer chil'en, missee.  Dey just rattles it off---dey don't
+know how for sing it.  I likes `Poor Rosy' better dan all de songs,
+but it can't be sung widout \emph{a full heart and a troubled
+%% CHANGED: I appended the closing single and double quote.
+sperrit}.'{}''
+
+The rests, by the way, do not indicate a cessation in the music, but
+only in part of the singers.  They overlap in singing, as already
+described, in such a degree that at no time is there any complete
+pause.  In ``A House in Paradise'' (No. 40) this overlapping is most
+marked.
+
+\bigskip
+
+\textsc{It} will be noticed that we have spoken chiefly of the negroes
+of the Port Royal islands, where most of our observations were made,
+and most of our materials collected.  The remarks upon the dialect
+which follow have reference solely to these islands, and indeed almost
+exclusively to a few plantations at the northern end of St.~Helena
+Island.  They will, no doubt, apply in a greater or less degree to the
+entire region of the southeasterly slave States, but not to other
+portions of the South.  It should also be understood that the
+corruptions and peculiarities here described are not universal, even
+here.  There are all grades, from the rudest field-hands to mechanics
+and house-servants, who speak with a considerable degree of
+correctness, and perhaps few would be found so illiterate as to be
+guilty of them all.
+
+Ordinary negro talk, such as we find in books, has very little
+resemblance to that of the negroes of Port Royal, who have been so
+isolated heretofore that they have almost formed a dialect of their
+own.  Indeed, the different plantations have their own peculiarities,
+and adepts profess to be able to determine by the speech of a negro
+what part of an island he belongs to, or even, in some cases, his
+plantation.  I can myself vouch for the marked peculiarities of speech
+of one plantation from which I had scholars, and which was hardly more
+than a mile distant from another which lacked these peculiarities.
+Songs, too, and, I suppose, customs, vary in the same way.
+
+A stranger, upon first hearing these people talk, especially if there
+is a group of them in animated conversation, can hardly understand
+them better than if they spoke a foreign language, and might, indeed,
+easily, suppose this to be the case.  The strange words and
+pronunciations, and frequent abbreviations, disguise the familiar
+features of one's native tongue, while the rhythmical modulations, so
+characteristic of certain European languages, give it an utterly
+un-English sound.  After six months' residence among them, there were
+scholars in my school, among the most constant in attendance, whom I
+could not understand at all, unless they happened to speak very
+slowly.
+
+With these people the process of ``phonetic decay'' appears to have
+gone as far, perhaps, as is possible, and with it an extreme
+simplification of etymology and syntax.  There is, of course, the
+usual softening of \emph{th} and \emph{v,} or \emph{f,} into \emph{d}
+and \emph{b;} likewise a frequent interchange of \emph{v} and
+\emph{w,} as \emph{veeds} and \emph{vell} for \emph{weeds} and
+\emph{well;} \emph{woices} and \emph{punkin wine,} for \emph{voices}
+and \emph{pumpkin vine.}  ``De wile' (\emph{vilest}) sinner may
+return'' (No.~48).  This last example illustrates also their constant
+%% CHANGED: "bro,'" to "bro',".
+habit of clipping words and syllables, as \emph{lee' bro',} for
+\emph{little brother;} \emph{pl\"ant'shun,} for \emph{plantation.}
+The lengthening of short vowels is illustrated in both these
+(\emph{a,} for instance, rarely has its short English sound).  ``Een
+(in) dat mornin' all day'' (No.~56).
+
+Strange words are less numerous in their \emph{patois} than one would
+suppose, and, few as they are, most of them maybe readily derived from
+English words.  Besides the familiar \emph{buckra,} and a few proper
+names, as Cuffy, Quash, and perhaps Cudjo, I only know of
+\emph{churray} (spill), which may be ``throw 'way;'' \emph{oona} or
+\emph{ona,} ``you'' (both singular and plural, and used only for
+friends), as ``Ona build a house in Paradise'' (No.~40); and
+\emph{aw,} a kind of expletive, equivalent to ``to be sure,'' as,
+``Dat clot' cheap.''  ``Cheap aw.''  ``Dat Monday one lazy boy.''
+``Lazy aw---I 'bleege to lick 'em.''
+
+Corruptions are more abundant.  The most common of them are these:
+\emph{Yearde} (hear), as in Nos.~3, etc.  ``Flora, did you see that
+cat?''  ``No ma'am, but I yearde him holler.''  ``\emph{Sh'um,}'' a
+corruption of \emph{see 'em,} applied (as \emph{'em} is) to all
+genders and both numbers.  ``Wan' to see how Beefut (Beaufort)
+stan'---nebber sh'um since my name Adam.''  \emph{Huddy} (how-do?),
+pronounced \emph{how-dy} by purists, is the common term of greeting,
+as in the song No.~20, ``Tell my Jesus huddy O.''  ``Bro' (brother)
+Quash sen' heap o' howdy.''  \emph{Studdy,} (steady) is used to denote
+any continued or customary action.  ``He studdy 'buse an' cuss we,''
+was the complaint entered by some little children against a large
+girl.  ``I studdy talk hard, but you no yearde me,'' was Rina's
+defence when I reproved her for not speaking loud enough.  When we
+left, we were told that we must ``studdy come back.''  Here, however,
+it seems to mean \emph{steady.}  \emph{Titty} is used for mother or
+oldest sister; thus, Titty Ann was the name by which the children of
+our man-of-all work knew their mother, Ann.  \emph{Sic-a} or
+\emph{sake-a,} possibly a condensation of \emph{same} and \emph{like.}
+``Him an' me grow up sic-a brudder an' sister.''  \emph{Enty} is a
+curious corruption, I suppose of \emph{ain't he,} used like our ``Is
+that so?'' in reply to a statement that surprises one.  ``Robert, you
+%% EDITED: I added an opening double quote before ``John''.
+have n't written that very well.''  ``Enty, sir?''  ``John, it's going
+to rain to-day.''  ``Enty, sir?''  \emph{Day-clean} is used for
+\emph{day-break.}  ``Do, day-clean, for let me go see Miss Ha'yet; and
+de day wouldn't clean.''  \emph{Sun-up} is also common.  \emph{Chu'}
+for ``this'' or ``that there;'' as ``Wha' chu?''  ``See one knife
+chu?''  \emph{Say} is used very often, especially in singing, as a
+kind of expletive; ``(Say) when you get to heaven (say) you 'member
+me.'' (No.~27.)  ``Ain't you know say cotton de-de?''  In the last
+sentence ``de-de'' (accent on first syllable) means ``is
+there;''---the first \emph{de,} a corruption of \emph{does} for
+\emph{is,} will be explained presently; the other is a very common
+form for \emph{dere,} there.
+
+I do not remember any other peculiar words, but several words used
+peculiarly.  \emph{Cuss} is used with great latitude, to denote any
+offensive language.  ``Him cuss me 'git out.''  ``Ahvy (Abby) do cuss
+me,'' was the serious-sounding, but trifling accusation made by a
+little girl against her seat-mate.  \emph{Stan'} is a very common
+word, in the sense of \emph{look.}  ``My back stan' like white man,''
+was a boast which meant that it was not scarred with the lash.  ``Him
+stan' splendid, ma'am,'' of the sitting of a dress.  I asked a group
+of boys one day the color of the sky.  Nobody could tell me.
+Presently the father of one of them came by, and I told him their
+ignorance, repeating my question with the same result as before.  He
+grinned: ``Tom, how sky stan'?''  ``Blue,'' promptly shouted Tom.
+\emph{Both} they seldom use; generally ``all-two,'' or emphatically,
+``all-two boff togedder.''  \emph{One} for \emph{alone.}  ``Me one,
+and God,'' answered an old man in Charleston to the question whether
+he escaped alone from his plantation.  ``Gone home one in de dark,''
+for alone.  ``Heab'n 'nuff for me one'' (\emph{i. e.,} I suppose,
+%% EDITED: Moved the full stop out of the parenthesis.
+``for my part''), says one of their songs (No.~46).  \emph{Talk} is
+one of their most common words, where we should use \emph{speak} or
+\emph{mean.}  ``Talk me, sir?'' asks a boy who is not sure whether you
+mean him or his comrade.  ``Talk lick, sir?  nuffin but lick,'' was
+the answer when I asked whether a particular master used to whip his
+slaves.  \emph{Call} is used to express relationship as, ``he call him
+aunt.''  \emph{Draw,} for receiving in any way---derived from the
+usage of drawing a specific amount of supplies at stated times.  ``Dey
+draw letter,'' was the remark when a mail arrived and was distributed
+among us whites.  \emph{Meet} is used in the sense of \emph{find.}
+``I meet him here an' he remain wid me,'' was the cook's explanation
+when a missing chair was found in the kitchen.  When I remarked upon
+the absurdity of some agricultural process---''I meet 'em so an' my
+fader meet 'em so,'' was the sufficient answer.  A grown man, laboring
+over the mysteries of simple addition, explained the gigantic answer
+he had got by ``I meet two row, and I set down two.''  ``I meet you
+dere, sir,'' said Miller frankly, when convinced in an argument.  Too
+\emph{much} is the common adverb for a high degree of a quality; ``he
+bad \emph{too} much'' was the description of a hard master.
+\emph{Gang,} for any large number; ``a whole gang of slate-pencils.''
+\emph{Mash} in the sense of crush; ``mammy mash 'em,'' when the goat
+had killed one of her kids by lying on it.  \emph{Sensibble} and
+\emph{hab sense} are favorite expressions.  A scholar would ask me to
+make him ``sensibble'' of a thing.  ``Nebber sh'um since I hab sense''
+(\emph{i.~e.,} since I was old enough to know).  \emph{Stantion}
+(substantial) was a favorite adjective at Coffin's Point.
+\emph{Strain} is also a favorite word.  ``Dem boy strain me,''
+explained Billy, when some younger boys were attempting to \emph{base}
+him.  ``I don't want to give more nor fifty-five dollar for a horse,''
+said Quash, ``but if dey strain you, you may give fifty-six.''  ``Dat
+tune \emph{so} strainful,'' said Rose.
+
+The letters \emph{n,} \emph{r} and \emph{y} are used euphonically.
+``He de baddes' little gal from y'ere to n'Europe,'' said Bristol of
+his troublesome niece Venus; |ought to put him on a bar'l, an' den he
+fall 'sleep an' fall down an' hut heself, an' dat make him more
+sensibble.''  ``He n'a comin', sir,'' was often said of a missing
+scholar.  At first, I took the \emph{n} for a negative.  I set Gib one
+day to picking out \emph{E'}s from a box of letters.  He could not
+distinguish \emph{E} from \emph{F,} and at last, discouraged with his
+repeated failures, explained, holding out an \emph{F,} ``dis y'ere
+stan' sic-a-r-\emph{um.}''  (This looks like that.)  It is suggested
+also that \emph{d} is used in the same way, in ``He d'a comin';'' and
+\emph{s,} in singing, for instance, ``'Tis wells and good'' (No.~25).
+So the vowel \emph{a;} ``De foxes have-a hole'' (No.~2), ``Heaven bell
+a-ring'' (No.~27).
+
+The most curious of all their linguistic peculiarities is perhaps the
+following.  It is well known that the negroes in all parts of the
+South speak of their elders as ``uncle'' and ``aunt,---''\footnote{In
+South Carolina ``daddy'' and ``maum'' are more common.} from a feeling
+of politeness, I do not doubt; it seemed disrespectful to use the bare
+name, and from \emph{Mr.} and \emph{Mrs.} they were debarred.  On the
+Sea Islands a similar feeling has led to the use of \emph{cousin}
+towards their equals.  Abbreviating this, after their fashion, they
+get \emph{co'n} or \emph{co'} (the vowel sound \emph{u} as in
+\emph{cousin}) as the common title when they speak of one another; as,
+C'Abram, Co' Robin, Co'n Emma, C'Isaac, Co' Bob.  \emph{Bro'}
+(brother) and \emph{Si'} (sister) and even \emph{T'} (Titty) are also
+often used in the same way; as, Bro' Paris, Si' Rachel, T' Jane.  A
+friend insists that \emph{Cudjo} is nothing but Co' Joe.
+
+\emph{Where} and \emph{when} are hardly used, at least by the common
+class of negroes.  The question ``Where did you spill the milk?'' was
+answered only with a stare; but ``which way milk churray?'' brought a
+ready response.  ``What side you stayin', sir?'' was one of the first
+questions put to me.  Luckily I had been initiated, and was able to
+answer it correctly.
+
+There is probably no speech that has less inflection, or indeed less
+power of expressing grammatical relation in any way.  It is perhaps
+not too strong to say that the field-hands make no distinction of
+gender, case, number, tense, or voice.  The pronouns are to be sure
+distinguished more or less by the more intelligent among them, and all
+of these, unless perhaps \emph{us,} are occasionally heard.
+\emph{She} is rare; \emph{her} still more so; \emph{him} being
+commonly used for the third person singular of all cases and genders;
+\emph{'em,} if my memory serves me rightly, only for the objective
+case, but for all genders and both numbers.  \emph{He,} or \emph{'e,}
+is, I should think, most common as possessive.  ``Him lick we'' might
+mean a girl as well as a boy.  Thus \emph{we} is distinguished from
+\emph{I} or \emph{me,} and \emph{dey} or \emph{dem} from \emph{him} or
+\emph{dat;} and these are, I think, the only distinctions made in
+number.  ``Dat cow,'' is singular, ``dem cow'' plural; ``Sandy hat''
+would mean indifferently Sandy's hat or hats; ``nigger-house'' means
+the collection of negro-houses, and is, I suppose, really a plural.
+
+I do not know that I ever heard a real possessive case, but they have
+begun to develop one of their own, which is a very curious
+illustration of the way inflectional forms grow up.  If they wish to
+make the fact of possession at all emphatic or distinct, they use the
+word ``own.''  Thus, they will say ``Mosey house,'' but if asked whose
+house that is, the answer is ``Mosey own.''  ``Co' Molsy y'own'' was
+the odd reply made by Mylie to the question whose child she was
+carrying.  Literally translated, this is ``Molsy's;'' \emph{Co'} is
+title, \emph{y} euphonic.  An officer of a colored regiment standing
+by me when the answer was made---himself born a slave---confessed that
+it was mere gibberish to him.  No doubt this custom would in time
+develop a regular inflectional possessive; but the establishment of
+schools will soon root up all these original growths.
+
+Very commonly, in verbs which have strong conjugations, the forms of
+the past tense are used for the present; ``What make you leff we?''
+``I tuk dem brudder'' (No.~30).  Past time is expressed by
+\emph{been,} and less commonly \emph{done.}  ``I been kep him home two
+day,'' was the explanation given for a daughter's absence from school.
+``I done pit my crap in de groun'.''  Present time is made definite by
+the auxiliary \emph{do} or \emph{da,} as in the refrains ``Bell da
+ring,'' ``Jericho da worry me.'' (Nos.~46, 47).  ``Bubber (brother) da
+hoe he tater.''  So \emph{did} occasionally: ``Nat did cuss me,''
+complained one boy of another.  It is too much to say that the verbs
+have no inflections, but it is true that these have nearly
+disappeared.  Ask a boy where he is going, and the answer is ``gwine
+crick for ketch crab'' (going into the creek to catch crabs); ask
+another where the missing boy is, and the answer is the same, with
+\emph{gone} instead of \emph{gwine.}  The hopeless confusion between
+auxiliaries is sometimes very entertaining: as ``de-de,'' ``ain't you
+know?''  ``I didn't been.''  ``De Lord is perwide'' (No.~2).  ``You'd
+better pray, de worl' da [is] gwine'' (No.~14).  ``My stomach been-a
+da hut me.''
+
+Some of these sentences illustrate two other peculiarities---the
+omission of auxiliaries and other small words, and the use of
+\emph{for} as the sign of the infinitive.  ``Unky Taff call Co' Flora
+for drop tater.''  ``Good for hold comb'' was the wisest answer found
+to the teacher's question what their ears were good for.  ``Co' Benah
+wan' Mr.---for tuk 'em down,'' was Gib's whispered comment when the
+stubborn Venus refused to step down from a bench.  After school the
+two were discovered at fisticuffs, and on being called to
+account---``dat same Benah dah knock me,'' said Gib, while Venus
+retorted with ``Gib cuss me in school.''
+
+It is owing to this habit of dropping auxiliaries that the passive is
+rarely if ever indicated.  You ask a man's name, and are answered,
+``Ole man call John.''  ``Him mix wid him own f\"at,'' was the
+description given of a paste made of bruised ground-nuts, the oil of
+the nut furnishing moisture.  ``I can't certain,'' ``The door didn't
+fasten,'' ``The bag won't full,'' ``Dey frighten in de dark,'' are
+illustrations of every-day usage.
+
+Proper names furnish many curious illustrations of the corruption in
+pronunciation.  Many of them are impossible to explain, and it is
+still only a surmise that \emph{Finnick} is derived from
+\emph{Phoenix,} and \emph{Wyna} from \emph{Malvina} (the first
+syllable being dropped, as in \emph{'Nelius} for \emph{Cornelius,} and
+\emph{'Rullus} for \emph{Marullus.})  \emph{Hacless} is unquestionably
+\emph{Hercules,} and \emph{Sack} no doubt \emph{Psyche;}
+\emph{Strappan} is supposed to be \emph{Strephon.}  All these are
+common names on the Sea Islands.  Names of trades, as \emph{Miller,}
+\emph{Butcher,} are not uncommon.  One name that I heard of, but did
+not myself meet with, was \emph{After-dark,} so called because he was
+so black that ``you can't sh'um 'fo' day-clean.''
+
+In conclusion, some actual specimens of talk, illustrating the various
+points spoken of, may not be without interest.  A scene at the opening
+of school:\footnote{It is proper to state that most of the materials
+for this scene were furnished by Mr.~Arthur Sumner, which accounts for
+the similarity of certain of the expressions to those in the dialogue
+given in the September number of the Boston \emph{Freedman's Record.}}
+
+``Charles, why did n't you come to school earlier?''  ``A-could n't
+come \emph{soon} to-day, sir; de boss he sheer out clo' dis mornin'.''
+``What did he give you?''  ``Me, sir? I ain't \emph{git;} de boss he
+de baddest buckra ebber a-see.  De morest part ob de mens dey git
+heaps o' clo'---more'n 'nuff; 'n I ain't git nuffin.''  ``Were any
+other children there?''  ``Plenty chil'n, sir.  All de chil'n dah fo'
+sun-up.''  ``January, you have n't brought your book.''  ``I
+\emph{is,} sir; sh'um here, sir?''  ``Where is Juno?''  ``I ain't know
+where he gone, sir.''  ``Where is Sam?''  ``He didn't been here.''
+``Where is the little boy, John?''  ``He pick up he foot and run.''  A
+new scholar is brought: ``Good mornin', maussa; I bring dis same chile
+to school, sir: \emph{do} don't let 'em stay arter school done.  Here
+you, gal, stan' up an' say howdy to de genlmn.  Do maussa lash 'em
+well ef he don't larn he lesson.''  ``Where's your book, Tom?''
+``Dunno, sir.  Some\emph{body} mus' a tief 'em.''  ``Where's your
+brother?''  ``Sh'um dar?  wid bof he han' in he pocket?''  ``Billy,
+have you done your sum?''  ``Yes, sir, I out 'em.''  ``Where's
+Polly?''  ``Polly de-de.''  Taffy comes up.  ``Please, sir, make me
+sensibble of dat word---I want to ketch 'em werry bad, sir, werry
+bad.''  Hacless begins to read.  He spells, in a loud whisper, ``g-o;
+g-o; g-o---can't fetch dat word, sir, nohow.''
+
+The first day Gib appeared in school I asked him whether he could
+read, and received a prompt answer in the affirmative.  So, turning to
+the first page of Willson's Primer, I told him to read.  The sentence
+was ``I am on,'' or something of that sort, opposite a picture of a
+boy on a rocking-horse.  Gib attacked it with great volubility,
+``h-r-s-e, horse.  De boy is on top ob de horse''---adding some
+remarks about a chair in the background.  His eye then fell on a
+picture of an eagle, and without pausing he went on, ``De raben is big
+bird.''  Next he passed to a lion on the opposite page, ``D-o-g,
+dog;'' but just then a cut above, representing a man and an ox, proved
+too strong for him, and he proceeded to give a detailed history of the
+man and the cow.  When this was completed, he took up a picture of a
+boy with a paper soldiers' cap and a sword.  ``Dis man hab sword; he
+tuk' e sword an' cut' e troat.''  Here I checked him, and found, as
+may be expected, that he did not know a single letter.
+
+A scene at a government auction: Henry and Titus are rivals, bidding
+for a piece of ``secesh'' furniture.  Titus begins with six dollars.
+``Well, Titus, I won't strain you---eight.''  ``Seven,'' says Titus.
+``Ten,'' says Henry.  ``Twelve,'' says Titus.  ``And den,'' said our
+informant, ``Henry bid fourteen an' tuk 'em for fifteen.''
+
+One Day when we returned from a row on the creek, to make a call, Dick
+met us with his face on a grin: ``You seen him?  you seen Miss T?
+\emph{I} seen him.  I tole him you gone wid intention call on she, but
+de boat didn't ready in time.  He cotch you at Mr.~H., on'y de horse
+bodder him at de gate.''  One of the boys came to me one day with the
+complaint, ``Dem Ma' B.~Fripp chil'n fin' one we book,'' \emph{i. e.},
+those children from Mr.~T.~B.~Fripp's have found one of our books.
+``'E nebber crack 'e bret,'' \emph{i.~e.,} say a word.  ``What make
+you don't?''  ``Mr.~P.~didn't must.''  ``I don't know what make I
+didn't answer.''  ``How do you do to-day?''  ``Stirrin,''; ``spared,''
+``standin';'' ``out o' bed,'' (never ``very well.'')  Or, of a friend,
+``He feel a lee better'n he been, ma'am.''
+
+``Arter we done chaw all de hard bones and swallow all de bitter
+pills,'' was part of a benediction; and the prayer at a
+``praise-meeting'' asked ``dat all de white bredren an' sister what
+jine praise wid we to-night might be bound up in de belly-band ob
+faith.''  At a funeral in a colored regiment: ``One box o' dead meat
+gone to de grave to-day---who gwine to-morrow?  Young man, who walk so
+stiff---ebery step he take seem like he say, `Look out dah, groun', I
+da comin'.''  The following is Strappan's view of Love.  ``Arter you
+lub, you lub, you know, boss.  You can't broke lub.  Man can't broke
+lub.  Lub stan'---'e ain't gwine broke.  Man hab to be berry smart for
+broke lub.  Lub is a ting stan' jus' like tar; arter he stick, he
+stick, he ain't gwine move.  He can't move less dan you burn him.  Hab
+to kill all two arter he lub 'fo' you broke lub.''
+
+It would be an interesting, and perhaps not very difficult inquiry, to
+determine how far the peculiarities of speech of the South Carolina
+negroes result from the large Huguenot element in the settlement of
+that State.  It would require, however, a more exact acquaintance than
+I possess with the dialects of other portions of the South, to form a
+judgment of any value upon this point.  Meanwhile, I will say only
+that two usages have struck me as possibly arising from this source,
+the habitual lengthening of vowel sounds, and the pronunciation of
+\emph{Maussa,} which may easily have been derived from
+\emph{Monsieur.}  After all, traces of Huguenot influence should by
+right be found among the whites, even more than the blacks.
+
+\begin{flushright}
+[W.~F.~A.]
+\end{flushright}
+
+\textsc{It} remains for the Editors to acknowledge the aid they have
+received in making this compilation.  To
+Col.~\textsc{T.~W.~Higginson}, above all others, they are indebted for
+friendly encouragement and for direct and indirect contributions to
+their original stock of songs.  From first to last he has manifested
+the kindest interest in their undertaking, constantly suggesting the
+names of persons likely to afford them information, and improving
+every opportunity to procure them material.  As soon as his own
+valuable collection had appeared in the \emph{Atlantic Monthly,} he
+freely made it over to them with a liberality which was promptly
+confirmed by his publishers, Messrs. \textsc{Ticknor \& Fields.}  It
+is but little to say that without his co-operation this \emph{Lyra
+  Africana} would have lacked greatly of its present completeness and
+worth.  Through him we have profited by the cheerful assistance of
+Mrs.~\textsc{Charles J.~Bowen,} Lieut.-Colonel
+\textsc{C.~T.~Trowbridge,} Capt.~\textsc{James S.~Rogers,}
+Rev.~\textsc{Horace James,} Capt. \textsc{Geo.~S.~Barton,} Miss
+\textsc{Lucy Gibbons,} Mr.~\textsc{William A.~Baker,}
+Mr.~\textsc{T.~E.~Ruggles,} and Mr.~\textsc{James Schouler.}  Our
+thanks are also due for contributions, of which we have availed
+ourselves, to Dr.~\textsc{William A.~Hammond,}
+Mr.~\textsc{Geo.~H.~Allan,} Lt.-Col.~\textsc{Wm.~Lee Apthorp,}
+Mr.~\textsc{Kane O'Donnel,} Mr.~\textsc{E.~J.~Snow,} Miss
+\textsc{Charlotte L.~Forten,} Miss \textsc{Laura M.~Towne,} and Miss
+\textsc{Ellen Murray;} and for criticisms, suggestions,
+communications, and unused but not unappreciated contributions, to
+Mr.~\textsc{John R.~Dennett,} Miss \textsc{Annie Mitchell,}
+Mr.~\textsc{Reuben Tomlinson,} Mr.~\textsc{Arthur Sumner,}
+Mr.~\textsc{N.~C.~Dennett,} Miss \textsc{Mary Ellen Peirce,}
+Maj-Gen.~\textsc{Wager Swayne,} Miss \textsc{Maria W.~Benton,}
+Prof.~\textsc{J.~Silsby,} Rev.~\textsc{John L.~McKim,}
+Mr.~\textsc{Albert Griffin,} Mr.~\textsc{A.~S.~Jenks,}
+Mr.~\textsc{E.~H.~Hawkes,} Rev.~\textsc{H.~C.~Trumbull,}
+Rev.~\textsc{J.~K.~Hosmer,} Rev.~\textsc{F.~N.~Knapp,}
+Brev.~Maj.-Gen.~\textsc{Truman Seymour,} Maj.-Gen.~\textsc{James
+  H.~Wilson,} Mr.~\textsc{J.~H.~Palmer,} and others; and, finally, to
+the editors of various newspapers who gratuitously announced the
+forthcoming volume.
+
+Conscious of many imperfections in this, the result of not
+inconsiderable joint labor for nearly a year, the Editors submit it,
+nevertheless, to the public judgment, in the belief that it will be
+pronounced deserving of even greater pains and of permanent
+preservation.
+
+\begin{flushright}
+\textsc{William Francis Allen,}\\
+\textsc{Charles Pickard Ware,}\\
+\textsc{Lucy McKim Garrison.}
+\end{flushright}
+
+
+\chapter{Directions for Singing.}
+
+\textsc{In} addition to those already given in the Introduction, the
+following explanations may be of assistance:
+
+Where all the words are printed with the music, there will probably be
+little difficulty in reading the songs; but where there are other
+words printed below the music, it will often be a question to which
+part of the tune these words belong, and how the refrain and the
+chorus are to be brought in.
+
+It will be noticed that the words of most of the songs arrange
+themselves into stanzas of four lines each.  Of these some are
+\emph{refrain}, and some are \emph{verse} proper.  The most common
+arrangement gives the second and fourth lines to the refrain, and the
+first and third to the verse; and in this case the third line may be a
+repetition of the first, or may have different words.  Often, however,
+the refrain occupies only one line, the verse occupying the other
+three; while in one or two songs the verse is only one line, while the
+refrain is three lines in length.  The refrain is repeated with each
+stanza: the words of the verse are changed at the pleasure of the
+leader, or fugleman, who sings either well-known words, or, if he is
+gifted that way, invents verses as the song goes on.
+
+In addition to the stanza, some of the songs have a chorus, which
+usually consists of a fixed set of words, though in some of the songs
+the chorus is a good deal varied.  The refrain of the main stanza
+often appears in the chorus.  The stanza can always be distinguished
+from the chorus, in those songs which have more than one stanza, by
+the figure ``1'' placed before the stanza which is printed with the
+music; the verses below being numbered on ``2,'' ``3,'' ``4,'' \&c.
+In a few cases the first verse below the music is numbered ``3;'' this
+occurs when two verses have been printed above in the music, instead
+of the first verse being repeated.  When the chorus has a variety of
+words, the additional verses are printed below without numbers.
+
+In the following list the first fifty tunes in the collection are
+classified according to the peculiarity of their division into verse
+and refrain.  It is hoped that this will help to remove all
+obscurities with which the reader may be embarrassed.
+
+%% FIXME: Make table, or lists or whatever.
+
+No explanation is needed for Nos.~2, 12, 13, 18, 22--26, 34, 36,
+38--43.
+
+Single line and refrain, 27, 35.
+
+Single line and refrain with chorus, 6, 29.
+
+Stanza of 4 lines:
+
+No refrain; chorus, 11.
+
+4th line refrain; introduction, 7.
+
+4th line refrain; chorus, 8, 9, 10, 15, 37, 45.
+
+1st and 2d lines verse, 3d and 4th refrain; chorus, 1, 4.
+
+1st and 3d lines verse, 2d and 4th refrain, 14, 17, 20, 28, 31, 32,
+33, 47, 48, 49, 50.
+
+1st and 3d lines verse, 2d and 4th refrain; double, 21.
+
+1st and 3d lines verse, 2d and 4th refrain; chorus, 3, 30, 44.
+
+1st and 3d lines verse, 2d and 4th refrain; introduction, 46.
+
+1st line verse; chorus, 5.
+
+1st line verse (double); chorus, 19.
+
+3d line verse, 16.
+
+%% FIXME: Small quarter notes!
+
+As regards the \emph{tempo}, most of the tunes are in 2--4 time, and
+in most of these FIXME=100---(say) 100--120.  The spirit of the music
+will determine the \emph{tempo} within these limits.  The slower tunes
+are 1, 3, 9, 17, 21, etc.  No.~2 is about FIXME=160--180, and perhaps
+had better have been written in 3--8.  So No.~13 would be better in
+2--4; as it is, the FIXME=160--170.  No.~24 should be read as if
+divided in 2--4, with FIXME=100.  The \emph{tempo} of the rowing tunes
+has been already indicated.
+
+The pitch has generally been accommodated to voices of medium range.
+
+
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+\part{South-Eastern Slave States: including South Carolina, Georgia and the Sea Islands.}
+
+%%
+%% Setup for the score part of the book.
+%%
+
+
+%% We don't want no indentation.
+\newlength{\parindentsave}
+\setlength{\parindentsave}{\parindent}
+\setlength{\parindent}{0em}
+
+
+%% \changepage{textheight}{textwidth}{evensidemargin}{oddsidemargin}{columnsep}{topmargin}{headheight}{headsep}{footskip}
+\changepage{180pt}{80pt}{-65pt}{-15pt}{}{-90pt}{}{}{}
+
+%% Font used for stanzas (magically extracted from lilypond-book output).
+% New Century Schoolbook, 11pt.
+\newcommand{\stanzafont}{\normalsize}
+
+%\font\smallerfont=cmb10
+%\font\smallerfont=cmb7
+
+%% We reduce the vertical space between staff lines as much as plausible.
+\def\interscoreline{\vskip 1pt}
+
+
+%% Some environments.
+\newenvironment{song}
+{
+  % The -13pt is the first X coordinate of the bounding box in the EPS
+  % files generated by lilypond.  The effect is to align the staff with
+  % the left margin, ignoring the measure numbering.
+  \begin{list}{}{\leftmargin-13pt}\item{}
+}
+{
+  \end{list}
+  % Because lilypond wraps the score sheet in a block ``{}'', the
+  % stanzas following are separated by some extra white space.  Rather
+  % than trying to battle this (how?), we just skip back up and go on.
+  % The -20pt is somewhat arbitrary and unrelated to the above -13pt.
+  % Note that also for whitespace reasons we have to add footnotetext
+  % instructions inside the song environment.
+  \vspace{-20pt}
+}
+
+\newenvironment{songpart}
+{
+  % The -13pt is the first X coordinate of the bounding box in the EPS
+  % files generated by lilypond.  The effect is to align the staff with
+  % the left margin, ignoring the measure numbering.
+  \begin{list}{}{\leftmargin-13pt}\item{}
+}
+{
+  \end{list}
+  % Because lilypond wraps the score sheet in a block ``{}'', the
+  % stanzas following are separated by some extra white space.  Rather
+  % than trying to battle this (how?), we just skip back up and go on.
+  % The -20pt is somewhat arbitrary and unrelated to the above -13pt.
+  % Note that also for whitespace reasons we have to add footnotetext
+  % instructions inside the song environment.
+  \vspace{-31pt}
+}
+
+\newenvironment{stanza}
+{
+  \begin{enumerate}
+  \stanzafont
+}
+{
+  \end{enumerate}
+}
+
+\newlength{\parindenttmp}
+\newenvironment{extra}
+{
+  \setlength{\parindenttmp}{\parindent}
+  \setlength{\parindent}{\parindentsave}
+  \small
+}
+{
+  \setlength{\parindent}{\parindenttmp}
+}
+
+
+
+
+
+\section{Roll, Jordan, roll.}
+\thispagestyle{empty}
+
+% Normal is 276pt.
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{001.ly}
+
+  \footnotetext[1]{Parson Fuller, Deacon Henshaw, Brudder Mosey, Massa
+    Linkum, \&c.}
+\end{song}
+
+
+\begin{stanza}
+\item[2.]
+  Little chil'en, learn to fear de Lord, \\
+  And let your days be long; \\
+  Roll, Jordan, \&c.
+
+\item[3.]
+  O, let no false nor spiteful word \\
+  Be found upon your tongue; \\
+  Roll, Jordan, \&c.
+\end{stanza}
+
+\begin{extra}
+  [This spiritual probably extends from South Carolina to Florida, and
+    is one of the best known and noblest of the songs.]
+  
+  [The following variation appears above bars 4--6 in the original
+    print. - Ed.]
+
+  \medskip
+  \begin{song}
+    \begin[staffsize=14,notime,ragged-right]{lilypond}
+    <<
+      \context Voice
+      {
+        \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+
+        \autoBeamOff
+	       
+        \clef violin
+        \key d \major
+        \time 2/4
+
+        \set Score.currentBarNumber = #4
+        %%\override Score.BarNumber  #'padding = #3
+	       
+        a'4( f') \bar "|" g'4 g'8 a' \bar "|" f'4 d'8 f' \bar "|"
+      }
+      \lyricsto "" \new Lyrics
+      {
+        \override LyricText #'font-size = #0
+        \override StanzaNumber #'font-size = #-1
+
+        roll; Roll, Jor -- dan, Roll, Jor -- dan,
+      }
+    >>
+  \end{lilypond}
+  \end{song}
+\end{extra}
+
+
+\newpage
+\section{Jehovah, Hallelujah.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{002.ly}
+
+  \footnotetext[1]{Will provide.}
+  \footnotetext[2]{Hanno.}
+\end{song}
+
+
+
+\newpage
+\section{I hear from Heaven to-day.}
+\thispagestyle{empty}
+
+%% FIXME: Fix variations.
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{003.ly}
+
+  \footnotetext[1]{Travel.}
+  \footnotetext[2]{My brudder, Brudder Jacob, Sister Mary.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  A baby born in Bethlehem, \\
+  And I yearde, \&c.
+
+\item[3.]
+  De trumpet sound in de oder bright land.\footnote[3]{World.}
+  
+\item[4.]
+  My name is called and I must go.
+
+\item[5.]
+  De bell is a-ringin' in de oder bright world.
+\end{stanza}
+
+
+\newpage
+\section{Blow your trumpet, Gabriel.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{004.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Paul and Silas, bound in jail, \\
+  Sing God's praise both night and day; \\
+  And I hope, \&c.
+\end{stanza}
+
+\begin{extra}
+  [This hymn is sung in Virginia in nearly the same form. The
+    following minor variation is given by Mrs.~Bowen, as heard by her
+    in Charleston, some twenty-five years ago:]
+
+  \begin{song}
+    \begin[staffsize=14,line-width=316\pt]{lilypond}
+    \score
+    {
+      \new Staff {
+        <<
+
+          \context Voice
+          {
+	    \set Staff.midiInstrument = "acoustic grand"
+            \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	    \autoBeamOff
+	    
+	    \time 2/4
+	    \clef violin
+	    %% EDITED: Key changed to G major from G minor.
+	    \key g \major
+
+	    {
+	      \override Stem #'neutral-direction = #1
+	      bes'8 bes' a' a' | bes'8 bes' a' r | bes'8 bes' a' g' |
+	      fis'8 g' a' a'16 a' |
+	      \break
+	      bes'8 bes' a' a' | g'8. e'16 d'8 e'16 fis' |
+	      g'8. bes'16 a'8 a' | g'4 r8 a' |
+	      \break
+	      b'8. b'16 g'8
+	      \override Stem #'neutral-direction = #-1
+	      b' |
+	      \override Stem #'neutral-direction = #1
+	      c''8 d''4 r8 |
+	      e''8. d''16 c''8 e'' | e''8 d'' r a'16 a' |
+	      \break
+	      bes'8 bes' a' a' |
+	      %% EDITED: I changed the original g'4. to g'8. to make
+	      %% it fit into the measure.
+	      g'8. e'16 d'8 e'16 fis' | g'8. bes'16 a'8 a' | g'4 r
+	    }
+	  }
+	  \lyricsto "" \new Lyrics
+	  {
+            \override LyricText #'font-size = #0
+            \override StanzaNumber #'font-size = #-1
+
+	    Paul and Si -- las, bound in jail,
+	    Chris -- tians pray both night and day,
+	    And I hope dat trump might blow me home
+	    To my new Je -- ru -- sa -- lem.
+	    So blow de trum -- pet, Gab -- riel,
+	    Blow de trum -- pet loud -- er,
+	    And I hope dat trump might blow me home
+	    To my new Je -- ru -- sa -- lem.
+	  }
+	  >>
+      }
+      
+      \layout { indent = 0.0 }
+    }
+  \end{lilypond}
+  \end{song}
+\end{extra}
+
+%% EDITED \bigskip
+%% [In the original book, this variation was set in the key of G minor.
+%% However, with hindsight---just notice the major third in the second
+%% part of the piece---it can be better interpreted as being in the key
+%% of G major with the use of blue notes. - Ed.]
+
+
+\newpage
+\section{Praise, member.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{005.ly}
+
+  \footnotetext[1]{Believer.}
+  \footnotetext[2]{Religion so sweet.}
+  \footnotetext[3]{Shore.}
+  \footnotetext[4]{Stream, Fight.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  O soldier's fight is a good old fight, \\
+  And I hain't, \&c.
+
+\item[3.]
+  O I look to de East, and I look to de West.
+
+\item[4.]
+  O I wheel to de right, and I wheel to de left.
+\end{stanza}
+
+\begin{extra}
+  [The last verse is varied in several different ways; Col.~Higginson
+    gives, ``There's a hill on my leff, an' he catch on my right,''
+    and says, ``I could get no explanation of this last riddle,
+    except, `Dat mean, if you go on de leff, you go to 'struction, and
+    if you go on de right, go to God, for sure.'{}'' Miss Forten
+    gives, ``I hop on my right an' I catch on my leff,'' and supposes
+    ``that some peculiar motion of the body formed the original
+    accompaniment of the song, but has now fallen into disuse.''
+    Lt.~Col.~Trowbridge heard this hymn sung among the colored people
+    of Brooklyn, N.~Y., several years ago.]
+\end{extra}
+
+
+\newpage
+\section{Wrestle on, Jacob.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{006.ly}
+
+  \footnotetext[1]{My sister, Brudder Jacky, All de member.}
+  \footnotetext[2]{I would not let him go.}
+  \footnotetext[3]{Lord I.}
+\end{song}
+
+\begin{stanza}
+\item[2.] I will not let you go, my Lord.
+
+\item[3.] Fisherman Peter out at sea.
+
+\item[4.] He cast\footnote[4]{Fish.} all night and he
+cast\footnotemark[4] all day.
+
+\item[5.] He\footnote[5]{I.} catch no fish, but he\footnotemark[5] catch
+some soul.
+
+\item[6.] Jacob hang from a tremblin' limb.
+\end{stanza}
+
+\begin{extra}
+  [This is also sung in Maryland and Virginia, in a slightly modified
+    form.  A Virginia verse is,---
+    \begin{quote}
+      I looked to the East at the breaking of the day, \\
+%% FIXME: The University of North Carolina at Chapel Hill scan has
+%% ``when'' not ``went''.  What's correct?
+      The old ship of Zion went sailing away.]
+    \end{quote}
+\end{extra}
+
+
+\newpage
+\section{The Lonesome Valley.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{007.ly}
+
+  \footnotetext[1]{Sister Katy, etc.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  O feed on milk and honey.
+
+\item[3.]
+  O John he write de letter.
+
+\item[4.]
+  And Mary and Marta read 'em.
+\end{stanza}
+
+\begin{extra}
+  [``{}`De valley,' and `de lonesome valley' were familiar words in
+    their religious experience.  To descend into that region implied
+    the same process with the `anxious-seat' of the camp-meeting.
+    When a young girl was supposed to enter it, she bound a
+    handkerchief by a peculiar knot over her head, and made it a point
+    of honor not to change a single garment till the day of her
+    baptism, so that she was sure of being in physical readiness for
+    the cleansing rite, whatever her spiritual mood might be.  More
+    than once, in noticing a damsel thus mystically kerchiefed, I have
+    asked some dusky attendant its
+    %% EDITED: The dash was made longer.
+    meaning, and have received the unfailing answer,---framed with
+    their usual indifference to the genders of pronouns,---`He in de
+    lonesome valley, sa.'{}''---\emph{Col.~Higginson.}]
+\end{extra}
+
+
+\newpage
+\section{I can't stay behind.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{008.ly}
+
+  \footnotetext[1]{For you.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  I been all around, I been all around, \\
+  Been all around de Heaven, my Lord.
+
+\item[3.]
+  I've searched every room---in de Heaven, my Lord.\footnote[2]{And Heaven
+  all around.}
+
+\item[4.]
+  De angels singin'\footnote[3]{Crowned}---all around de trone.
+
+\item[5.]
+  My Fader call---and I must go.
+
+\item[6.]
+  Sto-back,\footnote[4]{``Sto-back'' means ``Shout backwards''} member;
+  sto-back, member.
+\end{stanza}
+
+
+\newpage
+\thispagestyle{empty}
+
+\begin{extra}
+  [This ``shout'' is very widely spread, and variously sung.  In
+    Charleston it is simpler in its movement, and the refrain is ``I
+    can't stay away.''  In Edgefield it is expostulating: ``Don't stay
+    away, my mudder.''  Col.~Higginson gives the following version, as
+    sung in his regiment:
+
+    %% FIXME: This is not small as the rest in the extra environment.
+    \begin{stanza}
+    \item[]
+      ``O, my mudder is gone!  my mudder is gone! \\
+      My mudder is gone into heaven, my Lord! \\
+      I can't stay behind! \\
+      Dere's room in dar, room in dar. \\
+      Room in dar, in de heaven, my Lord! \\
+      I can't stay behind. \\
+      Can't stay behind, my dear, \\
+      I can't stay behind!
+      
+    \item[]
+      ``O, my fader is gone! \&c.
+
+    \item[]
+      ``O, de angels are gone! \&c.
+      
+    \item[]
+      ``O, I'se been on de road!  I'se been on de road! \\
+      I'se been on de road into heaven, my Lord! \\
+      I can't stay behind! \\
+      O, room in dar, room in dar, \\
+      Room in dar, in de heaven, my Lord! \\
+      I can't stay behind!''
+    \end{stanza}
+    
+    Lt.~Col.~Trowbridge is of opinion that it was brought from
+    Florida, as he first heard it in Dec, 1862, from a boat-load of
+    Florida soldiers brought up by Lt.~Col.~Billings.  It was not
+    heard by Mr.~Ware at Coffin's Point until that winter.  It seems
+    hardly likely, however, that it could have made its way to
+    Charleston and Edgefield since that time.  The air became
+    ``immensely popular'' in the regiment, and was soon adopted for
+    military purposes, so that the class leaders indignantly
+    complained of ``the drum corps using de Lord's chune.'']
+\end{extra}
+
+
+\newpage
+\section{Poor Rosy.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{009.ly}
+
+  \footnotetext[1]{Poor C\ae{}sar, poor boy.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Got hard trial in my way, \emph{(ter)} \\
+  Heav'n shall-a be my home.
+
+%% FIXME: There is an indentation here that must be removed.
+%% And every second line should be indented.
+  $\left.
+  \begin{array}{l}
+    \mbox{O when I talk\footnote[2]{Walk.}, I talk\footnotemark[2] wid God,} \\
+    \mbox{Heav'n shall-a be my home.}
+  \end{array}
+  \right\}
+  \mbox{\emph{(bis)}}$
+
+\item[3.]
+  I dunno what de people\footnote[3]{Massa.} want of me, \emph{(ter)} \\
+  Heav'n shall-a be my home.
+\end{stanza}
+
+\begin{extra}
+  [This song ranks with ``Roll, Jordan,'' in dignity and favor.  The
+    following variation of the second part was heard at ``The Oaks:'']
+
+  %% EDITED: I changed the key of the variation from C major to E minor.
+  %% Apparently the sharp sign was missing.
+  \medskip
+  \begin{song}
+    \begin[staffsize=14]{lilypond}
+    <<
+      \context Voice
+      {
+        \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+	       
+	\autoBeamOff
+	   
+	\clef violin
+	\key e \minor
+	\time 2/4
+
+	%% FIXME: Make the bar number pop up at the beginning of the line.
+	\set Score.currentBarNumber = #9
+	%%\override Score.BarNumber #'padding = #3
+
+	\repeat volta 2
+	{
+	  \partial 8 e'8 \bar "|"
+	  e'8 e' g' e' \bar "|"
+	  d'8 d' b4 \bar "|"
+	  g'16 g' g' g' g'8 fis' \bar "|" e'4 r8
+	}
+      }
+      \lyricsto "" \new Lyrics
+      {
+        \override LyricText #'font-size = #0
+        \override StanzaNumber #'font-size = #-1
+
+	\repeat fold 2 {}
+	\alternative
+	{
+	  {
+	    Be -- fore I stay in hell one day,
+	    Heav -- en shall -- a be my home;
+	  }
+	  {
+	    I sing and pray my soul a -- way,
+	    Heav -- en shall -- a be my home.
+	  }
+	}
+      }
+    >>
+  \end{lilypond}
+  \end{song}
+\end{extra}
+
+
+\newpage
+\section{The Trouble of the World.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{010.ly}
+
+  \footnotetext[1]{O you ought to be.}
+  \footnotetext[2]{My sister, My mudder, etc.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+I ask de Lord how long I hold 'em, \emph{(ter)} \\
+Hold 'em to de end.
+
+\item[3.]
+My sins so heavy I can't get along, Ah! \&c.
+
+\item[4.]
+I cast my sins in de middle of de sea, Ah! \&c.
+\end{stanza}
+
+\begin{extra}
+  [This is perhaps as good a rendering of this strange song as can be
+    given.  The difficulty is in the time, which is rapid, hurried and
+    irregular to a degree which is very hard to imitate and impossible
+    to represent in notes.  The following is sung in Savannah, with
+    the same refrain, ``Trouble of the world:'']
+
+  %% FIXME: Song very close to footnotes.
+  \begin{song}
+    \begin[staffsize=14]{lilypond}
+    <<
+      \context Voice
+      {
+        \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+
+	\autoBeamOff
+	   
+	\clef violin
+	\key g \major
+	\time 2/4
+
+	\override Stem #'neutral-direction = #1
+	\repeat volta 2
+	{
+	  \partial 8 d'8 | b'8 b'a ' a' | g'8 g' fis'4 | e'2 |
+	  fis'8 fis' d' d' |
+	  \break
+	  fis'8 fis' fis' fis' | g'8 g' c''4 |
+	  b'4 a'8 a' | g'4 r8
+	}
+      }
+      \lyricsto "" \new Lyrics
+      {
+        \override LyricText #'font-size = #0
+        \override StanzaNumber #'font-size = #-1
+
+	I wish I was in ju -- bi -- lee, Ha, ju -- bi -- lee;
+	I wish I was in ju -- bi -- lee, Roll, Jor -- dan, roll.
+      }
+    >>
+  \end{lilypond}
+  \end{song}
+\end{extra}
+
+
+\newpage
+\section{There's a meeting here to-night.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{011.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Brudder John was a writer, he write de laws of God; \\
+  Sister Mary say to brudder John, ``Brudder John, don't write no more.'' \\
+  Dere's a meeting here to-night, Oh!  (Brudder Sandy,) \emph{(bis)} \\
+  Dere's a meeting here to-night, \\
+  I hope to meet again.
+\end{stanza}
+
+\begin{extra}
+  [Mrs.~Bowen gives us the following beautiful variation, as sung in
+    Charleston:]
+
+  \medskip
+  \begin{song}
+    \begin[staffsize=14,line-width=316\pt]{lilypond}
+    \score
+    {
+      \new Staff {
+      <<
+        \context Voice
+	{
+	  \set Staff.midiInstrument = "acoustic grand"
+          \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	  \autoBeamOff
+	  
+	  \time 2/4
+	  \clef violin
+	  \key d \major
+
+	  {
+	    \partial 4 a'4 |
+	    d''8 d''16 d''16 d''8 e'' | d''8 cis'' r a'16 a' |
+	    b'8 b' d''8. b'16 | b'8 a' r a'16 a' |
+	    \break
+	    \override Stem #'neutral-direction = #1
+	    d''8 a' g' b' | a'8 fis' r fis'16 fis'16 |
+	    a'8 g' e'8. fis'16 | d'4 r8 d'16 e' |
+	    \break
+	    fis'8 fis' fis'8. e'16 | a'4 r8 g'16 fis' |
+	    e'8 e' e'8. d'16 | e'4 e''8-^ cis''8 |
+	    \break
+	    d''8 a' g' b' | a'8 fis' r fis'16 fis' |
+	    a'8 g' e'8. fis'16 | d'4 \bar "||"
+	  }
+	}
+	\lyricsto "" \new Lyrics
+	{
+          \override LyricText #'font-size = #0
+          \override StanzaNumber #'font-size = #-1
+
+	  I see brud -- der Mo -- ses yon -- der,
+	  And I think I ought to know him,
+	  For I know him by his gar -- ment,
+	  He's a bless -- ing here to -- night;
+	  He's a bless -- ing here to -- night,
+	  He's a bless -- ing here to -- night,
+	  And I think I ought to know him,
+	  He's a bless -- ing here to -- night.
+	}
+      >>
+    }
+    \layout { indent = 0.0 }
+  }
+  \end{lilypond}
+  \end{song}
+\end{extra}
+
+
+\newpage
+\section{Hold your light.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{012.ly}
+
+  \footnotetext[1]{Long o'.}
+  \footnotetext[2]{All de member, Turn seeker.}
+\end{song}
+
+\newpage
+\section{Happy Morning.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{013.ly}
+
+  \footnotetext[1]{Doubt no more, Thomas.}
+  \footnotetext[2]{Glorious, Sunday.}
+  \footnotetext[3]{O what a happy Sunday.}
+\end{song}
+
+\newpage
+\section{No man can hinder me.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{014.ly}
+\end{song}
+
+\begin{stanza}
+\item[3.]
+  Jesus make de dumb to speak.
+
+\item[4.]
+  Jesus make de cripple walk.
+
+\item[5.]
+  Jesus give de blind his sight.
+
+\item[6.]
+  Jesus do most anyting.
+
+\item[7.]
+  Rise, poor Lajarush, from de tomb.
+
+\item[8.]
+  Satan ride an iron-gray horse.
+
+\item[9.]
+  King Jesus ride a milk-white horse.
+\end{stanza}
+
+\begin{extra}
+  \emph{Variation.}
+
+  \begin{song}
+    \begin[staffsize=14,line-width=316\pt]{lilypond}
+    \score
+    {
+      \new Staff {
+	<<
+	\context Voice
+	{
+	  \set Staff.midiInstrument = "acoustic grand"
+          \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	  \autoBeamOff
+	  
+	  \time 2/4
+	  \clef violin
+	  \key c \major
+	  
+          {
+	    \partial 8 g'8 |
+	    g'8 g'8 g'8. g'16 | a'8 d'' c'' r |
+	    %% FIXME: Merge note heads.
+	    << { \stemUp a'4 a'8. g'16 \stemNeutral }
+	    << \\ { \autoBeamOff \stemDown a'8 a'4 g'8 } >> >> |
+	    a'8 b' c'' d'' | e''8 e'' c'' g' | c''8 g' e' r |
+	    << { \stemUp g'4 e'8. c'16 \stemNeutral }
+	    << \\ { \autoBeamOff \stemDown g'8 e'4 c'8 } >> >> |
+	    d'8 c' c' r | \bar "||"
+	  }
+	}
+        \lyricsto "" \new Lyrics
+	{
+          \override LyricText #'font-size = #0
+          \override StanzaNumber #'font-size = #-1
+
+	  You'd bet -- ter pray, de world da gwine, No man can hin -- der me!
+	  De Lord have mer -- cy on my soul, No man can hin -- der me!
+      }
+    >>
+  }
+  \layout { indent = 0.0 }
+}
+  \end{lilypond}
+  \end{song}
+\end{extra}
+
+
+\newpage
+\section{Lord, remember me.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{015.ly}
+
+  \footnotetext[1]{Do.}
+  \footnotetext[2]{I pray (cry) to de Lord.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  I want to die like-a Jesus die, \\
+  And he die wid a free good will, \\
+  I lay out in de grave and I stretchee out e arms, \\
+  Do, Lord, remember me.
+\end{stanza}
+
+
+\newpage
+\section{Not weary yet.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{016.ly}
+
+  \footnotetext[1]{Sister Mary.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Since I been in de field to\footnote[2]{Been-a.} fight.
+
+\item[3.]
+  I have a heaven to maintain.
+
+\item[4.]
+  De bond of faith are on my soul.
+
+\item[5.]
+  Ole Satan toss a ball at me.
+
+\item[6.]
+  Him tink de ball would hit my soul.
+
+\item[7.]
+  De ball for hell and I for heaven.
+\end{stanza}
+
+
+\newpage
+\section{Religion so sweet.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{017.ly}
+\end{song}
+
+\begin{stanza}
+\item[3.]
+  Religion make you happy.\footnote[1]{Humble.}
+
+\item[4.]
+  Religion gib me patience.\footnote[2]{Honor, Comfort.}
+
+\item[5.]
+  O member, get religion.
+
+\item[6.]
+  I long time been a-huntin'.
+
+\item[7.]
+  I seekin' for my fortune.
+
+\item[8.]
+  O I gwine to meet my Savior.
+
+\item[9.]
+  Gwine to tell him 'bout my trials.
+
+\item[10.]
+  Dey call me boastin' member.
+
+\item[11.]
+  Dey call me turnback\footnote[3]{Lyin', 'ceitful.} Christian.
+
+\item[12.]
+  Dey call me 'struction maker.
+
+\item[13.]
+  But I don't care what dey call me.
+
+\item[14.]
+  Lord, trial 'longs to a Christian.
+
+\item[15.]
+  O tell me 'bout religion.
+
+\item[16.]
+  I weep for Mary and Marta.
+
+\item[17.]
+%% EDITED: Added ``him.''
+  I seek my Lord and I find him.
+\end{stanza}
+
+
+\newpage
+\section{Hunting for the Lord.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{018.ly}
+\end{song}
+
+
+\newpage
+\section{Go in the wilderness.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{019.ly}
+
+  \footnotetext[1]{To.}
+\end{song}
+
+\begin{multicols}{2}
+\begin{stanza}
+%% FIXME: Where is stanzas 2?
+\item[3.]
+  You want to be a Christian.
+
+\item[4.]
+  You want to get religion.
+
+\item[5.]
+  If you spec' to be converted.
+
+\item[6.]
+  O weepin' Mary.
+
+\item[7.]
+  'Flicted sister.
+
+\item[8.]
+  Say, ain't you a member?
+
+\item[9.]
+  Half-done Christian.
+
+\item[10.]
+  Come, backslider.
+
+\item[11.]
+  Baptist member.
+
+\item[12.]
+  O seek, brudder Bristol.
+
+\item[13.]
+  Jesus a waitin' to meet you in de wilderness.
+\end{stanza}
+\end{multicols}
+
+\begin{extra}
+  [The second part of this spiritual is the familiar Methodist hymn
+    ``Ain't I glad I got out of the wilderness!''\ and may be the
+    original.  The first part is very beautiful, and appears to be
+    peculiar to the Sea Islands.]
+\end{extra}
+
+
+\newpage
+\section{Tell my Jesus ``Morning.''}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{020.ly}\
+
+  \footnotetext[1]{Morning.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Mornin', Hester, mornin' gal, \\
+  Tell my Jesus, \&c.
+\end{stanza}
+
+\begin{extra}
+\emph{Variation to first line.}
+
+\begin{song}
+  \begin[staffsize=14]{lilypond}
+  <<
+  \context Voice
+  {
+    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+    
+    \autoBeamOff
+    
+    \clef violin
+    \key g \major
+    \time 2/4
+    
+    b'8 a'16 g' b'8 g' | b'8 g'16 g' e'8 g' |
+  }
+  \lyricsto "" \new Lyrics
+  {
+    \override LyricText #'font-size = #0
+    \override StanzaNumber #'font-size = #-1
+
+    Pray To -- ny, pray boy, you got de or -- der;
+  }
+  >>
+\end{lilypond}
+\end{song}
+
+\smallskip
+\end{extra}
+\begin{stanza}
+\small
+\item[2.]
+  Say, brudder Sammy, you got de order, \\
+  Tell my Jesus, \&c.
+
+\item[3.]
+  You got de order, and I got de order.
+\end{stanza}
+
+
+\newpage
+\section{The Graveyard.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{021.ly}
+
+  \footnotetext[1]{Sing glory, Graveyard.}
+\end{song}
+
+\begin{stanza}
+\item[3.]
+  O graveyard, ought to know me.
+
+\item[4.]
+  O grass grow in de graveyard.
+
+\item[5.]
+  O I reel\footnote[2]{Shout, Wheel.} and I rock in de graveyard.
+
+\item[6.]
+  O I walk and I toss wid Jesus.
+
+\item[7.]
+  My mudder reel and-a toss wid de fever.
+
+\item[8.]
+  I have a grandmudder in de graveyard.
+
+\item[9.]
+  O where d'ye tink I find 'em?\footnote[3]{\emph{i.e.,} religion; see Preface.}
+
+\item[10.]
+  I find 'em, Lord, in de graveyard.
+
+\item[11.]
+  (Member,) I wheel, and I rock, and I gwine home.
+
+\item[12.]
+  (Brudder Sammy) O 'peat dat story over.
+\end{stanza}
+
+\begin{extra}
+\emph{Variation to Verse 3.}
+
+\medskip
+\begin{song}
+  \begin[staffsize=14,notime,ragged-right]{lilypond}
+    <<
+    \context Voice
+	 {
+           \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+
+	   \autoBeamOff
+	   
+	   \clef violin
+	   \key f \major
+	   \time 2/4
+
+		 {
+		   \partial 8 c''8 | c''8. c''16 c''8 c'' | \partial 4 d''8 c''
+		 }
+	 }
+	 \lyricsto "" \new Lyrics
+	 {
+           \override LyricText #'font-size = #0
+           \override StanzaNumber #'font-size = #-1
+
+	   Grave -- yard, you ought to know me.
+	 }
+  >>
+\end{lilypond}
+\end{song}
+\end{extra}
+
+
+\newpage
+\section{John, John, of the Holy Order.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{022.ly}
+
+  \footnotetext[1]{John, John, de holy Baptist.}
+  \footnotetext[2]{Paul and Silas, bound in jail.}
+\end{song}
+
+\newpage
+\thispagestyle{empty}
+
+\begin{extra}
+  [These words were sung at Hilton Head to the second and third parts:
+
+    \begin{stanza}
+    \item[]
+      I went down sing polka, and I ax him for my Saviour; \\
+      I wonder de angel told me Jesus gone along before. \\
+      I mourn, I pray, although you move so slow; \\
+      I wonder, \&c.
+    \end{stanza}
+
+    The regularity and elaborateness of this hymn lead one at first to
+    suspect its genuineness.  The question seems, however, to be settled
+    by two very interesting and undoubted variations from North Carolina
+    and Georgia.  The following words were sung at Augusta, but we have
+    not been able to obtain the tune, which is entirely unlike that given
+    above.  For the North Carolina variation, see No.~100.  Both, as will
+    be seen, omit the second part, and a comparison of the two shows that
+    %% EDITED: Inserted a period after ``altar''.
+    the enigmatical word ``order'' should undoubtedly be ``altar''.  The
+    North Carolina tune has the first part quite different from the Port
+    Royal tune, the last very similar to it.
+
+    \begin{stanza}
+    \item[]
+      Oh John, John, de holy member, \\
+      Sittin' on de golden ban'. \\
+      O worldy, worldy, let him be, \\
+      Let him be, let him be; \\
+      Worldly, worldly, let him be, \\
+      Sittin' on de golden ban'.]
+    \end{stanza}
+\end{extra}
+
+\newpage
+\section{I saw the beam in my sister's eye.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{023.ly}
+
+  \footnotetext[1]{Titty Peggy, Brudder Mosey, \&c.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  And I had a mighty battle like-a Jacob and de angel, \\
+  Jacob, time of old; \\
+  I didn't 'tend to lef' 'em go \\
+  Till Jesus bless my soul.
+
+\item[3.]
+  And bless\`ed me, and bless\`ed my, \\
+  And bless\`ed all my soul; \\
+  I didn't 'tend to lef' 'em go \\
+  Till Jesus bless my soul.
+\end{stanza}
+
+\begin{extra}
+  [This tune appears to be borrowed from ``And are ye sure the news is
+    true?''---but it is so much changed, and the words are so
+    characteristic, that it seemed undoubtedly best to retain it.]
+\end{extra}
+
+
+\newpage
+\section{Hunting for a city.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{024.ly}
+\end{song}
+
+
+\newpage
+\section{Gwine follow.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{025.ly}
+\end{song}
+
+\bigskip
+\begin{extra}
+  [The second part of this tune is evidently ``Buffalo'' (variously
+    known also as ``Charleston'' or ``Baltimore'') ``Gals;'' the first
+    part, however, is excellent and characteristic.]
+\end{extra}
+
+
+\newpage
+\section{Lay this body down.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{026.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+%% EDITED: Moved footnote to end of line.
+  I know moonlight,\footnote[1]{O moonlight (\emph{or}
+  moonrise); O my soul, O your soul.} I know starlight, \\
+  I'm walkin' troo de starlight; \\
+  Lay dis body down.
+\end{stanza}
+
+\begin{extra}
+  [This is probably the song heard by W.~H.~Russell, of the London
+    Times, as described in chapter xviii.~of ``My Diary North and
+    South.''  The writer was on his way from Pocotaligo to
+    Mr.~Trescot's estate on Barnwell Island, and of the midnight row
+    thither he says:
+
+    ``The oarsmen, as they bent to their task, beguiled the way by
+    singing in unison a real negro melody, which was unlike the works
+    of the Ethiopian Serenaders as anything in song could be unlike
+    another.  It was a barbaric sort of madrigal, in which one singer
+    beginning was followed by the others in unison, repeating the
+    refrain in chorus, and full of quaint expression and
+    melancholy:---
+
+    `O your soul! oh my soul! I'm going to the churchyard \\
+    To lay this body down; \\
+    Oh my soul! oh your soul! we're going to the churchyard \\
+    To lay this nigger down.'
+
+    And then some appeal to the difficulty of passing the `Jawdam'
+    constituted the whole of the song, which continued with unabated
+    energy during the whole of the little voyage.  To me it was a
+    strange scene.  The stream, dark as Lethe, flowing between the
+    silent, houseless, rugged banks, lighted up near the landing by
+    the fire in the woods, which reddened the sky---the wild strain,
+    and the unearthly adjurations to the singers' souls, as though
+    they were palpable, put me in mind of the fancied voyage across
+    the Styx.''
+
+
+    \newpage
+    \thispagestyle{empty}
+
+    We append with some hesitation the following as a variation; the
+    words of which we borrow from Col.~Higginson.  Lt.~Col.~Trowbridge
+    says of it that it was sung at funerals in the night time---one of
+    the most solemn and characteristic of the customs of the negroes.
+    He attributes its origin to St.~Simon's Island, Georgia:]
+
+\medskip
+\begin{song}
+  \begin[staffsize=18,line-width=356\pt]{lilypond}
+\score
+{
+  \new Staff {
+    <<
+    \context Voice
+    {
+	\set Staff.midiInstrument = "acoustic grand"
+        \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	\autoBeamOff
+
+	\time 4/4
+	\clef violin
+	\key g \minor
+
+	     {
+	       es''4 | es''4. es''8 es''4. es''8 |
+	       d''4. d''8 d''4. d''8 |
+	       c''4 c'' bes' a' | bes'2 r4 | \bar "||"
+	     }
+    }
+    \lyricsto "" \new Lyrics
+    {
+      \override LyricText #'font-size = #0
+      \override StanzaNumber #'font-size = #-1
+
+      I know moon -- light, I know star -- light;
+      I lay dis bo -- dy down.
+    }
+    >>
+  }
+
+  \layout { indent = 0.0 }
+}
+\end{lilypond}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  I walk in de moonlight, I walk in de starlight; \\
+  I lay dis body down.
+
+\item[3.]
+  I know de graveyard, I know de graveyard, \\
+  When I lay dis body down.
+
+\item[4.]
+  I walk in de graveyard, I wall troo de graveyard, \\
+  To lay, \&c.
+
+\item[5.]
+  I lay in de grave an' stretch out my arms; \\
+  I lay, \&c.
+
+\item[6.]
+  I go to de judgement in de evenin' of de day \\
+  When I lay, \&c.
+
+\item[7.]
+  And my soul an' your soul will meet in de day \\
+  When we lay, \&c.
+\end{stanza}
+
+\bigskip
+    [``{}`I'll lie in de grave and stretch out my arms' Never, it
+      seems to me, since man first lived and suffered, was his
+      infinite longing for peace uttered more plaintively than in that
+      line.''---\emph{Col.~Higginson.}]
+\end{extra}
+
+
+\newpage
+\section{Heaven bell a-ring.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{027.ly}
+\end{song}
+
+\begin{stanza}
+\setlength{\itemsep}{1pt}
+\item[2.]
+  What shall I do for a hiding place?  And a heav'n, \&c.
+
+\item[3.]
+  I run to de sea, but de sea run dry.
+
+\item[4.]
+  I run to de gate, but de gate shut fast.
+
+\item[5.]
+  No hiding place for sinner dere.
+
+\item[6.]
+%% FIXME: Say when... instead Say you when...?
+  Say you when you get to heaven say you 'member me.
+
+\item[7.]
+  Remember me, poor fallen soul.\footnotetext[1]{When I am gone, for
+  Jesus' sake.}
+
+\item[8.]
+  Say when you get to heaven say your work shall prove.
+
+\item[9.]
+  Your righteous Lord shall prove 'em well.
+
+\item[10.]
+  Your righteous Lord shall find you out.
+
+\item[11.]
+  He cast out none dat come by faith.
+
+\item[12.]
+  You look to de Lord wid a tender heart.
+
+\item[13.]
+ I wonder where poor Monday dere.
+
+\item[14.]
+  For I am gone and sent to hell.
+
+\item[15.]
+  We must harkee what de worldy say.
+
+\item[16.]
+  Say Christmas come but once a year.
+
+\item[17.]
+  Say Sunday come but once a week.
+\end{stanza}
+
+
+\newpage
+\section{Jine 'em.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{028.ly}
+\end{song}
+
+\bigskip
+\begin{extra}
+  [For other words see ``Heaven bell a-ring,'' No.~27.  The following
+    were sung at Hilton Head, probably to the same tune:
+
+    %% FIXME: Indentation.
+    Join, brethren, join us O, \\
+    Join us, join us, O. \\
+    We meet to-night to sing and pray; \\
+    In Jesus' name we'll sing and pray.
+
+    A favorite rowing tune: apparently a variation of ``Turn sinner,''
+    No.~48.]
+\end{extra}
+
+
+\newpage
+\section{Rain fall and wet Becca Lawton.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{029.ly}
+
+  \footnotetext[1]{Sun come and dry.}
+  \footnotetext[2]{All de member, \&c.}
+  \footnotetext[3]{We all, Believer, \&c.}
+  \footnotetext[4]{Beat, Bent, Rack.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Do, Becca Lawton, come to me yonder.
+
+\item[3.]
+  Say, brudder Tony, what shall I do now?
+
+\item[4.]
+  Beat back holy, and rock salvation.
+\end{stanza}
+
+\begin{extra}
+  [``Who,'' says Col.~Higginson, ``\emph{Becky Martin} was, and why
+    she should or should not be wet, and whether the dryness was a
+    reward or a penalty, none could say.  I got the impression that,
+    in either case, the event was posthumous, and that there was some
+    tradition of grass not growing over the grave of a sinner; but
+    even this was vague, and all else vaguer.''
+
+    Lt.~Col.~Trowbeidge heard a story that ``\emph{Peggy Norton} was
+    an old prophetess, who said that it would not do to be baptised
+    except when it rained; if the Lord was pleased with those who had
+    been `in the wilderness,' he would sand rain.''  Mr.~Tomlinson
+    says that the song always ends with a laugh, andd appears
+    therefore to be regarded by the negroes as mere nonsense.  he adds
+    that when it is used as a rowing tune, at the words ``Rack back
+    holy!''\ one rower reaches over back and slaps the man behind him,
+    who in turn does the same, and so on.]
+\end{extra}
+
+
+\newpage
+\section{Bound to go.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{030.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  I build my house on shiftin' sand, \\
+  De first wind come he blow him down.
+
+\item[3.]
+  I am not like de foolish man, \\
+  He build his house upon de sand.
+
+\item[4.]
+  One mornin' as I was a walkin' along, \\
+  I saw de berries a-hanging down.
+
+\item[5.]
+  I pick de berries and I suck de juice, \\
+  He sweeter dan de honey comb.
+
+%% FIXME: \item[6.]?
+  I tuk dem brudder, two by two, \\
+  I tuk dem sister, tree by tree.
+\end{stanza}
+
+\newpage
+\thispagestyle{empty}
+
+%%FIXME: center
+\emph{Variation.}
+
+\begin{song}
+  \begin[staffsize=18,line-width=356\pt]{lilypond}
+\score
+{
+  \new Staff {
+    <<
+    \context Voice
+    {
+	\set Staff.midiInstrument = "acoustic grand"
+     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	\autoBeamOff
+
+	\time 2/4
+	\clef violin
+	\key d \major
+
+	\override Stem #'neutral-direction = #1
+	\partial 8 a'8 | d''8 d'' cis'' a' | b'8 b' a' r |
+	d''4 e'' | a'4 r8 a'8 | d''8 d'' cis' a' | b'8 b' a' r |
+	fis'4 e' | d'4 r8 \bar "||" \break
+
+	r8 | a'8 b' a' a' | fis'8. fis'16 fis'8 r8 |
+	a'8 << { \stemUp b'8 \stemNeutral }
+	<< \\ { \stemDown a'8 } >> >> a'8 a' |
+	e'8. e'16 e'8 r8 | a'8 b' a' a' | fis'8. g'16 a'8 r8 |
+	d'16 d'8. fis'8. e'16 | d'4 r8 \bar "||"
+    }
+    \lyricsto "" \new Lyrics
+    {
+        \override LyricText #'font-size = #0
+        \override StanzaNumber #'font-size = #-1
+
+	I build my house up -- on a rock, O yes, Lord!
+	No wind nor storm shall blow 'em down, O yes, Lord!
+	March on, mem -- ber, Bound to go;
+	March on, mem -- ber, Bound to go;
+	March on, mem -- ber, Bound to go;
+	Bid 'em fare you well.
+    }
+    >>
+  }
+
+  \layout { indent = 0.0 }
+}
+\end{lilypond}
+\end{song}
+
+
+\newpage
+\section{Michael row the boat ashore.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{031.ly}
+\end{song}
+
+\begin{stanza}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\item[3.]
+  I wonder where my mudder deh (there).
+
+\item[4.]
+  See my mudder on de rock gwine home.
+
+\item[5.]
+  On de rock gwine home in Jesus' name.
+
+\item[6.]
+  Michael boat a music boat.
+
+\item[7.]
+  Gabriel blow de trumpet horn.
+
+\item[8.]
+  O you mind your boastin' talk.
+
+\item[9.]
+  Boastin' talk will sink your soul.
+
+\item[10.]
+  Brudder, lend a helpin' hand.
+
+\item[11.]
+  Sister, help for trim dat boat.
+
+\item[12.]
+  Jordan stream is wide and deep.
+
+\item[13.]
+  Jesus stand on t' oder side.
+
+\item[14.]
+  I wonder if my maussa deh.
+
+\item[15.]
+  My fader gone to unknown land.
+
+\item[16.]
+  O de Lord he plant his garden deh.
+
+\item[17.]
+  He raise de fruit for you to eat.
+
+\item[18.]
+  He dat eat shall neber die.
+
+\item[19.]
+  When de riber overflow.
+
+\item[20.]
+  O poor sinner, how you land?
+
+\item[21.]
+  Riber run and darkness comin'.
+
+\item[22.]
+  Sinner row to save your soul.
+\end{stanza}
+
+%%FIXME: center
+\emph{Words from Hilton Head.}
+
+Michael haul the boat ashore. \\
+Then you'll hear the horn they blow. \\
+Then you'll hear the trumpet sound. \\
+Trumpet sound the world around. \\
+Trumpet sound for rich and poor. \\
+Trumpet sound the jubilee. \\
+Trumpet sound for you and me.
+
+
+\newpage
+\section{Sail, O believer.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{032.ly}
+\end{song}
+
+\bigskip
+\begin{extra}
+  [Col.~Higginson gives the following stanzas, of which the above
+    seems to be a part; but unfortunately he is unable to identify the
+    music, which is well described by the terms in which he speaks of
+    the words---''very graceful and lyrical, and with more variety of
+    rhythm than usual:''
+
+    %%FIXME: Indentation
+    ``Bow low, Mary, bow low, Martha, \\
+    For Jesus come and lock de door, \\
+    And carry de keys away.
+
+    Sail, sail, over yonder, \\
+    And view de promised land, \\
+    For Jesus come, \&c.
+
+    Weep, O Mary, bow low, Martha, \\
+    For Jesus come, \&c.
+
+    Sail, sail, my true believer; \\
+    Sail, sail, over yonder; \\
+    Mary, bow low, Martha, bow low, \\
+    For Jesus come and lock de door, \\
+    And carry de keys away.'']
+\end{extra}
+
+
+\newpage
+\section{Rock o' Jubilee.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{033.ly}
+
+  \footnotetext[1]{To mercy seat, To de corner o' de world.}
+  \footnotetext[2]{Yes.}
+\end{song}
+
+\begin{stanza}
+\item[3.]
+  Stand back, Satan, let me come by.
+
+\item[4.]
+  O come, titty Katy, let me go.
+
+\item[5.]
+  I have no time for stay at home.
+
+\item[6.]
+  My Fader door wide open now.
+
+\item[7.]
+  Mary, girl, you know my name.
+
+\item[8.]
+  Look dis way an' you look dat way.
+
+\item[9.]
+  De wind blow East, he blow from Jesus.
+\end{stanza}
+
+
+\newpage
+\section{Stars begin to fall.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{034.ly}
+
+  \footnotetext[1]{Titty Nelly, De member, \&c.}
+\end{song}
+
+\newpage
+\section{King Emanuel.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{035.ly}
+\end{song}
+
+\begin{stanza}
+\item[3.]
+  If you touch one string, den de whole heaven ring.
+
+\item[4.]
+  O the great cherubim, O de cherubim above.
+
+\item[5.]
+  O believer, ain't you glad dat your soul is converted?
+\end{stanza}
+
+\begin{extra}
+  [This hymn---words and melody--bears all the marks of white origin.
+    We have not, however, been able to find it in any hymn-book, and
+    therefore retain it, as being a favorite at Port Royal.]
+\end{extra}
+
+
+\newpage
+\section{Satan's Camp A-Fire.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{036.ly}
+\end{song}
+
+
+\newpage
+\section{Give up the world.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{037.ly}
+
+  \footnotetext[1]{De moon give a light, De starry crown.}
+\end{song}
+
+\bigskip
+\begin{extra}
+  [The first movement of this air is often sung in the minor key.]
+\end{extra}
+
+
+\newpage
+\section{Jesus on the Waterside.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{038.ly}
+\end{song}
+
+
+\newpage
+\section{I wish I been dere.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{039.ly}
+\end{song}
+
+
+\newpage
+\section{Build a house in Paradise.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{040.ly}
+\end{song}
+
+
+\newpage
+\section{I know when I'm going home.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{041.ly}
+\end{song}
+
+
+\newpage
+\section{I'm a trouble in de mind.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{042.ly}
+
+  \footnotetext[1]{Titty Rosy, Brudder Johnny, Come along dere.}
+\end{song}
+
+\newpage
+\section{Travel on.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{043.ly}
+
+  \footnotetext[1]{Heaven-bound.}
+\end{song}
+
+\newpage
+%% CHANGED: Add comma as in TOC.
+\section{Archangel, open the door.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{044.ly}
+
+  \footnotetext[1]{Sister.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Brudder, tuk off your knapsack, I'm gwine home;\\
+  Archangel open de door.
+\end{stanza}
+
+
+\newpage
+\section{My body rock 'long fever.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{045.ly}
+
+  \footnotetext[1]{All de member.}
+  \footnotetext[2]{Long time seeker 'gin to believe.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  By de help ob de Lord we rise up again\\
+  O de Lord he comfort de sinner;\\
+  By de help ob de Lord we rise up again\\
+  An' we'll get to heaven at last.
+\end{stanza}
+
+\newpage
+\thispagestyle{empty}
+
+%%FIXME: center
+\emph{Variation.}
+
+\begin{song}
+  \begin[staffsize=18,line-width=356\pt]{lilypond}
+\score
+{
+  \new Staff {
+    <<
+    \context Voice
+    {
+	\set Staff.midiInstrument = "acoustic grand"
+	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	\autoBeamOff
+
+	\time 2/4
+	\clef violin
+	\key d \minor
+
+	\partial 8 f'16 f' | g'8 g' g' f'16 g' | bes'8 bes' bes' d' |
+	f'8 f' d'16 f'16 | g'8 f' d' f' | g'8 g' g' f'16 g' |
+	bes'8 bes' bes' c'' | d''16 d'' d'' c'' bes'8 bes'16 a'16 |
+	g'4( g'8) \bar "||"
+    }
+    \lyricsto "" \new Lyrics
+    {
+      \override LyricText #'font-size = #0
+      \override StanzaNumber #'font-size = #-1
+
+      O my bo -- dy's racked wid de fe -- ve -- er,
+      My head rack'd wid de pain I hab,
+      I wish I was in de king -- do -- om,
+      A -- set -- tin' on de side ob de Lord.
+    }
+    >>
+  }
+
+  \layout { indent = 0.0 }
+}
+\end{lilypond}
+\end{song}
+
+
+\bigskip
+[This is one of the most striking of the Port Royal spirituals, and is
+shown by a comparison with No.~93 to be one of the most widely spread
+of all the African hymns.  It is hard to explain every word of the
+introduction, but ``long time get over crosses'' is of course the
+``long time waggin' o' er de crossin'{}'' of the Virginia hymn.]
+    
+  
+\newpage
+\section{Bell da ring.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{046.ly}
+
+  \footnotetext[1]{Boggy, Tedious.}
+  \footnotetext[2]{'ciety, Lecter, Praise-house.}
+\end{song}
+
+\begin{stanza}
+\item[3.]
+  I can't get to meetin'.\footnotemark[2]
+\item[4.]
+  De church mos' ober.
+\item[5.]
+  De heaven-bell a heaven-bell.
+\item[6.]
+  De heaven-bell I gwine home.
+\item[7.]
+  I shout for de heaven-bell.
+\item[8.]
+  Heaven 'nough for me one.
+\item[9.]
+  (Brudder) hain't you a member.
+\end{stanza}
+
+\newpage
+\thispagestyle{empty}
+
+[The following words were sung in Col.~Higginson's regiment:
+
+Do my brudder, O yes, yes, member,\\
+De bell done ring.\\
+You can't get to heaben\\
+When de bell done ring.\\
+If you want to get to heaven,\\
+Fo' de bell, etc.\\
+You had better follow Jesus,\\
+Fo' de bell, etc.\\
+O yes, my Jesus, yes, I member,\\
+De bell etc.\\
+O come in, Christians,\\
+Fo' de bell, etc.\\
+For the gates are all shut,\\
+When de bell, etc.\\
+And you can't get to heaben\\
+When de bell, etc.\\
+
+Col.~Higginson suggests that this refrain may have originated in
+Virginia, and gone South with our army, because ``{}`done' is a
+Virginia shibboleth, quite distinct from the `been' which replaces it
+in South Carolina.  In the proper South Carolina dialect, would have
+been substituted `De bell been-a ring.'{}'' We have, however, shown in
+the preface, that ``done'' is used on St.~Helena; and at any rate the
+very general use of this refrain there in the present tense, ``Bell da
+ring,'' would indicate that it was of local origin, while we have
+never met with anything at all like it in any other part of the
+country.  As given above, it is one of the most characteristic
+``shouting'' tunes.
+
+In singing ``Heaven-bell a heaven-bell,'' the \emph{v} and \emph{n}
+were so run together that the words sounded like ``hum-bell a
+hum-bell,'' with strong emphasis and dwelling upon the \emph{m}.]
+
+
+\newpage
+\section{Pray all de member.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{047.ly}
+
+  \footnotetext[1]{True believer.}
+\end{song}
+
+\begin{stanza}
+\item[4.]
+  Jericho, Jericho.
+\item[5.]
+  I been to Jerusalem.
+\item[6.]
+  Patrol aroun'me.
+\item[7.]
+  Thank God he no ketch me.
+\item[8.]
+  Went to de meetin'
+\item[9.]
+  Met brudder Hacless [Hercules].
+\item[10.]
+  Wha' d'ye tink he tell me?
+\item[11.]
+  Tell me for to turn back.
+\item[12.]
+  Jump along Jericho.
+\end{stanza}
+
+\begin{extra}
+  [This also is a very characteristic shouting tune.]
+\end{extra}
+
+\newpage
+\section{Turn sinner, turn O.}
+\thispagestyle{empty}
+
+\begin{songpart}
+  \lilypondfile[staffsize=18,line-width=356\pt]{048-p1.ly}
+\end{songpart}
+\begin{songpart}
+  \lilypondfile[staffsize=18,line-width=356\pt]{048-p2.ly}
+\end{songpart}
+\begin{songpart}
+  \lilypondfile[staffsize=18,line-width=356\pt]{048-p3.ly}
+\end{songpart}
+
+\newpage
+\thispagestyle{empty}
+
+\begin{songpart}
+  \lilypondfile[staffsize=18,line-width=356\pt]{048-p3b.ly}
+\end{songpart}
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{048-p4.ly}
+\end{song}
+
+\bigskip
+
+The following words are sung to the same tune:
+
+\begin{stanza}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\item[1.]
+  Bro' Joe, you ought to know my name---Hallelujah.
+\item[2.]
+  My name is written in de book ob life.
+\item[3.]
+  If you look in de book you'll fin' 'em dar.
+\item[4.]
+  One mornin' I was a walkin' down.
+\item[5.]
+  I saw de berry a-hinging down.
+\item[6.]
+  (Lord) I pick de berry, an' I suck de juice.
+\item[7.]
+  Jes' as sweet as de honey in de comb.
+\item[8.]
+  I wonder where fader Jimmy gone.
+\item[9.]
+  My fader gone to de yonder worl'.
+\item[10.]
+  You dig de spring dat nebber dry.
+\item[11.]
+  De more I dig 'em, de water spring.
+\item[12.]
+  De water spring dat nebber dry.
+\end{stanza}
+
+\begin{extra}
+  [This is the most dramatic of all the shouts; the tune varies with the
+    words, commonly about as given above, and the general effect is very
+    pathetic.  The words and tunes are constantly interchanged: thus, for
+    instance, the 6th versemight be sung to the second variation, and the
+    8th, 9th, and 10th, to the third.]
+\end{extra}
+
+\newpage
+\section{My army cross over.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{049.ly}
+\end{song}
+
+%% FIXME: Table in two columns?
+\begin{stanza}
+\item[2.]
+  Satan bery busy.
+\item[3.]
+  Wash 'e face in ashes.
+\item[4.]
+  Put on de leder apron.
+\item[5.]
+  Jordan riber rollin'.
+\item[6.]
+  Cross 'em, I tell ye, cross 'em.
+\item[7.]
+  Cross Jordan (danger) riber.
+\end{stanza}
+
+\begin{extra}
+  [The following version, probably from Sapelo Id., Georgia, was sung in
+    Col.~Higginson's regiment:
+\end{extra}
+
+\begin{song}
+  \begin[staffsize=18,line-width=356\pt]{lilypond}
+\score
+{
+  \new Staff {
+    <<
+    \context Voice
+    {
+	\set Staff.midiInstrument = "acoustic grand"
+     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	\autoBeamOff
+
+	\time 4/4
+	\clef violin
+	\key g \major
+
+	\partial 4 g'4 | g'4 g'4 b'2 | a'4 a' r fis' | fis'4 fis' d'2 |
+	g'4 g' r g' | b'4 b' g' g' | fis'4 a' r fis' | fis'4 fis' d'2 |
+	g'4 g' r g' | fis' 4 a' r g' | fis'4 a' r g' | fis'4 fis' d'2 |
+	g'4 g' r \bar "||"
+    }
+    \lyricsto "" \new Lyrics
+    {
+      \override LyricText #'font-size = #0
+      \override StanzaNumber #'font-size = #-1
+
+      \set stanza = "1."
+      My ar -- my cross o -- ber,
+      My ar -- my cross o -- ber,
+      O Phara -- oh's ar -- my drown -- ded,
+      My ar -- my cross o -- ber.
+      My ar -- my, my ar -- my,
+      my ar -- my cross o -- ber.
+    }
+    >>
+  }
+
+  \layout { indent = 0.0 }
+}
+\end{lilypond}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  We'll cross de riber Jordan.
+\item[3.]
+  We'll cross de danger water.
+\item[4.]
+  We'll cross de mighty Myo.
+\end{stanza}
+
+\begin{extra}
+[On the word ``Myo,'' Col.~Higginson makes the following note: ``I
+could get no explanation of the `mighty Myo,' except that one of the
+old men thought it meant the river of death.  Perhaps it is an African
+word.  In the Cameroon dialect, `Mawa' signifies `to die.'{}''
+Lt.~Col.~Trowbridge feels very confident that it is merely corruption
+of ``bayou.'']
+\end{extra}
+
+\newpage
+\section{Join the angel band.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{050.ly}
+\end{song}
+
+%% FIXME: Table in two columns?
+\begin{stanza}
+\item[2.]
+  Do, fader Modey, gader your army.
+\item[3.]
+  O do mo' soul gader togeder.
+\item[4.]
+  O do join 'em, join 'em for Jesus.
+\item[5.]
+  O do join 'em, join 'em archangel.
+\end{stanza}
+
+
+\begin{extra}
+  The following variation of the first line, with the words that follow,
+  was sung in Charleston:
+\end{extra}
+
+\begin{song}
+  \begin[staffsize=18,line-width=356\pt,ragged-right]{lilypond}
+\score
+{
+  \new Staff {
+    <<
+    \context Voice
+    {
+	\set Staff.midiInstrument = "acoustic grand"
+     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	\autoBeamOff
+
+	\time 2/4
+	\clef violin
+	\key a \major
+
+	\partial 4 e''4 | cis''8 e'' e''4 | cis''8. a'16 fis'8 a'
+    }
+    \lyricsto "" \new Lyrics
+    {
+      \override LyricText #'font-size = #0
+      \override StanzaNumber #'font-size = #-1
+
+      O join 'em all, join for Jesus.
+    }
+    >>
+  }
+
+  \layout { indent = 0.0 }
+}
+\end{lilypond}
+\end{song}
+
+\begin{stanza}
+\item[]
+  O join 'em all, join for Jesus, Join Jerusalem Band.
+\item[]
+  Sister Mary, stan' up for Jesus.
+\item[]
+  O brudder an' sister, come up for Heaven.
+\item[]
+  Daddy Peter set out for Jesus.
+\item[]
+  Ole Maum Nancy set out for Heaven.
+\end{stanza}
+
+\begin{extra}
+  [``The South Carolina negroes never say Aunty and Uncle to old
+    persons, but Daddy and Maumer, and all the white people say Daddy and
+    Maumer to old black men and women''---A.~M.~B.
+
+    This is no doubt correct as regards South Carolina in general.  I am
+    sure that I heard ``Uncle'' and ``Aunty'' at Port Royal, and I do not
+    remember hearing ``Daddy'' and ``Maumer'.''---W.~F.~A.]
+\end{extra}
+
+
+\newpage
+\section{I an' Satan had a race.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{051.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Win de race agin de course.
+\item[3.]
+  Satan tell me to my face
+\item[4.]
+  He will break my kingdom down.
+\item[5.]
+  Jesus whisper in my heart
+\item[6.]
+  He will build 'em up again.
+\item[7.]
+  Satan mount de iron grey;
+\item[8.]
+  Ride half way to Pilot-Bar.
+\item[9.]
+  Jesus mount de milk-white horse.
+\item[10.]
+  Say you cheat my fader children.
+\item[11.]
+  Say you cheat 'em out of glory.
+\item[12.]
+  Trouble like a gloomy cloud
+\item[13.]
+  Gader dick an' tunder loud.
+\end{stanza}
+
+
+\newpage
+\section{Shall I die?}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{052.ly}
+\end{song}
+
+\begin{stanza}
+\item[3.]
+  Die, die die, shall I die? \\
+  Jesus da coming, shall I die?
+
+\item[4.]
+  Run for to meet him, shall I die? \\
+  Weep like a weeper, shall I die?
+
+\item[5.]
+  Mourn like a mourner, shall I die? \\
+  Cry like a crier, shall I die?
+\end{stanza}
+
+\begin{extra}
+  [This shout was a great favorite of the Capt.~John Fripp plantation;
+    its simplicity, wildness and minor character suggest a native African
+    origin.  Sometimes the leading singer would simply repeat the words,
+    mornfully: ``Die, die, die,''---sometimes he would interpolate such an
+    inappropriate line as ``Jump along, jump along dere.'']
+\end{extra}
+
+
+\newpage
+\section{When we do meet again.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{053.ly}
+\end{song}
+
+
+\newpage
+\section{The White Marble Stone.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{054.ly}
+
+  %% We have to provide the text of the footnotes in this document.
+  \footnotetext[1]{Believer, Patty, etc.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  O the city light the lamp, the white man he will sold,\\
+  And I wish I been there, etc.
+\item[3.]
+  O the white marble stone, and the white marble stone.
+\end{stanza}
+
+\begin{extra}
+  [This song was described to us as ``\emph{too} pretty.''  The
+    following minor variation might be called ``too \emph{much}
+    prettier.''
+\end{extra}
+
+\begin{song}
+  \begin[staffsize=18,line-width=356\pt]{lilypond}
+\score
+{
+  \new Staff {
+    <<
+    \context Voice
+    {
+	\set Staff.midiInstrument = "acoustic grand"
+     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	\autoBeamOff
+
+	\time 6/8
+	\clef violin
+	\key d \minor
+
+	\partial 8 d'16 f' | f'16 f' f'8. f'16 f'8 bes' a' |
+	g'8 a'8. gis'16 a'4 r16 f' |
+	f'8 a' c'' d'' d'8. e'16 | f'16 f' e'8. f'16 d'8 r \bar "||"
+    }
+    \lyricsto "" \new Lyrics
+    {
+      \override LyricText #'font-size = #0
+      \override StanzaNumber #'font-size = #-1
+
+      O my sis -- ter light de lamp, and de lamp light de road;
+      I wish I been dere for to hear -- de Jor -- dan roll.
+    }
+    >>
+  }
+
+  \layout { indent = 0.0 }
+}
+\end{lilypond}
+\end{song}
+
+
+\newpage
+\section{I can't stand the fire.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{055.ly}
+\end{song}
+
+\begin{extra}
+  [Probably only a fragment of a longer piece.  The following variation
+    was sung at Coffin's Point:
+\end{extra}
+
+\begin{song}
+  \begin[staffsize=18,line-width=356\pt,ragged-right]{lilypond}
+\score
+{
+  \new Staff {
+    <<
+    \context Voice
+    {
+	\set Staff.midiInstrument = "acoustic grand"
+     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	\autoBeamOff
+
+	\time 2/8
+	\clef violin
+	\key f \major
+
+	g'8 g'16. a'32 | f'8 r |
+	g'8 g'16. a'32 | f'8 r |
+	\break
+	
+	bes'8 bes'16. bes'32 |
+	<< { \once \override Stem #'transparent = ##t a'16 
+	  \set fontSize = #'-4 \stemDown c''16 a' f'
+	  \set fontSize = #'0 \stemNeutral }
+	<< \\ \set fontSize = #'0 \stemUp { a'8 r8 } >> >> |
+	g'8 g'16. g'32. | f'8 r	\bar "||"
+    }
+    \lyricsto "" \new Lyrics
+    {
+      \override LyricText #'font-size = #0
+      \override StanzaNumber #'font-size = #-1
+
+      Can't stand the fire,
+      Can't stand the fire,
+      Can't stand the fire, "(O" Lord, "I)"
+      Can't stand the fire.
+    }
+    >>
+  }
+
+  \layout { indent = 0.0 }
+}
+\end{lilypond}
+\end{song}
+
+
+\newpage
+\section{Meet, O Lord.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{056.ly}
+
+  %% We have to provide the text of the footnotes in this document.
+  \footnotetext[1]{\emph{i.~e.} the anointing vial.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Moon went into de poplar tree,\\
+  An' star went into blood;\\
+  In dat mornin', etc.
+\end{stanza}
+
+\begin{extra}
+  [This was taught me by a boy from Hilton Head Island, whom the rebel
+    Gen.~Drayton left holding his horse ``when gun shoot at Bay Pint.''
+    The General never returned to reclaim his horse, which afterwards came
+    into the possession of a friend of mine, and was famed for swiftness.
+    I had several fine rides upon ``milk-white''
+    \emph{Drayton}.---W.~F.~A.]
+\end{extra}
+
+
+\newpage
+\section{Wai', Mr.~Mackright}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{057.ly}
+\end{song}
+
+
+\newpage
+\section{Early in the morning.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{058.ly}
+
+  \footnotetext[1]{O shout glory till 'em join dat ban.}
+\end{song}
+
+\begin{stanza}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\item[2.]
+  I meet my mudder early in de mornin',\\
+  An' I ax her, how you do my mudder?\\
+  Walk 'em easy, etc.
+\item[3.]
+  I meet brudder Robert early in de mornin';\\
+  I ax brudder Robert, how you do, my sonny?
+\item[4.]
+  I meet titta-Wisa\footnote[2]{\emph{i.~e.} sister Louisa.}
+  early in de mornin';\\
+  I ax titta-Wisa, how you do, my darter?
+\end{stanza}
+
+\emph{Variation of first part.}
+
+\vspace{-10pt}
+
+\begin{song}
+  \begin[staffsize=18,line-width=356\pt]{lilypond}
+\score
+{
+  \new Staff {
+    <<
+    \context Voice
+    {
+	\set Staff.midiInstrument = "acoustic grand"
+     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	\autoBeamOff
+
+	\time 2/4
+	\clef violin
+	\key g \major
+	{
+	    \repeat volta 2
+	    {
+		\partial 8 c''8 | c''8 c''16 c'' b'8 b' |
+		a'16 a' a' g' e'8 g' | c''4 b' a'8. g'16 e'4 |
+		g'16 g' g' e' d'4 fis'16 r
+	    }
+	}
+    }
+    \lyricsto "" \new Lyrics
+    {
+      \override LyricText #'font-size = #0
+      \override StanzaNumber #'font-size = #-1
+
+      \set stanza = "1."
+      I meet lit -- tle Ro -- sa ear -- ly in de morn -- in',
+      O Je -- ru -- sa -- lem, ear -- ly in de morn -- "in'; etc."
+    }
+    >>
+  }
+
+  \layout { indent = 0.0 }
+}
+\end{lilypond}
+\end{song}
+
+
+\newpage
+\section{Hail, Mary.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{059.ly}
+\end{song}
+
+\begin{extra}
+  [``I fancied,'' says Col.~Higginson, ``that the original reading
+    might have been `soul,' instead of `soldier,'---with some other
+    syllable inserted, to fillout the metre,---and that the `Hail,
+    Mary,' might denote a Roman Catholic origin, as I had several men
+    from St.~Augustine who held in a dim way to that faith.''
+
+    In Mr.~Spaulding's article in the \emph{Continental Monthly,} a
+    tune nearly identical with this is given with words almost the
+    same as those of ``No more peck of corn,'' No.~64, the whole as an
+    introduction to the second part of ``Trouble of the World,''
+    No.~10---a curious illustration of the way in which the colored
+    people make different combinations of their own tunes at different
+    times:]
+\end{extra}
+
+\begin{song}
+  \begin[staffsize=18,line-width=356\pt]{lilypond}
+\score
+{
+  \new Staff {
+    <<
+    \context Voice
+    {
+	\set Staff.midiInstrument = "acoustic grand"
+        \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	\autoBeamOff
+
+	\time 2/4
+	\clef violin
+	\key g \major
+
+	d'8 g' g' g' | g'8 g'4. | e'8 e' g' g' | d'8 d'4. |
+	d'8 fis' a' fis' | g'8[ c''] c''4 | b'4 a'8 a' | g'4 r \bar "||"
+    }
+    \lyricsto "" \new Lyrics
+    {
+      \override LyricText #'font-size = #0
+      \override StanzaNumber #'font-size = #-1
+
+      \set stanza = "1."
+      Done wid dri -- ber's dri -- bin',
+      Done wid dri -- ber's dri -- bin',
+      Done wid dri -- ber's dri -- bin',
+      Roll, Jor -- dan, roll.
+    }
+    >>
+  }
+
+  \layout { indent = 0.0 }
+}
+\end{lilypond}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Done wid massa's hollerin',
+\item[3.]
+  Done wid missus' scoldin'.
+\end{stanza}
+
+
+\newpage
+\section{No more rain fall for wet you.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{060.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  No more sun shine for burn you.
+\item[3.]
+  No more parting in de kingdom.
+\item[4.]
+  No more backbiting in de kingdom.
+\item[5.]
+  Every day shall be Sunday.
+\end{stanza}
+
+
+\newpage
+\section{I want to go home.}
+\thispagestyle{empty}
+
+\emph{In chanting style.}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{061.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Dere's no sun to burn you,---O yes, etc.
+\item[3.]
+  Dere's no hard trials.
+\item[4.]
+  Dere's no whips a--crackin'.
+\item[5.]
+  Dere's no stormy weather.
+\item[6.]
+  Dere's no tribulation.
+\item[7.]
+  No more slavery in de kingdom.
+\item[8.]
+  No evil--doers in de kingdom.
+\item[9.]
+  All is gladness in de kingdom.
+\end{stanza}
+
+
+\newpage
+\section{Good-bye, brother.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{062.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  We part in de body but we meet in de spirit,\\
+  We'll meet in de heaben in de blessed\footnote[1]{Glorious.} kingdom.
+\item[3.]
+  So good--bye, brother, good--bye, sister;\\
+  Now God bless you, now God bless you.
+\end{stanza}
+
+\begin{extra}
+  [``Sung at the breaking up of a midnight meeting after the death of
+    a soldier.  These midnight \emph{wails} are very solemn to me, and
+    exhibit the sadness of the present mingled with the joyful hope of
+    the future.  I have known the negroes to get together in groups of
+    six or eight around a small fire, and sing and pray alternately
+    from nine o'clock till three the next morning, after the death of
+    one of their number.''---J.~S.~R.]
+\end{extra}
+
+
+\newpage
+\section{Fare ye well.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{063.ly}
+\end{song}
+
+
+\newpage
+\section{Many thousand go.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{064.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  No more driver's lash for me.
+\item[3.]
+  No more pint o' salt for me.
+\item[4.]
+  No more hundred lash for me.
+\item[5.]
+  No more mistress' call for me.
+\end{stanza}
+
+\begin{extra}
+  [A song ``to which the Rebellion had actually given rise.  This was
+    composed by nobody knows whom---though it was the most recent
+    doubtless of all these `spirituals,'---and had been sung in secret
+    to avoid detection.  It is certainly plaintive enough.  The peck
+    of corn and pint of salt were slavery's rations.''---T.~W.~H.
+    Lt.~Col.~Trowbridge learned that it was first sung when Beauregard
+    took the slaves of the islands to build the fortifications at
+    Hilton Head and Bay Point.]
+\end{extra}
+
+
+\newpage
+\section{Brother Moses gone.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{065.ly}
+\end{song}
+
+
+\newpage
+\section{The Sin-sick Soul.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{066.ly}
+\end{song}
+
+
+\newpage
+\section{Some Valiant Soldier.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{067.ly}
+\end{song}
+
+\bigskip
+[The words are in part the same as those of ``Hail Mary,'' No.~59.]
+
+
+\newpage
+\section{Hallelu, Hallelu.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{068.ly}
+\end{song}
+
+\begin{stanza}
+\item[3.]
+  Member walk and never tire.
+\item[4.]
+  Member walk Jordan long road.
+\item[5.]
+  Member walk tribulation.
+\item[6.]
+  You go home to Wappoo.
+\item[7.]
+  Member seek new repentance.
+\item[8.]
+  I go to seek my fortune.
+\item[9.]
+  I go to sek my dying Saviour.
+\item[10.]
+  You want to die like Jesus.
+\end{stanza}
+
+\begin{extra}
+  [For other words, see ``Children do linger,'' No.~69.]
+\end{extra}
+
+\newpage
+\section{Children do linger.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{069.ly}
+\end{song}
+
+\begin{stanza}
+\item[3.]
+  O Jesus is our Captain.
+\item[4.]
+  He lead us on to glory.
+\item[5.]
+  We'll meet at Zion gateway.\footnote[1]{Heaven portal.}
+\item[6.]
+  We'll take dis story over.
+\item[7.]
+  We'll enter into glory.
+\item[8.]
+  When we done wid dis world trials.
+\item[9.]
+  We done wid all our crosses.
+\item[10.]
+  O brudder, will you meet us?
+\item[11.]
+  When de ships is out a--sailin'.
+\item[12.]
+  O Jesus got de hellum.
+\item[13.]
+  Fader, gader in your chil'en.
+\item[14.]
+  O gader dem for Zion.
+\item[15.]
+  'Twas a beauteous Sunday mornin'.
+\item[16.]
+  When he rose from de dead.
+\item[17.]
+  He will bring you milk and honey.
+\end{stanza}
+
+
+\newpage
+\section{Good-bye.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{070.ly}
+\end{song}
+
+\bigskip
+\begin{extra}
+  [``This is sung at the breaking up of a meeting, with a general
+    shaking of hands, and the name of him or her pronounced, whose
+    hand is shaken; of course there is seeming
+    confusion.''---Mrs.~C.~J.~B.]
+\end{extra}
+
+
+\newpage
+\section{Lord, make me more patient.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{071.ly}
+
+  \footnotetext[1]{``Any adjective expressive of the virtues is inserted
+    here: holy, loving, peaceful, etc.''---Mrs.~C.~J.~B.}
+\end{song}
+
+\newpage
+\section{The Day of Judgment.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{072.ly}
+
+  \footnotetext[1]{``A sort of prolonged wail.''---Mrs.~C.~J.~B.}
+\end{song}
+
+
+\begin{stanza}
+\item[2.]
+  And you'll see de stars a-fallin'.
+\item[3.]
+  And de world will be on fire.
+\item[4.]
+  And you'll hear de saints a-singin:
+\item[5.]
+  And de Lord will say to de sheep.
+\item[6.]
+  For to go to Him right hand;
+\item[7.]
+  But de goats must go to de left.
+\end{stanza}
+
+
+\newpage
+\section{The Resurrection Morn.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{073.ly}
+\end{song}
+
+\begin{stanza}
+\item[3.]
+  That she went to de sepulchre.
+\item[4.]
+  And de Lord he wasn't da.
+\item[5.]
+  But she see a man a--comin'.
+\item[6.]
+  And she thought it was de gardener.
+\item[7.]
+  But he say, ``O touch me not',
+\item[8.]
+  ``For I am not yet ascended.
+\item[9.]
+  ``But tell to my disciples
+\item[10.]
+  ``Dat de Lord he is arisen.''
+\item[11.]
+  So run, Mary, run, etc.
+\end{stanza}
+
+
+\newpage
+\section{Nobody knows the trouble I've had.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{074.ly}
+
+  \footnotetext[1]{I see.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  I pick de berry and I suck de juice, O yes, Lord!\\
+  Just as sweet as the honey in de comb, O yes, Lord!
+\item[3.]
+  Sometimes I'm up, sometimes I'm down,\\
+  Sometimes I'm almost on de groun'.
+\item[4.]
+  What make ole Satan hate me so?\\
+  Because he got me once and he let me go.
+\end{stanza}
+
+\emph{Variation on St.~Helena Id.}
+
+\begin{song}
+  \begin[staffsize=18,line-width=356\pt,ragged-right]{lilypond}
+\score
+{
+  \new Staff {
+    <<
+    \context Voice
+    {
+	\set Staff.midiInstrument = "acoustic grand"
+     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	\autoBeamOff
+
+	\time 4/4
+	\clef violin
+	\key bes \major
+
+	f''2 f'' | d''2 r4 d'' | f''4 f'' d'' bes' | f''4 d'' bes' r
+    }
+    \lyricsto "" \new Lyrics
+    {
+      \override LyricText #'font-size = #0
+      \override StanzaNumber #'font-size = #-1
+
+      O yes, Lord!
+      I saw some ber -- ries hang -- ing down.
+    }
+    >>
+  }
+
+  \layout { indent = 0.0 }
+}
+\end{lilypond}
+\end{song}
+
+
+\newpage
+\thispagestyle{empty}
+
+\begin{extra}
+  [This song was a favorite in the colored schools of Charleston in
+    1865; it has since that time spread to the Sea Islands, where it
+    is now sung with the variation noted above.  An independent
+    transcription of this melody, sent from Florida by
+    Lt.~Col.~Apthorp, differed only in the ictus of certain measures,
+    as has also been noted above.  The third verse was furnished by
+    Lt.~Col.~Apthorp.  Once when there had been a good deal of ill
+    feeling excited, and trouble was apprehended, owing to the
+    uncertain action of Government in regard to the confiscated lands
+    on the Sea Islands, Gen.~Howard was called upon to address the
+    colored people earnestly and even severly.  Sympathizing with
+    them, however, he could not speak to his own satisfaction; and to
+    relieve their minds of the ever-present sense of injustice, and
+    prepare them to listen, he asked them to sing.  Immediately an old
+    woman on the outskirts of the meeting began ``Nobody knows the
+    trouble I've had','' and the whole audience joined in.  The
+    General was so affected by the plaintive words and melody, that he
+    found himself melting into tears and quite unable to maintain his
+    official sterness.]
+\end{extra}
+
+
+\newpage
+\section{Who is on the Lord's side.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{075.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Weepin' Mary.
+\item[3.]
+  Mournin' Marta.
+\item[4.]
+  Risen Jesus.
+\end{stanza}
+
+
+\newpage
+\section{Hold out to the end.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{076.ly}
+\end{song}
+
+
+\newpage
+\section{Come go with me.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{077.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  I did not come here myself, my Lord,\\
+  It was my Lord who brought me here;\\
+  And I really do believe I'm a child of God,\\
+  A--walkin' in de heaven I roam.\\
+  O come--e go wid me, etc.
+\end{stanza}
+
+
+\newpage
+\section{Every hour in the day.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{078.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Every hour in de night cry Jesus, etc.
+\end{stanza}
+
+
+\newpage
+\section{In the mansions above.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{079.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  My Lord, I've had many crosses an' trials here below;\\
+  My Lord, I hope to meet you\\
+  In de manshans above.
+\item[3.]
+  Fight on, my brudder, for de manshans above,\\
+  For I hope to meet my Jesus dere\\
+  In de manshans above.
+\end{stanza}
+
+
+\newpage
+\section{Shout on, children.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{080.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Shout an' pray both night an' day;\\
+  How can you die, you in de Lord?
+\item[3.]
+  Come on, chil'en, let's go home;\\
+  O I'm so glad you're in de Lord.
+\end{stanza}
+
+
+\newpage
+%% CHANGED: Changed to match table of content: bye to by.
+\section{Jesus, won't you come by-and-by?}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{081.ly}
+\end{song}
+
+
+\newpage
+\section{Heave away.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{082.ly}
+\end{song}
+
+\begin{extra}
+  [This is one of the Savannah firemen's songs of which Mr.~Kane
+    O'Donnel gave a graphic acccount in a letter to the Philadelphia
+    \emph{Press}.  ``Each company,'' he says, ``has its own set of
+    tunes, its own leader, and doubtless in the growth of time,
+    necessity and invention, its own composer.'']
+\end{extra}
+
+
+
+\part{Northern Seaboard Slave States, including Delaware, Maryland,
+  Virginia, and North Carolina.}
+\thispagestyle{empty}
+
+\section{Wake up, Jacob.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{083.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Got some friends on de oder shore,\\
+  Do love de Lord!\\
+  I want to see 'em more an' more,\\
+  Do love de Lord!\\
+  Wake up, Jacob, \&c.
+\end{stanza}
+
+
+\newpage
+\section{On to Glory.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{084.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Oh, there's Bill Thomas, I know him well,\\
+  He's got to work to keep from hell;\\
+  He's got to pray by night and day,\\
+  If he wants to go by the narrow way.
+\item[3.]
+  There's Chloe Williams, she makes me mad,\\
+  For you see I know she's going on bad;\\
+  She told me a lie this arternoon,\\
+  And the devil will get her very soon.
+\end{stanza}
+
+\begin{extra}
+  [We should be tempted, from the character of this tune, to doubt its
+    genuineness as a pure negro song.  We're informed, however, that
+    it was sung twenty-five years ago in negro camp-meetings, and not
+    in those of the whites.  The words, at any rate, are worth
+    preserving, as illustrating the kind of influence brought to bear
+    upon the wavering.]
+\end{extra}
+
+
+\newpage
+\section{Just Now.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{085.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Good religion, good religion, etc.
+\item[3.]
+  Come to Jesus, come to Jesus, etc.
+\end{stanza}
+
+\begin{extra}
+  [This, which is now, in a somewhat different form, a Methodist hymn,
+    was sung as given above, by the colored people of Ann Arundel Co.,
+    Md., twenty-five years ago.---W.~A.~H.]
+\end{extra}
+
+
+\newpage
+\section{Shock along, John.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{086.ly}
+\end{song}
+
+\bigskip
+\begin{extra}
+  [A corn-song, of which only the burden is remembered.]
+\end{extra}
+
+
+\newpage
+\section{Round the corn, Sally.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{087.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Here's your iggle-quarter and here's your count-aquils.
+
+\item[3.]
+  I can bank, 'ginny bank, 'ginny bank the weaver.
+\end{stanza}
+
+\begin{extra}
+  [``Iggle'' is of course ``eagle;'' for the rest of the enigmatical
+    words and expressions in this corn-song, we must leave readers to
+    guess at the interpretation.]
+\end{extra}
+
+
+\newpage
+\section{Jordan's Mills.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{088.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Built without nail or hammer.
+\item[3.]
+  Runs without wind or water.
+\end{stanza}
+
+
+\newpage
+\section{Sabbath has no end.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{089.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Gwine to follow King Jesus, I really do believe.
+\item[3.]
+  I love God certain.
+\item[4.]
+  My sister's got religion.
+\item[5.]
+  Set down in the kingdom.
+\item[6.]
+  Religion is a fortune.
+\end{stanza}
+
+\begin{extra}
+  [This chorus was written down as exactly as possible from the lips
+    of the singer, and illustrates the odd transformations which words
+    undergo in their mouths.  It is a verse of a familiar hymn:
+    ``fore-half'' is ``forehead;'' ``harpess'' is ``harp.'']
+\end{extra}
+
+
+\newpage
+\section{I don't feel weary.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{090.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Gwine to live with God forever, While, etc.
+\item[3.]
+  And keep the ark a-moving, While, etc.
+\end{stanza}
+
+
+\newpage
+\section{The Hypocrite and the Concubine.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{091.ly}
+\end{song}
+
+
+\newpage
+\section{O shout away.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{092.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  O Satan told me not to pray,\\
+  He want my soul at judgement day.
+\item[3.]
+  And every where I went to pray,\\
+  There some thing was in my way.
+\end{stanza}
+
+
+\newpage
+\section{O'er the Crossing.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{093.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  O yonder's my ole mudder, Been a waggin' at de hill so long;\\
+  It's about time she cross over, Git home bime-by.\\
+  Keep prayin', I do believe, etc.
+\item[3.]
+  O hear dat lumberin' thunder A-roll from do' to do',\\
+  A-callin' de people home to God; Dey'll git home bime-by.\\
+  Little chil'n, I do believe, etc.
+\item[4.]
+  O see dat forked lightnin' A-jump from cloud to cloud,\\
+  A-pickin' up God's chil'n; Dey'll git home bime-by.\\
+  Pray mourner, I do believe, etc.
+\end{stanza}
+
+\newpage
+\thispagestyle{empty}
+
+\begin{extra}
+  [This ``infinitely quaint description of the length of the heavenly
+    road,'' as Col.~Higginson styles it, is one of the most peculiar
+    and wide-spread of the spirituals.  It was sung as given above in
+    Caroline
+    %% CHANGED: ``State.'' -> ``State,''
+    Co., Virtginia, and probably spread southeard from this State,
+    variously modified in different localities.  ``My body rock `long
+    fever,'' (No.~45) would hardly be recognised as the same, either
+    by words or tune, and yet it is almost certainly the same, as is
+    shown by the following, sung in Augusta, Georgia, which has some
+    of the words of the present song, adapted to a tune which is
+    unmistakably identical with No.~45.]
+\end{extra}
+
+\bigskip
+\begin{song}
+  \begin[staffsize=18,line-width=356\pt]{lilypond}
+\score
+{
+  \new Staff {
+    <<
+    \context Voice
+    {
+	\set Staff.midiInstrument = "acoustic grand"
+     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	
+	\autoBeamOff
+
+	\time 4/4
+	\clef violin
+	\key b \minor
+
+	\partial 4 fis'4 | b'4 b' b' d''8[ b'] | d''4 d'' r fis'8 fis' |
+	\break
+	a'8 a' a' a' b'4 a' | fis'2 r4 fis' |
+	\break
+	b'8 b' b' b' b'4 d''8 b' | d''4 d'' d'' r8 d'' |
+	\break
+	d''4 d''8 d'' e''[ d''] b''[ a''] | b'2 r4
+	\bar "||"
+    }
+    \lyricsto "" \new Lyrics
+    {
+      \override LyricText #'font-size = #0
+      \override StanzaNumber #'font-size = #-1
+
+      O yon -- der's my ole moth -- er,
+      Been a -- wag -- gin' at de hill so long;
+      I real -- ly do be -- lieve she's a child of God,
+      She'll git home to heav'n bime -- bye.
+    }
+    >>
+  }
+
+  \layout { indent = 0.0 }
+}
+\end{lilypond}
+\end{song}
+
+\bigskip
+\begin{extra}
+  [We regret we have not the air of the Nashville variation, ``My Lord
+    called Daniel.'']
+\end{extra}
+
+
+\newpage
+\section{Rock o' my Soul.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{094.ly}
+\end{song}
+
+
+\newpage
+%% CHANGED: Title in book has ``through''.
+\section{We will march thro' the valley.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{095.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  We will march, etc.\\
+  Behold I give myself away, and\\
+  We will march, etc.
+\item[3.]
+  We will march, etc.\\
+  This track I'll see and I'll pursue;\\
+  We will march, etc.
+\item[4.]
+  We will march, etc.\\
+  When I'm dead and buried in the cold silent tomb,\\
+  I don't want you to grieve for me.
+\end{stanza}
+
+
+\newpage
+\section{What a trying time.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{096.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Lord, I am in the garden.
+\item[3.]
+  Adam, you ate that apple.
+\item[4.]
+  Lord, Eve she gave it to me.
+\item[5.]
+  Adam, it was forbidden.
+\item[6.]
+  Lord, said, walk out de garden.
+\end{stanza}
+
+\begin{extra}
+  [A most compendious account of the fall.]
+\end{extra}
+
+\newpage
+\section{Almost Over.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{097.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Sister, if your heart is warm,\\
+  Snow and ice will do you no harm.
+\item[3.]
+  I done been down, and I done been tried,\\
+  I been through the water, and I been baptized.
+\item[4.]
+  O sister, you must mind how you step on the cross,\\
+  Your foot might slip, and your soul get lost.
+\item[5.]
+  And when you get to heaven, you'll be able for to tell\\
+  How you shunned the gates of hell.
+\item[6.]
+  Wrestle with Satan and wrestle with sin,\\
+  Stepped over hell and come back again.
+\end{stanza}
+
+\begin{extra}
+  [A baptismal song, as the chattering ``almost o-ver'' so forcibly
+    suggests.]
+\end{extra}
+
+
+\newpage
+\section{Don't be weary, traveller.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{098.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Where to go I did not know\\
+  Ever since he freed my soul.
+\item[3.]
+  I look at de worl' and de worl' look new,\\
+  I look at de worl' and de worl' look new.
+\end{stanza}
+
+
+\newpage
+\section{Let God's saints come in.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{099.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  There was a wicked man,\\
+  He kept them children in Egypt Land.
+\item[3.]
+  God did say to Moses one day,\\
+  Say, Moses go to Egypt land,
+\item[4.]
+  And tell him to let my people go.\\
+  And Pharaoh would not let 'em go.
+\item[5.]
+  God did go to Moses' house,\\
+  And God did tell him who he was,
+\item[6.]
+  God and Moses walked and talked,\\
+  And God did show him who he was.
+\end{stanza}
+
+
+\newpage
+\section{The Golden Altar.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{100.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  And home to Jesus we will go, we will go, etc.;\\
+  We are de people of de Lord.
+  John sawr-O, etc.
+\item[3.]
+  Dere's a golden slipper in de heaven for you, etc.,\\
+  Before de Lamb of God.
+\item[4.]
+  I wish I'd been dere when prayer begun, etc.
+\item[5.]
+  To see my Jesus about my sins, etc.
+\item[6.]
+  Then home to glory we will go, etc.
+\end{stanza}
+
+\begin{extra}
+  [This is interesting as an undoubted variation of ``John, John of the
+    holy order.'' No.~22.  A comparison of the words shows that the word
+    ``number'' should be ``member.'']
+\end{extra}
+
+
+\newpage
+\section{The Winter.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{101.ly}
+
+  \footnotetext[1]{Am a-comin'.}
+  \footnotetext[2]{Sing.}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  You bend your knees\footnote[3]{I bend my knees, etc.} on holy ground, ground,\\
+  And ask de Lord, Lord, for to turn you around.
+  For de vinter, etc.
+\item[3.]
+  I turn my eyes towards the sky, sky,\\
+  And ask de Lord, Lord, for wings to fly.
+\item[4.]
+  For you see me gwine 'long so, so,\\
+  I has my tri-trials yer below.
+\end{stanza}
+
+
+\newpage
+\section{The Heaven Bells.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{102.ly}
+\end{song}
+
+
+\newpage
+\thispagestyle{empty}
+
+
+\part{Inland Slave States, including Tennessee, Arkansas,
+  and the Mississippi River.}
+\thispagestyle{empty}
+
+
+\newpage
+\section{The Gold Band.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{103.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Sister Mary gwine to hand down the robe,\\
+  In the army, bye-and-bye;\\
+  Gwine to hand down the robe and the gold band,\\
+  In the army, bye-and-bye.
+\end{stanza}
+
+
+\newpage
+\section{The Good Old Way.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{104.ly}
+
+  \footnotetext[1]{Sister, etc.}
+\end{song}
+	
+\newpage
+\section{I'm going home.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{105.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  I found free grace in the wilderness.
+\item[3.]
+  My father preaches in the wilderness.
+\end{stanza}
+
+
+\newpage
+\section{Sinner won't die no more.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{106.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  O see dem ships come a-sailing, sailing, sailing,\\
+  O see dem ships come a-sailing,\\
+  De robes all ready now.
+\end{stanza}
+
+
+\newpage
+\section{Brother, guide me home.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{107.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Let's go to God, chil'n, (\emph{ter})\\
+  Bright angels biddy me to come.
+\end{stanza}
+
+\begin{extra}
+  [I heard this in a praise-house at the ``Contraband Camp'' on
+    President's Island near Memphis, in September, 1864.  I will not vouch
+    for the absolute accuracy of my memory.---W.~F.~A.]
+\end{extra}
+
+
+\newpage
+\section{Little children, then won't you be glad?}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{108.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  King Jesus, he was so strong (\emph{ter}), my Lord,\\
+  That he jarred down the walls of hell.
+\item[3.]
+  Don't you hear what de chariot any? (\emph{bis})\\
+  De fore wheels run by de grace ob God,\\
+  An 'de hind wheels dey run by faith.
+\item[4.]
+  Don't you 'member what you promise de Lord? (\emph{bis})\\
+  You promise de Lord that you would feed his sheep,\\
+  An' gather his lambs so well.
+\end{stanza}
+
+\begin{extra}
+  [Often sung in the colored schools at Helena, Arkansas.]
+\end{extra}
+
+
+\newpage
+\section{Charleston Gals.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{109.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  As I went a-walking down the street,\\
+  Up steps Charleston gals to take a walk with me.\\
+  I kep' a walking and they kep' a talking,\\
+  I danced with a gal with a hole in her stocking.
+\end{stanza}
+
+
+\newpage
+\section{Run, nigger, run.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{110.ly}
+\end{song}
+
+
+\newpage
+\section{I'm gwine to Alabamy.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{111.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  She went from Old Virginny,---Oh, \\
+  And I'm her pickaninny,---Ah.
+
+\item[3.]
+  She lives on the Tombigbee,---Oh, \\
+  I wish I had her wid me,---Ah.
+
+\item[4.]
+  Now I'm a good big nigger,---Oh, \\
+  I reckon I won't get bigger,---Ah.
+
+\item[5.]
+  But I'd like to see my mammy,---Oh, \\
+  Who lives in Alabamy,---Ah.
+\end{stanza}
+
+
+\newpage
+\thispagestyle{empty}
+
+
+\part{Gulf States, including Florida and Louisiana: Miscellaneous}
+\thispagestyle{empty}
+
+
+\newpage
+\section{My Father, how long?}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{112.ly}
+\end{song}
+\footnotetext[1]{Mother, etc.}
+
+\begin{stanza}
+\item[2.]
+  We'll soon be free, (\emph{ter})\\
+  De Lord will call us home.
+\item[3.]
+  We'll walk de miry road\\
+  Where pleasure never dies.
+\item[4.]
+  We'll walk de golden streets\\
+  Of de New Jerusalem.
+\item[5.]
+  My brudders do sing\\
+  De praise of de Lord.
+\item[6.]
+  We'll fight for liberty\\
+  When de Lord will call us home.
+\end{stanza}
+
+\begin{extra}
+  [For singing this ``the negroes had been put in jail at Georgetown,
+    S.~C., at te outbreak of the Rebellion.  `We'll soon be free' was
+    too dangerous an assertion, and though the chant was an old one,
+    it was no doubt sung with re-doubled emphasis during the new
+    events.  `De Lord will call us home,' was evidently thought to be
+    a symbolical verse; for, as a little drummer boy explained it to
+    me, showing all his white teeth as he sat in the moonlight by the
+    door of my tent, `Dey tink \emph{de Lord} mean for say \emph{de
+      Yankees}.'{}''---T.~W.~H.]
+\end{extra}
+
+\newpage
+\section{I'm in trouble}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{113.ly}
+\end{song}
+
+
+\newpage
+\section{O Daniel.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{114.ly}
+\end{song}
+
+
+\newpage
+\section{O brother, don't get weary.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{115.ly}
+\end{song}
+
+
+\newpage
+\section{I want to join the band.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{116.ly}
+\end{song}
+
+
+\newpage
+\section{Jacob's Ladder.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{117.ly}
+\end{song}
+
+
+\newpage
+\section{Pray on.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{118.ly}
+\end{song}
+
+\bigskip
+\begin{extra}
+  [As an interpretation of ``dem light us over,'' I suggest ``de night
+    is over;'' and ``union'' should probably have a capital \emph{U}.
+    ``De night is over; de Union break of day (da comin').''  The
+    interchange of \emph{l} and \emph{n} is not uncommon, and is
+    illustrated again in this song in the word ``Union,'' which was
+    pronounced ``yuliul'' by the person who sang it to me.  This song
+    and Nos.~38, 41, 42, 43, 119, 122, and 123, came on to the
+    plantation after I left.---C.~.P.~W.]
+\end{extra}
+
+
+\newpage
+\section{Good news, Member.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{119.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Mr.~Hawley have a home in Paradise.
+\item[3.]
+  Archangel bring baptizing down.
+\end{stanza}
+
+
+\newpage
+\section{I want to die like-a Lazarus die.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{120.ly}
+\end{song}
+
+
+\newpage
+\section{Away down in Sunbury.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{121.ly}
+\end{song}
+
+
+\newpage
+\section{This is the trouble of the world.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{122.ly}
+\end{song}
+\footnotetext[1]{(What you doubt for?) etc.}
+\footnotetext[2]{(what you shame for?), (take it easy), (Titty Melia)}
+
+
+\newpage
+\section{Lean on the Lord's side.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{123.ly}
+\end{song}
+\footnotetext[1]{\emph{i.~e.} Daniel (as if Samson) racked the lion's
+  \emph{jaw.}}
+\footnotetext[2]{Band.}
+
+\bigskip
+\begin{extra}
+  A Port Royal variation of ``Who is on the Lord's side'' (No.~75.)
+\end{extra}
+
+
+\newpage
+\section{These are all my Father's children.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{124.ly}
+\end{song}
+
+\bigskip
+\begin{extra}
+  [This is interesting as being probably the original of ``Trouble of
+    the world'' (No.~10,) and peculiarly so from the following custom,
+    which is described by a North Carolina negro as existing in South
+    Carolina.  When a \emph{pater-familias} dies, his family assemble
+    in the room where the coffin is, and, ranging themselves round the
+    body in the order of age and relationship, sing this hymn,
+    marching round and round.  They also take the youngest and pass
+    him first over and then under the coffin.  Then two men take the
+    coffin on their shoulders and carry it on the run to the grave.]
+\end{extra}
+
+
+\newpage
+\section{The Old Ship of Zion.}
+\thispagestyle{empty}
+
+\begin{extra}
+  [We have received two versions of the ``Old Ship of Zion,'' quite
+    different from each other and from those given by Col.~Higginson.
+    The first was sung twenty-five years ago by the colored people of
+    Ann Arundel Co., Maryland.  The words may be found in ``The
+    Chorus'' (Philadelphia: A.~S.~Jenks, 1860,) p.~170.  (Compare,
+    also, p.~167.)
+\end{extra}
+
+\bigskip
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{125a.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  And who is the Captain of the ship that you're on?---O glory, etc.\\
+  My Saviour is the Captain, hallelujah!
+\end{stanza}
+
+
+\newpage
+\thispagestyle{empty}
+
+\begin{extra}
+  [The other is from North Carolina:]
+\end{extra}
+
+\bigskip
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{125b.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  She sails like she is heavy loaded.
+\item[3.]
+  King Jesus is the Captain.
+\item[4.]
+  The Holy Ghost is the Pilot.
+\end{stanza}
+
+
+\newpage
+\section{Come along, Moses.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{126.ly}
+\end{song}
+\footnotetext[1]{Judy, Aaron.}
+\footnotetext[2]{Children.}
+
+\begin{stanza}
+\item[2.]
+  He sits in the Heaven and he answers prayer.
+\item[3.]
+  Stretch out your rod and come across.
+\end{stanza}
+
+\begin{extra}
+  [This air has in parts a suspicious resemblance to the Sunday-school
+    hymn ``{}'Tis religion that can give,'' which has become very
+    wide-spread in the South since the war.  Mrs.~James, however,
+    heard it from an old woman in North Carolina, early in 1862, which
+    would seem to vouch for its genuineness.]
+\end{extra}
+
+
+\newpage
+\section{The Social Band.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{127.ly}
+\end{song}
+\footnotetext[1]{Brother David.}
+
+
+\newpage
+\section{God got plenty o' room.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{128.ly}
+\end{song}
+
+\begin{stanza}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\item[2.]
+  So many-a weeks and days have passed\\
+  Since we met together last.
+\item[3.]
+  Old Satan tremble when he sees\\
+  The weakest saints upon their knees.
+\item[4.]
+  Prayer makes the darkest cloud withdraw,\\
+  Prayer climbed the ladder Jacob saw.
+\item[5.]
+  Daniel's wisdom may I know,\\
+  Stephen's faith and spirit sure.
+\item[6.]
+  John's divine communion feel,\\
+  Joseph's meek and Joshua's zeal.
+\item[7.]
+  There is a school on earth begun\\
+  Supported by the Holy One.
+\item[8.]
+  We soon shall lay our school-books by,\\
+  And shout salvation as I fly.
+\end{stanza}
+
+\begin{extra}
+  [The above is given exactly as it was sung, some of the measures in
+    %% FIXME: Put in real measure signs 2/8 etc...
+    2/8, some in 3/8, and some in 2/4 time.  The irregularity probably
+    arises from omission of rests, but it seemed a hopeless undertaking
+    to attempt to restore the correct time, and it was thought best to
+    give it in this shape as at any rate a characteristic specimen of
+    negro singing.  The song was obtained of a North Carolina negro, who
+    said it came from Virginia.]
+\end{extra}
+
+\newpage
+\section{You must be pure and holy.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{129.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  I'll run all round the cross and cry,\\
+  My Lord, bretheren, ah my Lord,\\
+  Or give me Jesus, or I die,\\
+  My Lord, bretheren, ah my Lord.\\
+  You must be pure and holy, etc.
+\item[3.]
+  The Devil am a liar and conjurer too, My Lord, etc.\\
+%% FIXME: cut you in two, cut you through
+  If you don't look out he'll conjure you, My Lord, etc.
+\item[4.]
+  O run up, sonny, and get your crown, My Lord, etc.\\
+  And by your Father sit you down, My Lord, etc.
+\item[5.]
+  I was pretty young when I begun, My Lord, etc.\\
+  But, now my work is almost done, My Lord, etc.
+\item[6.]
+  The Devil's mad and I am glad, My Lord, etc.\\
+  He lost this soul, he thought he had, My Lord, etc.
+\item[7.]
+  Go 'way, Satan, I don't mind you, My Lord, etc.\\
+  You wonder, too, that you can't go through, My Lord, etc.
+\item[8.]
+  A lilly\footnote[1]{\emph{Qu.} little. ?} white stone came rolling down,
+  My Lord, etc.\\
+  It rolled like thunder through the town, My Lord, etc.
+\end{stanza}
+
+\begin{extra}
+  [This is a favorite and apparently genuine song which ``flourishes''
+    in a colored church at Auburn, N.~.Y. having been introduced there
+    from the South.  ``It is sung on \emph{all} occasions, and without
+    any regard to \emph{order} in the verses; you may not be able to
+    see any connection between any of them.  The horus is always sung
+    once ot twice before the verses are used at all.  You will see
+    that occasionally there is inserted an extra sylable (ah) and
+    always in the 2nd and 4th lines of the verses; why this is done I
+    am unable to discover, but it appears to assist them wonderfully
+    in singing.  The first note in the chorus is sung very
+    \emph{loud,} and is prolonged to an indefinite time, at the
+    pleasure of the leader.  You will notice that the air is in the
+    minor mode, but the chorus, with the exception of the last line,
+    in the major.''---W.~A.~B.]
+\end{extra}
+
+
+\newpage
+\section{Belle Layotte.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{130.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Jean Babet, mon ami,\\ 
+  Si vous couri par en haut,\\
+  Vous mand\'e belle Layotte\\
+  Cadeau la li t\'e promi mouin.
+\item[3.]
+  Domestique la maison\\
+  Y\'e tout fach\'e avec mouin,\\
+  Paraporte chanson la\\
+  Mo compos\'e pou la belle Layotte.
+\end{stanza}
+
+
+\newpage
+\section{Remon.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{131.ly}
+\end{song}
+
+
+\newpage
+\section{Aurore Bradaire.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{132.ly}
+\end{song}
+
+
+\newpage
+\section{Caroline.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{133.ly}
+\end{song}
+
+
+\newpage
+\section{Calinda.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{134.ly}
+\end{song}
+
+\begin{stanza}
+\item[2.]
+  Michi\'e Pr\'eval li t\'e capitaine bal,\\
+  So cocher Louis t\'e maite c\'er\'emonie.
+\item[3.]
+  Dans lequirie la yav\'e gran gala,\\
+  Mo cr\'e choual lay\'e t\'e bien \'etonn\'e.
+\item[4.]
+  Yav\'e des n\'egresse belle pass\'e maitresse,\\
+  Y\'e vol\'e b\'ebelle dans l'ormoire mamzelle.
+\end{stanza}
+
+
+\newpage
+\section{Lolotte.}
+\thispagestyle{empty}
+
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{135.ly}
+\end{song}
+
+
+\newpage
+\section{Musieu Bainjo.}
+\thispagestyle{empty}
+
+\begin{songpart}
+  \lilypondfile[staffsize=18,line-width=356\pt]{136-p1.ly}
+\end{songpart}
+\begin{song}
+  \lilypondfile[staffsize=18,line-width=356\pt]{136-p2.ly}
+\end{song}
+
+\newpage
+\thispagestyle{empty}
+
+\begin{extra}
+  [The seven foregoing songs were obtained from a lady who heard them
+    sung, before the war, on the ``Good Hope'' plantation, St.~Charles
+    Parish, Louisiana.  The language, evidently a rude corruption of
+    French, is that spoken by the negroes in that part of the State;
+    and it is said that it is more difficult for persons who speak
+    French to interpret this dialect, than for those who speak English
+    to understand the most corrupt of the ordinary negro-talk.  The
+    pronunciation of this negro-French is indicated, as accurately as
+    possible, in the versions given here, which furnish, also, many
+    interesting examples of the peculiar phrases and idioms employed
+    by this people.  The frequent omission of prepositions, articles,
+    and auxiliary verbs, as well as of single letters, and the
+    contractions constantly occurring, are among the most noticeable
+    peculiarities.  Some of the most difficult words are: \emph{mo
+      \emph{for} me, mon, je; li \emph{for} lui, le, la il, elle;
+      mouin \emph{for} moi; y \emph{for} ils, leur; aine, d \emph{for}
+      un, deux; t \emph{for} t, tait; ya, yav \emph{for} il y a,
+      \emph{etc.;} ouar \emph{for} voir \emph{and its inflections;}
+      oul \emph{for} vouloir, \emph{etc.;} pancor \emph{for} pas
+      encore; michi \emph{for} monsieur; inp \emph{for} un peu.}  The
+    words are, of course, to be pronounced as if they were pure
+    French.
+
+    Four of these songs, Nos.~130, 131, 132 and 133, were sung to a
+    simple dance, a sort of minuet called the \emph{Coonjai}; the name
+    and the dance are probably both of African origin.  When the
+    \emph{Coonjai} is danced, the music is furnished by an orchestra
+    of singers, the leader of whom---a man selected both for the
+    quality of his voice and for his skill in improvising---sustains
+    the solo part, while the others afford him an opportunity, as they
+    shout in chorus, for inventing some neat verse to compliment some
+    lovely \emph{danseuse}, or celebrate the deeds of some plantation
+    hero.  The dancers themselves never sing, as in the case of the
+    religious ``shout'' of the Port Royal negroes; and the usual
+    musical accompaniment, besides that of the singers, is that
+    furnished by a skilful performer on the barrel-head-drum, the
+    jaw-bone and key, or some other rude instrument.
+
+    No.~134.  The ``calinda'' was a sort of contra-dance, which has
+    now passed entirely out of use.  Bescherelle describes the two
+    lines as ``avan\c{}cant et reculant en cadence, et faisant des
+    contorsions for singuli\'eres et des gestes fort lascifs.''
+
+    The first movement of No.~135, ``Lolotte,'' has furnished
+    M.~Gottschalk with the theme of his ``Ballade Cr\'eole,'' ``La
+    Savane,'' op.~3 de la Louisiane.
+
+    In 136, we have the attempt of some enterprising negro to write a
+    French song; he is certainly to be congratulated on his success.
+
+    It will be noticed that all these songs are ``seculars''; and that
+    while the words of most of them are of very little account, the
+    music is as peculiar, as interesting, and, in the case of two or
+    three of them, as difficult to write down, or to sing correctly,
+    as any that have preceded them.]
+\end{extra}
+
+
+\newpage
+%% \changepage{textheight}{textwidth}{evensidemargin}{oddsidemargin}{columnsep}{topmargin}{headheight}{headsep}{footskip}
+\changepage{-180pt}{-80pt}{+65pt}{+15pt}{}{+90pt}{}{}{}
+\setlength{\parindent}{\parindentsave}
+
+\pagestyle{myheadings}
+\markboth{\uppercase{Editors'\ Note}}{}
+
+\chapter*{Editors' Note}
+
+The original arrangement of the foregoing collection has not been
+adhered to.  Why the secular songs do not appear by themselves has
+been already explained.  That the division into parts is not strictly
+geographical was caused by the tardy arrival of most of the songs
+contained in Part IV.  Should a second edition ever be justified by
+the favor with which the present is received, these irregularities
+will be corrected.
+
+It was proposed to print music without words, and words without music,
+each by themselves.  But the first can hardly be said to have been
+obtained, unless ``Shock along, John,'' No.~86, is an instance.  The
+words without music which in one or two cases were kindly, and we fear
+laboriously, communicated to us, presented no fresh or striking
+peculiarities, and we therefore decided against their admission.
+
+As was remarked in the Introduction, we are fully aware of the
+incompleteness of this collection, though we may fairly enough assume
+it to be \emph{la cr\^eme de la cr\^eme}.  Col.~Higginson writes:
+
+``I wish you would look up one `spiritual,' of which I only remember
+the chorus---`\emph{It doth appear}'---as being often sung in camp.
+Also, `\emph{Ring dat charming bell},' which they used to sing to
+please Mrs.~Saxton, who liked it.''
+
+Gen.~James H.~Wilson, who, in the earlier part of the war, was at Port
+Royal, and, during explorations and night surveys of the coast between
+there and Ossabaw Sound, had frequent opportunities of hearing every
+grade of ``spirituals,'' writes, of Col.~Higginson's collection in the
+Atlantic Monthly:
+
+``He has omitted two which I heard more generally sung than any
+others.  I refer to the one beginning:
+
+``{}`They took ole Master Lord,\\
+And fed him on pepper and gall,'
+
+and the other:
+
+``{}`My brudder Johnny's new-born baby,\\
+Hi oh, de new-born!'
+
+``The airs to which these were sung are very peculiar, while the
+burthen of the songs is pretty clearly indicated by the lines given
+above.  The first seems to allude to the persecutions of Christ, while
+the latter simply refers to the birth and early death of a new-born
+baby, and is varied by making a new verse for all the brothers and
+sisters that the singer happens to be able to call to mind.
+
+``I also recollect the refrain of a boat-song which a crew of ten
+stalwart negroes used to sing for me in our excursions, but I am
+inclined to the belief that it was by no means a `spiritual,' as I
+could never get any of them to explain it to my satisfaction.  The
+only words I could make out clearly were:
+
+``{}`Jah de window, jah!\\
+Oh jah de window,' etc.
+
+and the meaning of which I took to be `{}'jar the window.'  If they
+had any such thing among them, this was probably a fragment of a
+simple ballad, describing an incident in a negro courtship.  I got
+this impression at the time, partly from the peculiar tone of the
+song, and partly from their hesitancy to explain it.  But whatever may
+have been its real character, it was quite musical, and had such an
+inspiring effect upon my boatmen that I have known them to row
+eighteen or twenty miles, exerting their utmost strength, keeping
+perfect time to its notes, and never pausing for breath.''
+
+These, certainly, are songs to be desired and regretted.  But we do
+not despair of recovering them and others perhaps equally
+characteristic for a second edition; and we herewith solicit the kind
+offices of collectors into whose hands this volume may have fallen, in
+extending and perfecting our researches.  For fully a third of the
+songs recorded by Col.~Higginson we have failed to obtain the music,
+and they may very well serve as a guide for future investigators.  We
+shall also gratefully acknowledge any errors of fact or of typography
+that may be brought to our attention, and in general anything that
+would enhance the value or the interest of this collection.
+Communications may be addressed to Mr.~W.~P.~Garrison, Office of
+\emph{The Nation} newspaper, New York City.
+
+\textsc{November}, 1867. 
+
+\end{document}

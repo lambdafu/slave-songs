@@ -1,4 +1,4 @@
-= Slave Songs of the United States, 1867
+# Slave Songs of the United States, 1867 =
 
 Digital Edition 2007, Version 1.0 ALPHA
 
@@ -14,16 +14,16 @@ $ make
 ```
 
 For any comments, please drop a note to
-Marcus Brinkmann <marcus.brinkmann@rub.de>.
+Marcus Brinkmann, marcus.brinkmann@rub.de.
 
-== TODO
+## TODO
 
 * Write new preface.  Solicite prefaces from experts in the field.
 * Add pictures.
 * Create lead sheets.
 * ...
 
-== Glitches
+## Glitches
 
 * Suppress line numbers in table of contents
 * non-numbered stanzas in extra comments need to be centered or in
@@ -48,7 +48,7 @@ Things to watch out for:
 % Lilypond uses New Century Schoolbook for lyrics.
 \usepackage{newcent}
 ```
-** Adjust font size in Lilypond:
+* Adjust font size in Lilypond:
 ```
 \override LyricText #'font-size = #0
 \override StanzaNumber #'font-size = #-1

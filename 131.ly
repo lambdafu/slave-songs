@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 	\tupletDown
@@ -38,23 +38,23 @@ melody =
 	\clef violin
 	\key f \major
 	{
-	    r4 \times 2/3 { f'8^\markup { SOLO } a' c'' } |
-	    a'8 bes'4 g'8 | bes'4 \times 2/3 { g'8 bes' d' } |
-	    bes'8 c''4 f'8 | a'4 \times 2/3 { f'8 a' c'' } |
-	    a'8 bes'4 e'8 | g'8 g' \times 2/3 { bes' bes' e' } |
+	    r4 \tuplet 3/2 { f'8^\markup { SOLO } a' c'' } |
+	    a'8 bes'4 g'8 | bes'4 \tuplet 3/2 { g'8 bes' d' } |
+	    bes'8 c''4 f'8 | a'4 \tuplet 3/2 { f'8 a' c'' } |
+	    a'8 bes'4 e'8 | g'8 g' \tuplet 3/2 { bes' bes' e' } |
 	    g'8 f'4 \bar "||"
 	    \break
-	    a'8^\markup { CHORUS } | f'4 \times 2/3 { a'8 a' a' } |
-	    g'8( bes'4) g'8 | e'4 \times 2/3 { g'8 g' g' } |
-	    f'8( a'4) a'8 | f'4 \times 2/3 { f'8 a' c'' } |
-	    bes'8( d''4) bes'8 | \times 2/3 { g'8 g' bes' } bes'8 e' |
+	    a'8^\markup { CHORUS } | f'4 \tuplet 3/2 { a'8 a' a' } |
+	    g'8( bes'4) g'8 | e'4 \tuplet 3/2 { g'8 g' g' } |
+	    f'8( a'4) a'8 | f'4 \tuplet 3/2 { f'8 a' c'' } |
+	    bes'8( d''4) bes'8 | \tuplet 3/2 { g'8 g' bes' } bes'8 e' |
 	    g'8 f'4 r8 \bar "||"
 	}
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	Mo par -- lé Ré -- mon, Ré -- mon,
 	Li par -- lé Si -- mon, Si -- mon,
@@ -82,10 +82,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

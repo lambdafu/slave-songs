@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -48,10 +48,10 @@ melody =
 	    a'2. \bar "||"
 	}
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	I want to climb up Ja -- cob's lad -- der,
 	Ja -- cob's lad -- der, O Ja -- cob's lad -- der,
@@ -63,11 +63,11 @@ melody =
 	I'll praise Him till I die,
 	And sing Je -- ru -- sa -- lem.
     }
-    \lyricsto "" \new Lyrics
-    {
+    \new Lyrics
+    \lyricsto "" {
 % FIXME: Look at this.
-%        \override LyricText #'font-size = #0
-%        \override StanzaNumber #'font-size = #-1
+%        \override LyricText.font-size = #0
+%        \override StanzaNumber.font-size = #-1
 
 	\small
 	"" "" "" "" "" "" "" "" ""
@@ -93,10 +93,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 100 4)
-      }
+    \tempo 4 = 100
     }
 
 

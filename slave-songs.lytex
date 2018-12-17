@@ -1300,11 +1300,10 @@ The pitch has generally been accommodated to voices of medium range.
 
   \medskip
   \begin{song}
-    \begin[staffsize=14,notime,ragged-right]{lilypond}
-    <<
+    \begin[staffsize=14,notime,ragged-right]{lilypond}<<
       \context Voice
       {
-        \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+        \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1)
 
         \autoBeamOff
 	       
@@ -1317,10 +1316,9 @@ The pitch has generally been accommodated to voices of medium range.
 	       
         a'4( f') \bar "|" g'4 g'8 a' \bar "|" f'4 d'8 f' \bar "|"
       }
-      \lyricsto "" \new Lyrics
-      {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+      \new Lyrics \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
         roll; Roll, Jor -- dan, Roll, Jor -- dan,
       }
@@ -1401,7 +1399,7 @@ The pitch has generally been accommodated to voices of medium range.
           \context Voice
           {
 	    \set Staff.midiInstrument = "acoustic grand"
-            \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+            \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	    \autoBeamOff
 	    
@@ -1431,10 +1429,10 @@ The pitch has generally been accommodated to voices of medium range.
 	      g'8. e'16 d'8 e'16 fis' | g'8. bes'16 a'8 a' | g'4 r
 	    }
 	  }
-	  \lyricsto "" \new Lyrics
+	  \new Lyrics \lyricsto ""
 	  {
-            \override LyricText #'font-size = #0
-            \override StanzaNumber #'font-size = #-1
+            \override LyricText.font-size = #0
+            \override StanzaNumber.font-size = #-1
 
 	    Paul and Si -- las, bound in jail,
 	    Chris -- tians pray both night and day,
@@ -1699,7 +1697,7 @@ some soul.
     <<
       \context Voice
       {
-        \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+        \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1)
 	       
 	\autoBeamOff
 	   
@@ -1719,24 +1717,18 @@ some soul.
 	  g'16 g' g' g' g'8 fis' \bar "|" e'4 r8
 	}
       }
-      \lyricsto "" \new Lyrics
-      {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
-
-	\repeat fold 2 {}
-	\alternative
-	{
-	  {
+      \new Lyrics \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 	    Be -- fore I stay in hell one day,
 	    Heav -- en shall -- a be my home;
 	  }
-	  {
+	  \new Lyrics \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 	    I sing and pray my soul a -- way,
 	    Heav -- en shall -- a be my home.
 	  }
-	}
-      }
     >>
   \end{lilypond}
   \end{song}
@@ -1779,7 +1771,7 @@ I cast my sins in de middle of de sea, Ah! \&c.
     <<
       \context Voice
       {
-        \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+        \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1)
 
 	\autoBeamOff
 	   
@@ -1797,10 +1789,9 @@ I cast my sins in de middle of de sea, Ah! \&c.
 	  b'4 a'8 a' | g'4 r8
 	}
       }
-      \lyricsto "" \new Lyrics
-      {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+      \new Lyrics \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	I wish I was in ju -- bi -- lee, Ha, ju -- bi -- lee;
 	I wish I was in ju -- bi -- lee, Roll, Jor -- dan, roll.
@@ -1842,7 +1833,7 @@ I cast my sins in de middle of de sea, Ah! \&c.
         \context Voice
 	{
 	  \set Staff.midiInstrument = "acoustic grand"
-          \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+          \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	  \autoBeamOff
 	  
@@ -1855,7 +1846,7 @@ I cast my sins in de middle of de sea, Ah! \&c.
 	    d''8 d''16 d''16 d''8 e'' | d''8 cis'' r a'16 a' |
 	    b'8 b' d''8. b'16 | b'8 a' r a'16 a' |
 	    \break
-	    \override Stem #'neutral-direction = #1
+	    \override Stem.neutral-direction = #1
 	    d''8 a' g' b' | a'8 fis' r fis'16 fis'16 |
 	    a'8 g' e'8. fis'16 | d'4 r8 d'16 e' |
 	    \break
@@ -1866,10 +1857,9 @@ I cast my sins in de middle of de sea, Ah! \&c.
 	    a'8 g' e'8. fis'16 | d'4 \bar "||"
 	  }
 	}
-	\lyricsto "" \new Lyrics
-	{
-          \override LyricText #'font-size = #0
-          \override StanzaNumber #'font-size = #-1
+	\new Lyrics \lyricsto "" {
+          \override LyricText.font-size = #0
+          \override StanzaNumber.font-size = #-1
 
 	  I see brud -- der Mo -- ses yon -- der,
 	  And I think I ought to know him,
@@ -1955,7 +1945,7 @@ I cast my sins in de middle of de sea, Ah! \&c.
 	\context Voice
 	{
 	  \set Staff.midiInstrument = "acoustic grand"
-          \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+          \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	  \autoBeamOff
 	  
@@ -1975,10 +1965,9 @@ I cast my sins in de middle of de sea, Ah! \&c.
 	    d'8 c' c' r | \bar "||"
 	  }
 	}
-        \lyricsto "" \new Lyrics
-	{
-          \override LyricText #'font-size = #0
-          \override StanzaNumber #'font-size = #-1
+        \new Lyrics \lyricsto "" {
+          \override LyricText.font-size = #0
+          \override StanzaNumber.font-size = #-1
 
 	  You'd bet -- ter pray, de world da gwine, No man can hin -- der me!
 	  De Lord have mer -- cy on my soul, No man can hin -- der me!
@@ -2189,7 +2178,7 @@ I cast my sins in de middle of de sea, Ah! \&c.
   <<
   \context Voice
   {
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1)
     
     \autoBeamOff
     
@@ -2199,10 +2188,9 @@ I cast my sins in de middle of de sea, Ah! \&c.
     
     b'8 a'16 g' b'8 g' | b'8 g'16 g' e'8 g' |
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     Pray To -- ny, pray boy, you got de or -- der;
   }
@@ -2274,7 +2262,7 @@ I cast my sins in de middle of de sea, Ah! \&c.
     <<
     \context Voice
 	 {
-           \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+           \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1)
 
 	   \autoBeamOff
 	   
@@ -2286,10 +2274,9 @@ I cast my sins in de middle of de sea, Ah! \&c.
 		   \partial 8 c''8 | c''8. c''16 c''8 c'' | \partial 4 d''8 c''
 		 }
 	 }
-	 \lyricsto "" \new Lyrics
-	 {
-           \override LyricText #'font-size = #0
-           \override StanzaNumber #'font-size = #-1
+	 \new Lyrics \lyricsto "" {
+           \override LyricText.font-size = #0
+           \override StanzaNumber.font-size = #-1
 
 	   Grave -- yard, you ought to know me.
 	 }
@@ -2470,7 +2457,7 @@ I cast my sins in de middle of de sea, Ah! \&c.
     \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-        \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+        \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -2484,10 +2471,9 @@ I cast my sins in de middle of de sea, Ah! \&c.
 	       c''4 c'' bes' a' | bes'2 r4 | \bar "||"
 	     }
     }
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
       I know moon -- light, I know star -- light;
       I lay dis bo -- dy down.
@@ -2709,7 +2695,7 @@ I cast my sins in de middle of de sea, Ah! \&c.
     \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -2717,7 +2703,7 @@ I cast my sins in de middle of de sea, Ah! \&c.
 	\clef violin
 	\key d \major
 
-	\override Stem #'neutral-direction = #1
+	\override Stem.neutral-direction = #1
 	\partial 8 a'8 | d''8 d'' cis'' a' | b'8 b' a' r |
 	d''4 e'' | a'4 r8 a'8 | d''8 d'' cis' a' | b'8 b' a' r |
 	fis'4 e' | d'4 r8 \bar "||" \break
@@ -2728,10 +2714,9 @@ I cast my sins in de middle of de sea, Ah! \&c.
 	e'8. e'16 e'8 r8 | a'8 b' a' a' | fis'8. g'16 a'8 r8 |
 	d'16 d'8. fis'8. e'16 | d'4 r8 \bar "||"
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	I build my house up -- on a rock, O yes, Lord!
 	No wind nor storm shall blow 'em down, O yes, Lord!
@@ -3073,7 +3058,7 @@ Trumpet sound for you and me.
     \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -3086,10 +3071,9 @@ Trumpet sound for you and me.
 	bes'8 bes' bes' c'' | d''16 d'' d'' c'' bes'8 bes'16 a'16 |
 	g'4( g'8) \bar "||"
     }
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
       O my bo -- dy's racked wid de fe -- ve -- er,
       My head rack'd wid de pain I hab,
@@ -3318,7 +3302,7 @@ The following words are sung to the same tune:
     \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -3331,10 +3315,9 @@ The following words are sung to the same tune:
 	g'4 g' r g' | fis' 4 a' r g' | fis'4 a' r g' | fis'4 fis' d'2 |
 	g'4 g' r \bar "||"
     }
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
       \set stanza = "1."
       My ar -- my cross o -- ber,
@@ -3405,7 +3388,7 @@ of ``bayou.'']
     \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -3415,10 +3398,9 @@ of ``bayou.'']
 
 	\partial 4 e''4 | cis''8 e'' e''4 | cis''8. a'16 fis'8 a'
     }
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
       O join 'em all, join for Jesus.
     }
@@ -3564,7 +3546,7 @@ of ``bayou.'']
     \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -3576,10 +3558,9 @@ of ``bayou.'']
 	g'8 a'8. gis'16 a'4 r16 f' |
 	f'8 a' c'' d'' d'8. e'16 | f'16 f' e'8. f'16 d'8 r \bar "||"
     }
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
       O my sis -- ter light de lamp, and de lamp light de road;
       I wish I been dere for to hear -- de Jor -- dan roll.
@@ -3615,7 +3596,7 @@ of ``bayou.'']
     \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -3634,10 +3615,9 @@ of ``bayou.'']
 	<< \\ \set fontSize = #'0 \stemUp { a'8 r8 } >> >> |
 	g'8 g'16. g'32. | f'8 r	\bar "||"
     }
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
       Can't stand the fire,
       Can't stand the fire,
@@ -3729,7 +3709,7 @@ of ``bayou.'']
     \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -3745,10 +3725,9 @@ of ``bayou.'']
 	    }
 	}
     }
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
       \set stanza = "1."
       I meet lit -- tle Ro -- sa ear -- ly in de morn -- in',
@@ -3796,7 +3775,7 @@ of ``bayou.'']
     \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-        \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+        \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -3807,10 +3786,9 @@ of ``bayou.'']
 	d'8 g' g' g' | g'8 g'4. | e'8 e' g' g' | d'8 d'4. |
 	d'8 fis' a' fis' | g'8[ c''] c''4 | b'4 a'8 a' | g'4 r \bar "||"
     }
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
       \set stanza = "1."
       Done wid dri -- ber's dri -- bin',
@@ -4173,7 +4151,7 @@ of ``bayou.'']
     \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -4183,10 +4161,9 @@ of ``bayou.'']
 
 	f''2 f'' | d''2 r4 d'' | f''4 f'' d'' bes' | f''4 d'' bes' r
     }
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
       O yes, Lord!
       I saw some ber -- ries hang -- ing down.
@@ -4601,7 +4578,7 @@ of ``bayou.'']
     \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-     \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -4618,10 +4595,9 @@ of ``bayou.'']
 	d''4 d''8 d'' e''[ d''] b''[ a''] | b'2 r4
 	\bar "||"
     }
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
       O yon -- der's my ole moth -- er,
       Been a -- wag -- gin' at de hill so long;

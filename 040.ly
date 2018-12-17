@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -44,13 +44,13 @@ melody =
 	    b'8 d'' << { \stemUp c''8
 			       \set fontSize = #'-4 
 			       c'' |
-			       \once \override NoteHead #'transparent = ##t
-			       \once \override Stem #'transparent = ##t g'16
+			       \once \override NoteHead.transparent = ##t
+			       \once \override Stem.transparent = ##t g'16
 			       \set fontSize = #'-4 
 			 c''16 c'' c'' c'' a'8
 			 \set fontSize = #'0 }
 		       << \\ { \slurDown
-			       \override Slur #'attachment = #'(stem . stem)
+			       \override Slur.attachment = #'(stem . stem)
 			       c''4( | c''4) r8 } >> >>
 	    d'8
 	}
@@ -69,10 +69,10 @@ melody =
 	}
     }
 
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
 	My brud -- der build a house in Pa -- ra -- dise,
 	"(My" "" fa -- der build a "house.)"
@@ -81,10 +81,10 @@ melody =
 	Build it wid -- out a ham -- mer or a nail,
 	Build it wid -- out a ham -- mer or a nail.
     }
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
 	"" "" "" "" "" "" "" "" "" ""
       %% FIXME: Not sure about this.
@@ -107,10 +107,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

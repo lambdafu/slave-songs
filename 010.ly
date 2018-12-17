@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
 
@@ -41,31 +41,31 @@ melody =
     {
       \partial 4*2
       \tupletUp
-      \override Stem #'neutral-direction = #1
-      \times 2/3 { d''8 d'' d'' } b'8. g'16 |
-      \override Stem #'neutral-direction = #-1
-      g'8 g' \times 2/3 { d'8 d' d'' } |
-      d''8 b' a'4 | \times 2/3 { fis'8 fis' fis' }
-      \times 2/3 { d'8 d' r16 d' } | g'8 a' b'[ c''] |
+      \override Stem.neutral-direction = #1
+      \tuplet 3/2 { d''8 d'' d'' } b'8. g'16 |
+      \override Stem.neutral-direction = #-1
+      g'8 g' \tuplet 3/2 { d'8 d' d'' } |
+      d''8 b' a'4 | \tuplet 3/2 { fis'8 fis' fis' }
+      \tuplet 3/2 { d'8 d' r16 d' } | g'8 a' b'[ c''] |
       d''8 d''16 b' c''8 c'' |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       b'4 a'8 a' | g'4 r8
-      \override Stem #'neutral-direction = #-1
+      \override Stem.neutral-direction = #-1
     }
     \repeat volta 2
     {
       \partial 8 d'8 | g'8 g'16 g' g'8 g'16 g' | g'16 g' g' g' g'8 g'8( |
       e'2) | d'16 d' d' d' d'8 d' | a'8 a'16 a' fis'8 d'16 d' |
       g'16 g' g' g' c''8 c'' |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       b'4 a'8 a' | g'4 r |
     }
   }
   
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     \set stanza = "1."
     I want to be¹ my Fa -- der's chil' -- en,
@@ -96,10 +96,7 @@ melody =
 % Tempo is about 4=100 to 4=120.
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 120 4)
-      }
+    \tempo 4 = 120
     }
 
 

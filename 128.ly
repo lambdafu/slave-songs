@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -37,10 +37,10 @@ melody =
 	\clef violin
 	\key g \major
 	{
-	    \time 2/8 b'8 b' | \time 3/8 \times 2/3 { b'16 b' b' } b'8 d'' |
-	    \time 2/8 \times 2/3 { a'16 a' b' } g'8 |
+	    \time 2/8 b'8 b' | \time 3/8 \tuplet 3/2 { b'16 b' b' } b'8 d'' |
+	    \time 2/8 \tuplet 3/2 { a'16 a' b' } g'8 |
 	    \time 2/4 a'4. g'16 a' | \time 2/8 b'8 a' | b'8 b' |
-	    \time 3/8 \times 2/3 { b'16 b' b' } b'8 b' |
+	    \time 3/8 \tuplet 3/2 { b'16 b' b' } b'8 b' |
 	    \time 2/4 a'8 g' e' r | g'4. b'16 b' |
 	    a'8 g' r4 \bar "||"
 	    \time 2/4 d''8 d'' b' d'' | b'8 a' g'4 | a'4. g'16 a' |
@@ -48,10 +48,10 @@ melody =
 	    a'8 g' r4 \bar "||"
 	}
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	God got plen -- ty o' room, got plen -- ty o' room,
 	'Way in de king -- dom,
@@ -80,10 +80,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

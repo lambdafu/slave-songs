@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice = "melody"
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1)
 	
     \autoBeamOff
     
@@ -37,7 +37,7 @@ melody =
     \clef violin
     \key g \major
     
-    \override Stem #'neutral-direction = #1
+    \override Stem.neutral-direction = #1
 
     \repeat volta 2
     {
@@ -49,23 +49,23 @@ melody =
     \break
     \repeat volta 2
     {
-      \override Stem #'neutral-direction = #-1
+      \override Stem.neutral-direction = #-1
       \partial 2 b'8. b'16 b'8
-      <b' \tweak #'font-size #-4 d''>8
+      <b' \tweak font-size #-4 d''>8
       c''8 d'' r4 | e''4
-      <e'' \tweak #'font-size #-4 c''>8
+      <e'' \tweak font-size #-4 c''>8
       e''8 |
       f''16[ e''] d''4 c''16 c'' |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       b'8 b' a' a' | g'8. e'16 d'8 fis'16 fis' | g'8. b'16 a'8. g'16 |
       g'4 r4
     }
   }
   
-  \lyricsto "melody" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "melody" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     De tall -- es' tree in Pa -- ra -- dise,
     De Chris -- tian call de tree of life;
@@ -86,13 +86,13 @@ melody =
       \new Staff \with
       {
 	fontSize = #-4
-	\override StaffSymbol #'staff-space = #(magstep -4)
+	\override StaffSymbol.staff-space = #(magstep -4)
       }
       {
 	\context Voice
 	{
 	  \set Staff.midiInstrument = "acoustic grand"
-	  \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	  \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	  
 	  \autoBeamOff
 		
@@ -118,10 +118,7 @@ melody =
     
     
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 96 4)
-      }
+    \tempo 4 = 96
     }
 
 

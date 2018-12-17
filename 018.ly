@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
     
@@ -42,15 +42,15 @@ melody =
       \partial 4 r16 es' es' es' |
       es'8 es' r es'16 es' | g'8 d'' r d''16 f'' |
       es''8 es'' c'' bes' | g'8 r r es'16 g' |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       bes'8 bes' r bes'16 bes' | bes'8 g' r es'16 f' |
       g'8 g' es'8. es'16 | c'4 \bar "||"
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     Hunt till you find him, Hal -- le -- lu -- jah,
     And a -- hunt -- in' for de Lord;
@@ -74,10 +74,7 @@ melody =
 % Tempo is about 4=100 to 4=120.
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 100 4)
-      }
+    \tempo 4 = 100
     }
 
 

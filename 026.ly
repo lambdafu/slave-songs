@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
     
     \autoBeamOff
     
@@ -39,16 +39,16 @@ melody =
     
     {
       c''2 | es''16 es''16~ es''4 r8 |
-      \once \override Stem #'neutral-direction = #1 
+      \once \override Stem.neutral-direction = #1 
       bes'2 | as'16 g'16~ g'4 es''8 |
       c''16 es''8. c''8 bes' | g'16 f'16~ f'4 r8 |
       c'8 f' g'16 as'8. | f'4 r4 | \bar "||"
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     \set stanza = "1."
     O grave -- yard,
@@ -72,10 +72,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 82 4)
-      }
+    \tempo 4 = 82
     }
 
 

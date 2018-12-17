@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -55,7 +55,7 @@ melody =
 		     >> \stemNeutral
 	    r8 d'' | g''8 b'4 d''8 | c''16[ b'] a'8 r a' |
 	    <fis' a'>8 a'4
-	    <fis' \tweak #'font-size #-4 a'>8 |
+	    <fis' \tweak font-size #-4 a'>8 |
 	    \stemDown << d'4
 			 << \\ \set fontSize = #'-4
 			    { \autoBeamOff \stemUp fis'8 d' } >>
@@ -64,10 +64,10 @@ melody =
 	}
     }
 
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
 	My mud -- der, you fol -- low Je -- sus,
 	My sis -- ter, you fol -- low Je -- sus,
@@ -79,10 +79,10 @@ melody =
 	I wish I been dere,
 	To wear de star -- ry crown.
     }
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
 	"" "" "" "" "" "" "" ""
 	"" "" "" "" "" "" "" ""
@@ -112,10 +112,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

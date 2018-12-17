@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
     
     \autoBeamOff
     
@@ -37,7 +37,7 @@ melody =
     \clef violin
     \key f \major
     
-    \override Stem #'neutral-direction = #1 
+    \override Stem.neutral-direction = #1 
     {
       { \partial 16*6 \set fontSize = #'-4 a'16 
 	a' a' c''8. \set fontSize = #'0 }
@@ -50,10 +50,10 @@ melody =
       c''8 a'16 a' bes' bes' a' a' | g'16 f'8. a'8 bes' |
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     % FIXME: The extra white space is intended to avoid overlap with
     % stanza number.
@@ -83,10 +83,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 82 4)
-      }
+    \tempo 4 = 82
     }
 
 

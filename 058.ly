@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -55,10 +55,10 @@ melody =
 	    f'8 f' f'16 a'8. | a'16 f'8 f' c'8. \bar "||"
 	}
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	\set stanza = "1."
 	I meet lit -- tle Ro -- sa ear -- ly in de morn -- in',
@@ -69,10 +69,10 @@ melody =
 	Walk 'em eas -- y round de heab -- en,
 	Till all liv -- ing may join dat band.¹
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	"An' I" ax her, "" how you do "" my "" dar -- ter?
 	O Je -- ru -- sa -- lem, ear -- ly in de morn -- in'.
@@ -93,10 +93,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

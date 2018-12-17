@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 	\tupletDown
@@ -40,23 +40,23 @@ melody =
 	{
 	    \repeat volta 2
 	    {
-		g'2 \times 2/3 { es'4( g' bes') } bes'4.( g'8) f'4 as'8[ g'] |
+		g'2 \tuplet 3/2 { es'4( g' bes') } bes'4.( g'8) f'4 as'8[ g'] |
 		f'2 f'4. es'8 d'4 es' f' g' | as'4. g'8 as'4. bes'8 c''2 as' |
 		g'1 es'
 	    }
 	    \break
 	    \time 4/4
 	    \partial 4 es'8. es'16 |
-	    \times 2/3 { es'8 es' es' } es' d' c' d' es'4 |
+	    \tuplet 3/2 { es'8 es' es' } es' d' c' d' es'4 |
 	    f'8 f' f'4 g'8 bes'8 bes'8\fermata g'16 f' |
-	    \times 2/3 { es'8 es' es' } es' d' c' d' es'8. es'16 |
+	    \tuplet 3/2 { es'8 es' es' } es' d' c' d' es'8. es'16 |
 	    f'4. f'8 g'4. f'8 | es'2 r4 \bar "||"
 	}
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	John saw-r-O, John saw -- r-O,
 	John saw de ho -- ly num -- ber set -- tin' on de gold -- en al -- tar!
@@ -83,10 +83,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

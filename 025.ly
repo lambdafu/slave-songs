@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
 
@@ -39,7 +39,7 @@ melody =
     
     \repeat volta 2
     {
-      \override Stem #'neutral-direction = #1 
+      \override Stem.neutral-direction = #1 
       \partial 8 a'16 a' | a'16 cis''8 cis''16 e' e' cis'8 |
       d'16 e'8. gis'8 gis' | a'16 b'8. r8 gis'8 |
       a'16 b'8. r8 gis'16 gis' | a'16 cis''8 cis''16 e' fis' cis' cis' |
@@ -55,19 +55,19 @@ melody =
       e'8 | a'8 b' cis'' d''16 d'' |
       e''16 e'' e'' cis'' d''8 d''16 d'' |
       cis''16 cis'' cis'' cis'' cis''8 a'16 cis''16 |
-      \override Stem #'neutral-direction = #-1
+      \override Stem.neutral-direction = #-1
       b'16 cis''16 b' gis' e'8 e' |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       a'8 b' cis'' d''16 d'' |
       e''16 e'' e'' cis'' d''8 d''16 d'' |
-      \override Stem #'neutral-direction = #-1
+      \override Stem.neutral-direction = #-1
       cis''8 cis'' b'16 b'8. | a'4 r8
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     Tit -- ty Ma -- ry, you know I gwine fol -- low,
     I gwine fol -- low, gwine fol -- low,
@@ -95,10 +95,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 82 4)
-      }
+    \tempo 4 = 82
     }
 
 

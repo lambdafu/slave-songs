@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.5"
+\version "2.21.0"
 
 % \header
 % {
@@ -30,7 +30,7 @@ melody =
   \context Voice = "one"
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 
     \autoBeamOff
  
@@ -42,12 +42,12 @@ melody =
     {
       \partial 8 a'8 |
       d''16 d''8. d''16 d'' fis'' e'' |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       d''8 d'' d'' a'16 b' |
-      \override Stem #'neutral-direction = #-1
+      \override Stem.neutral-direction = #-1
       c''16 c'' c''8 b' b' |
 
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       a'4( fis') | g'4 g'8 a' | fis'4 d'8 fis' |
       %% Variation
       %% \tag #'var { a'4( f') | g'4 g'8 a' | f'4 d'8 f' | }
@@ -63,10 +63,10 @@ melody =
     }
   }
 
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     \set stanza = "1."
     My brud -- der¹ sit -- tin' on de tree of life,
@@ -93,10 +93,7 @@ left-margin = 0\cm }
     
     
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 65 4)
-      }
+    \tempo 4 = 65
     }
 
 

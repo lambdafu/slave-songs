@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -45,22 +45,22 @@ melody =
 	    \alternative
 	    {
 		%% CHANGED: Slur removed (FIXME?).  Also below.
-		{ \times 2/3 { c''8 b' a' } b'8. g'16 c''2^\markup { FINE } }
-		{ \times 2/3 { c''8 b' a' } b'8. g'16
+		{ \tuplet 3/2 { c''8 b' a' } b'8. g'16 c''2^\markup { FINE } }
+		{ \tuplet 3/2 { c''8 b' a' } b'8. g'16
 		  c''8. c''16 c''8. c''16 }
 	    }
 	    d''8. d''16 c''8. c''16 b'4 g'8. g'16 | 
-	    \times 2/3 { c''8 b' a' } b'8. g'16 c''8. c''16 c''8. c''16 |
+	    \tuplet 3/2 { c''8 b' a' } b'8. g'16 c''8. c''16 c''8. c''16 |
 	    d''8. d''16 c''8. c''16 b'4 g'8. g'16 | 
-	    \times 2/3 { c''8 b' a' } b'8. g'16 c''2^\markup { D. C. }
+	    \tuplet 3/2 { c''8 b' a' } b'8. g'16 c''2^\markup { D. C. }
 	    %% FIXME: What does that mean?
 	    \set Score.repeatCommands = #'(end-repeat)
 	}
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	I'm in troub -- le, Lord, I'm in troub -- le,
 	I'm in troub -- le, Lord, troub -- le a -- bout my grave,
@@ -86,10 +86,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 100 4)
-      }
+    \tempo 4 = 100
     }
 
 

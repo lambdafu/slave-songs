@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
 
@@ -37,7 +37,7 @@ melody =
     \clef violin
     \key g \major
 
-    \override Stem #'neutral-direction = #1
+    \override Stem.neutral-direction = #1
     \repeat volta 2
     {
       \partial 4 c''8 c'' |
@@ -46,24 +46,24 @@ melody =
       b'8 g' a' g' | d'4 a' | g'4. fis'8 | g'4
     }
     \break
-    \override Stem #'neutral-direction = #-1
+    \override Stem.neutral-direction = #-1
     \repeat volta 2
     {
       b'8 c'' | d''8. d''16 d''8 d'' | d''4 e''8 d'' |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       b'8. b'16 a'8 g' | e'8 r a'4 | g'4. a'8 |
-      \override Stem #'neutral-direction = #-1
+      \override Stem.neutral-direction = #-1
       b'4 c''8 c'' |
-      <b' \tweak #'font-size #-4 d''>8.
-      <b' \tweak #'font-size #-4 d''>16
+      <b' \tweak font-size #-4 d''>8.
+      <b' \tweak font-size #-4 d''>16
       a'8. a'16 | g'4
     }
   }
   
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     \set stanza = "1."
     O my King E -- ma -- nu -- el, my E -- ma -- nu -- el a -- bove,
@@ -89,10 +89,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

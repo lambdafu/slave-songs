@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -43,9 +43,9 @@ melody =
 	    g'8 g' b' b' d''4 d'' |
 	    b'4 b'8 a' g'4 e' | a'4 g' e' e' |
 	    g'8 g' b' b' a'4\fermata e'8 e' |
-	    <e' \tweak #'font-size #-4 g'>4 g'8 
-	    <e' \tweak #'font-size #-4 g'>8 g'4
-	    <g' \tweak #'font-size #-4 fis'>4 |
+	    <e' \tweak font-size #-4 g'>4 g'8 
+	    <e' \tweak font-size #-4 g'>8 g'4
+	    <g' \tweak font-size #-4 fis'>4 |
 	    e'2 r4
 	}
 	\repeat volta 2
@@ -56,10 +56,10 @@ melody =
 	}
      }
 
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	Wai', my brud -- der,¹ bet -- ter true
 	be -- lieve,²
@@ -87,10 +87,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

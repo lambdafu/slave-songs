@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
     
@@ -40,25 +40,25 @@ melody =
     \repeat volta 2
     {
       \partial 8
-      <f' \tweak #'font-size #-4 c''>8 |
-      <f' \tweak #'font-size #-4 a'>8
-      <a' \tweak #'font-size #-4 c''>8
+      <f' \tweak font-size #-4 c''>8 |
+      <f' \tweak font-size #-4 a'>8
+      <a' \tweak font-size #-4 c''>8
       c''8 c'' |
-      <c'' \tweak #'font-size #-4 a'>8
+      <c'' \tweak font-size #-4 a'>8
       c''8 c'' r |
       bes'8. c''16 d''8 c'' |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       bes'8 a' g' c'' |
       %% FIXME: I put the stems up in this measure.
       \stemUp
-      <a' \tweak #'font-size #-4 c''>16
-      <a' \tweak #'font-size #-4 c''>16
-      <a' \tweak #'font-size #-4 c''>16
-      <a' \tweak #'font-size #-4 c''>16
-      <g' \tweak #'font-size #-4 a'>8
-      <g' \tweak #'font-size #-4 a'>8
+      <a' \tweak font-size #-4 c''>16
+      <a' \tweak font-size #-4 c''>16
+      <a' \tweak font-size #-4 c''>16
+      <a' \tweak font-size #-4 c''>16
+      <g' \tweak font-size #-4 a'>8
+      <g' \tweak font-size #-4 a'>8
       \stemNeutral |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       f'8( a') bes' bes' | a'4 g'16 g'8 f'16 | f'4 r8
     }
     \repeat volta 2
@@ -69,10 +69,10 @@ melody =
     }
   }
   
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     I tink I hear my brud -- der¹ say,
     Call de na -- tion great and small;
@@ -101,10 +101,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

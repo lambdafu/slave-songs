@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
     
@@ -41,10 +41,10 @@ melody =
     {
       \partial 8 bes'8 |
       es''8 es'' es'' es'' | d''8
-      <bes' \tweak #'font-size #-4 f''>4 bes'8 |
+      <bes' \tweak font-size #-4 f''>4 bes'8 |
       c''8. c''16 c'' es''8. | c''8 bes'4 bes'8 |
       es''8 es'' bes' g' |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       bes'16 g'16~ g'4 es'16 f'16 |
       g'16 g'8. f'8. f'16 | es'4 r8
     }
@@ -61,24 +61,24 @@ melody =
 	 << \\ { s32 \autoBeamOff \set fontSize = #'-4 \stemDown as'8*3/4 as'8
 		 \set fontSize = #'0 as'16 as'16 } >> >> |
       g'8 g' g'8. g'16 |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       bes'4. g'8 | f'8. bes'16 bes'8. g'16 | es'4 r8
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     \set stanza = "1."
     I take my text in Mat -- tew, and by de Re -- ve -- la -- tion, I
     know you by your gar -- ment, Dere's a meet -- ing here to -- night.
     Dere's a meet -- ing here to -- night,
     \repeat fold 2 {} \alternative { { Oh! Dere's a }
-				     { \override LyricText #'font-size = #0 "(Brudder" To -- "ny,)" } }
+				     { \override LyricText.font-size = #0 "(Brudder" To -- "ny,)" } }
     meet -- ing here to -- night, 
     \repeat fold 2 {} \alternative { { Oh! Dere's a }
-				     { \override LyricText #'font-size = #0 "(Sister" Ri -- "na,)" } }
+				     { \override LyricText.font-size = #0 "(Sister" Ri -- "na,)" } }
     meet -- ing here to -- night, I hope to meet a -- gain.
   }
 >>
@@ -97,10 +97,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 82 4)
-      }
+    \tempo 4 = 82
     }
 
 

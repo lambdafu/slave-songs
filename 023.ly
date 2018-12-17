@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 % FIXME: can't switch it off for the book.
 %\header
@@ -30,7 +30,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
 
@@ -45,13 +45,13 @@ melody =
       b'16 d''8. d''8 a' | g'4 r4 \bar "||"
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
 %% EDITED: I like it better with stem down.
-%% \override Stem #'neutral-direction = #1 
+%% \override Stem.neutral-direction = #1 
     \set stanza = "1."
     I saw de beam in my sis -- ter's¹ eye,
     Can't saw de beam in mine;
@@ -75,10 +75,7 @@ melody =
 % Tempo is about 4=100 to 4=120.
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 90 4)
-      }
+    \tempo 4 = 90
     }
 
 

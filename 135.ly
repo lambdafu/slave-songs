@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -54,17 +54,17 @@ melody =
 	    \partial 1 as'8. g'16 f'8 f' as' as' c''4 |
 	    g'8. f'16 e'8 e' g' g' c''4 |
 	    \break
-	    as'8. g'16 f'8 f' as' as' c'' \times 2/3 { bes'16 as' g' } |
-	    f'16 as'8. g'16 bes'8. as'16 c''8. \times 2/3 { es''16 c'' as' }
+	    as'8. g'16 f'8 f' as' as' c'' \tuplet 3/2 { bes'16 as' g' } |
+	    f'16 as'8. g'16 bes'8. as'16 c''8. \tuplet 3/2 { es''16 c'' as' }
 	    f'16 as'16~ |
 	    \break
 	    as'8 g' f' e' f'4 r4 \bar "||"
 	}
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	Pauve pi -- ti Lo -- lotte a mouin,
 	Pauve pi -- ti Lo -- lotte a mouin,
@@ -97,10 +97,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

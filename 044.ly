@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -38,9 +38,9 @@ melody =
 	\key f \major
 
 	\partial 4 c''4 | c''2 d''4 c'' |
-	a' a' a' \times 2/3 { d''8 d'' d'' } |
+	a' a' a' \tuplet 3/2 { d''8 d'' d'' } |
 	d''4. e''8 f''4 d'' | c''2 r4 a' | c''2 d''4 c'' |
-	a'4 f' f' \times 2/3 { f''8 f'' f'' } |
+	a'4 f' f' \tuplet 3/2 { f''8 f'' f'' } |
 	c''4. c''8 a'4 g' | f'2 r4 \break
     
 	\repeat volta 2
@@ -52,10 +52,10 @@ melody =
 	}
      }
 
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	I ax all dem brud -- der¹ roun',
 	Brud -- der,¹ why can't you pray for me?
@@ -85,10 +85,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

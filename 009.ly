@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -40,9 +40,9 @@ melody =
 	\repeat volta 2
 	{
 	    d''4 b'8 d'' | b'8[ a'] g'4 |
-	    \override Stem #'neutral-direction = #1
+	    \override Stem.neutral-direction = #1
 	    b'4 a'8 b' |
-	    \override Stem #'neutral-direction = #-1
+	    \override Stem.neutral-direction = #-1
 	    g'8[ fis'] e'4 |
 	    g'8 g' fis' e' | g'4 b | d'8 b16 b d'8 d' | e'4 r
 	}
@@ -52,18 +52,18 @@ melody =
 	    \partial 8 e'16[ fis'] |
 	    g'8 g' g'16[ fis'] e'[ fis'] |
 	    g'8
-	    <d' \tweak #'font-size #-4 g'>8
-	    <b \tweak #'font-size #-4 g'>4 |
+	    <d' \tweak font-size #-4 g'>8
+	    <b \tweak font-size #-4 g'>4 |
 	    d'8 b16 b d'8 d' | e'4 r8 e'16[ fis'] |
 	    g'8 g' g'16[ fis'] e'16[ fis'] | g'8 d'8 b4 |
 	    d'8 b16 b d'8 d' | e'4 r8
 	}
     }
 
-    \lyricsto "" \new Lyrics
-    {
-      \override LyricText #'font-size = #0
-      \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+      \override LyricText.font-size = #0
+      \override StanzaNumber.font-size = #-1
 
       \set stanza = "1."
       Poor Ro -- sy, poor gal;¹ Poor Ro -- sy, poor gal;
@@ -92,12 +92,12 @@ var =
 	    g'16 g' g' g' g'8 f' | e'4 r8
 	}
     }
-    \lyricsto "var" \new Lyrics
-    {
+    \new Lyrics
+    \lyricsto "var" {
 	Be -- fore I stay in hell one day, Hea -- ven shall -- a be my home;
     }
-    \lyricsto "var" \new Lyrics
-    {
+    \new Lyrics
+    \lyricsto "var" {
 	I sing and pray my soul a -- way, Hea -- ven shall -- a be my home.
     }
 >>
@@ -125,10 +125,7 @@ var =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 60 4)
-      }
+    \tempo 4 = 60
     }
 
 
@@ -140,10 +137,7 @@ var =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 60 4)
-      }
+    \tempo 4 = 60
     }
 
 

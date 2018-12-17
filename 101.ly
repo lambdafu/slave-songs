@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -38,12 +38,12 @@ melody =
 	\key as \major
 	{
 	    %% CHANGED: < changed to >.  Mmmh.
-	    \partial 8 es'16 c' | es'8^| es'8^> r8 es'16 c'16 |
-	    es'8^| es'8^> r8 es'16 c'16 | es'8 c'' c'' c'' |
-	    c'' bes' as' g'16 c' | f'8^| f'8^> r8 f'16 c'16 |
-	    f'8^| f'8^> r8 f'16 c'16 | f'8 bes' bes' bes' |
-	    bes'8 as' g' f'16 es' | as'8^| as'8^> r8 as'16 es'16 |
-	    as'8^| as'8^> r8 as'16 es'16 | as'8 c'' c'' c'' |
+	    \partial 8 es'16 c' | es'8^! es'8^> r8 es'16 c'16 |
+	    es'8^! es'8^> r8 es'16 c'16 | es'8 c'' c'' c'' |
+	    c'' bes' as' g'16 c' | f'8^! f'8^> r8 f'16 c'16 |
+	    f'8^! f'8^> r8 f'16 c'16 | f'8 bes' bes' bes' |
+	    bes'8 as' g' f'16 es' | as'8^! as'8^> r8 as'16 es'16 |
+	    as'8^! as'8^> r8 as'16 es'16 | as'8 c'' c'' c'' |
 	    c''8 bes' as' g' | < es' g' bes' >8 c''16[ bes']
 %% FIXME: FINE is too large.
 	    < c' as' >8.^\fermata \mark \markup { FINE }
@@ -61,10 +61,10 @@ melody =
 	    \bar "||"
 	}
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	O de vin -- ter, O de vin -- ter,
 	O de vin -- ter'll soon be o -- ber,¹ chil -- en,
@@ -95,10 +95,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

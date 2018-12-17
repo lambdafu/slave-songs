@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
     
@@ -40,18 +40,18 @@ melody =
     \repeat volta 2
     {
       \partial 8 bes'8 |
-      \once \override Stem #'direction = #-1
-      <bes' \tweak #'font-size #-4 g'>8
+      \once \override Stem.direction = #-1
+      <bes' \tweak font-size #-4 g'>8
       bes'8 bes' c'' | bes'8 d''4( f''8) |
       es''8 d'' c'' c'' | bes'4 r8
-      <g' \tweak #'font-size #-4 d''>8 |
-      <as' \tweak #'font-size #-4 es''>8
-      <as' \tweak #'font-size #-4 d''>8
-      <as' \tweak #'font-size #-4 c''>8
-      <as' \tweak #'font-size #-4 c''>8 |
-      <g' \tweak #'font-size #-4 bes'>8
-      <g' \tweak #'font-size #-4 bes'>8
-      <g' \tweak #'font-size #-4 bes'>8.
+      <g' \tweak font-size #-4 d''>8 |
+      <as' \tweak font-size #-4 es''>8
+      <as' \tweak font-size #-4 d''>8
+      <as' \tweak font-size #-4 c''>8
+      <as' \tweak font-size #-4 c''>8 |
+      <g' \tweak font-size #-4 bes'>8
+      <g' \tweak font-size #-4 bes'>8
+      <g' \tweak font-size #-4 bes'>8.
       g'16 |
       as'8 g' f' f' |
       
@@ -59,14 +59,14 @@ melody =
       %% collapses with the one in the other voice (giving a spurious warning).
       %% The result is that we can assign the text as if it were one voice.
       %% The \stemDown for the rest makes it appear below the other voice.
-      << { \stemUp \autoBeamOff \once \override Stem #'transparent = ##t es'8 \stemUp bes'16 bes' bes'8 bes' }
+      << { \stemUp \autoBeamOff \once \override Stem.transparent = ##t es'8 \stemUp bes'16 bes' bes'8 bes' }
 	 << \\ { \stemUp es'4 \stemDown r8 \stemNeutral } >> >> |
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     O me no wea -- ry yet, O me no wea -- ry yet
     \set stanza = "1."
@@ -89,10 +89,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 82 4)
-      }
+    \tempo 4 = 82
     }
 
 

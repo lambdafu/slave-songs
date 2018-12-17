@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 	\tupletDown
@@ -38,10 +38,10 @@ melody =
 	\clef violin
 	\key g \major
 	{
-	    d''4 d'' d'' \times 2/3 { b'8 c'' d'' } |
-	    e''8 d'' c'' b' \times 2/3 { d'' c'' a' } r4 |
-	    c''4 c'' c'' \times 2/3 { a'8 b' c'' } |
-	    d''8 c'' b' a' \times 2/3 { b' a' g' } r8 \bar "||"
+	    d''4 d'' d'' \tuplet 3/2 { b'8 c'' d'' } |
+	    e''8 d'' c'' b' \tuplet 3/2 { d'' c'' a' } r4 |
+	    c''4 c'' c'' \tuplet 3/2 { a'8 b' c'' } |
+	    d''8 c'' b' a' \tuplet 3/2 { b' a' g' } r8 \bar "||"
 	    \break
 	    d'8 | g'16 g' b'4 g'8 a'16 a' c''4 a'8 |
 	    g'16 g' b'4 fis'8 a'16 fis'16 d'8 r d' |
@@ -49,10 +49,10 @@ melody =
 	    d''16 d'' d''4 fis'8 a'16 a' g'8 r4 \bar "||"
 	}
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	Aine, dé, trois, Car -- o -- line,
 	ça ça yé comme ça ma chère,
@@ -79,10 +79,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

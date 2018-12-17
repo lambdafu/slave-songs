@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
 
@@ -40,23 +40,23 @@ melody =
     \repeat volta 2
     {
       \partial 8
-      <\tweak #'font-size #-4 bes' d''>8 |
-      <\tweak #'font-size #-4 d'' f''>4
+      <\tweak font-size #-4 bes' d''>8 |
+      <\tweak font-size #-4 d'' f''>4
       es''8. d''16 | c''8 a' f' a' | c''4 d''8. c''16 | bes'4 r8
     }
     \break
     \repeat volta 2
     {
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       << { \stemUp g'8 \stemNeutral }
 	 << \\ { s32 \set fontSize = #'-4 \stemDown f'8*3/4 } >> >>
       | f'8 f'
-      <\tweak #'font-size #-4 f' bes'>4 |
+      <\tweak font-size #-4 f' bes'>4 |
       << { \stemUp bes'16 d''8. \stemNeutral }
 	 << \\ { \autoBeamOff \stemDown bes'8
 		 \set fontSize = #'-4 bes'8 } >> >>
       bes'8 r | g'8 g' g' bes'16 bes' |
-      \override Stem #'neutral-direction = #-1
+      \override Stem.neutral-direction = #-1
       f'8 f' f' r |
       f'8 f' f' r |
       %% FIXME: Variation is missing.
@@ -64,10 +64,10 @@ melody =
       c''4 d''8. c''16 | bes'4 r8
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     %% FIXME: Can't use \emph here as this messes up with lilyponds
     %% with guessing algorithm.
@@ -94,10 +94,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 82 4)
-      }
+    \tempo 4 = 82
     }
 
 

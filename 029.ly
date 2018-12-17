@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
 
@@ -41,7 +41,7 @@ melody =
     {
       d''4 d''8. b'16 | d''8 d''16 d'' d''8 b' |
       d''2(~ | d''4 b')|
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       c''4 c''8. c''16 |
       b'8 a'16 a' g'8 a' | b'2 | g'16 g' g'8 e' d' \break
     }
@@ -52,10 +52,10 @@ melody =
       b'2 | g'16 g' g'8 e' d'
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     Rain fall and wet¹
     Bec -- ca Law -- ton,² Oh __
@@ -82,10 +82,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 82 4)
-      }
+    \tempo 4 = 82
     }
 
 

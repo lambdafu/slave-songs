@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
     
@@ -40,10 +40,10 @@ melody =
     \repeat volta 2
     {
       b'4 d'' d''2 | c''4 d''2 r4 | fis'4 a' a'2 | fis'4
-      <d' \tweak #'font-size #-4 a'>
+      <d' \tweak font-size #-4 a'>
       d'' d'' | 
-      <b' \tweak #'font-size #-4 d''>2
-      <g' \tweak #'font-size #-4 b'>4.
+      <b' \tweak font-size #-4 d''>2
+      <g' \tweak font-size #-4 b'>4.
       g'8 |
       d'2 fis'4 fis' | g'2.( fis'4) | g'2
     }
@@ -51,7 +51,7 @@ melody =
     \repeat volta 2
     {
       b'4 d'' | c''2.( b'4) |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       a'2 b'4. b'8 | a'2.( fis'4) |
       \break
       \stemUp d'4
@@ -64,10 +64,10 @@ melody =
       \stemNeutral d'2 fis'4 fis' | g'2.( fis'4) | g'2 r2
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     Weep no more, Mar -- ta,
     Weep no more, Ma -- ry,¹
@@ -96,10 +96,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 82 4)
-      }
+    \tempo 4 = 82
     }
 
 

@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.5"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
 
@@ -41,13 +41,13 @@ melody =
     {
       \partial 4 a'8 c'' |
       d''4. 
-      \stemUp <a' \tweak #'font-size #-4 c''>8 \stemNeutral
+      \stemUp <a' \tweak font-size #-4 c''>8 \stemNeutral
       d''8 c'' a' f'16 f' | g'16 g' f'8 g'16 a'8 g'16 |
       g'4 a'8 c'' |
       %% FIXME: It would be better to have the variation more to the right.
       %% EDITED: I added a stem to the d'', because this makes it clear
       %% there are two voices.
-      \override Staff.NoteCollision #'merge-differently-dotted = ##t
+      \override Staff.NoteCollision.merge-differently-dotted = ##t
       << { d''4. \stemDown c''8 \stemNeutral }
 	 << \\ { \stemUp d''4 f''8[ d''] } >> >> |
       d''8 c'' a' f'16 f' | f'16 f' c'8 d'16 f'8 f'16 |
@@ -64,10 +64,10 @@ melody =
     }
   }
   
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     Hur -- ry¹ on, my wea -- ry soul,
     And I year -- de from heav -- en to -- day,
@@ -96,10 +96,7 @@ melody =
     
     
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 82 4)
-      }
+    \tempo 4 = 82
     }
 
 

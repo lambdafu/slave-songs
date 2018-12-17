@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -39,13 +39,13 @@ melody =
 	
 	{
 	    \partial 8 g'8 | g'4 g'8. g'16 | 
-	    << { \once \override Stem #'transparent = ##t f'4
+	    << { \once \override Stem.transparent = ##t f'4
 		 \set fontSize = #'-4 \stemDown f'16 f' f'
 		 \set fontSize = #'0 \stemNeutral }
 	       << \\ \set fontSize = #'0 \stemUp { f'4 r8 } >> >>
 	    %% FIXME: Yuck, yuck.
 	    \partial 8 f'8 | bes'4 bes'8. bes'16 |
-	    << { \once \override Stem #'transparent = ##t a'4 
+	    << { \once \override Stem.transparent = ##t a'4 
 		 \set fontSize = #'-4 \stemDown c''16 a'[ g']
 		 \set fontSize = #'0 \stemNeutral }
 	       << \\ \set fontSize = #'0 \stemUp { a'4 r8 } >> >>
@@ -56,10 +56,10 @@ melody =
 	    \bar "||"
 	}
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	I can't stan' de fire, "(dear" sis -- "ter)"
 	I can't stan' de fire, "(O" "Lord)"
@@ -82,10 +82,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 82 4)
-      }
+    \tempo 4 = 82
     }
 
 

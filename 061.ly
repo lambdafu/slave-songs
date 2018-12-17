@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -42,13 +42,13 @@ melody =
 	    c''1 | bes' \bar "||"
 	}
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
-%	\override LyricSpace #'minimum-distance = #5.0
-	\override LyricText #'self-alignment-X = #LEFT
+%	\override LyricSpace.minimum-distance = #5.0
+	\override LyricText.self-alignment-X = #LEFT
 
 %% FIXME: align left end of the notes to the lyrics.
 	\set stanza = "1."
@@ -72,7 +72,7 @@ melody =
       \consists Bar_engraver
       %% need procedure, since lyrics doesn't have a staff_sym
       %% engraver.
-      \override BarLine #'bar-size = #3.0
+      \override BarLine.bar-extent = #'(-1.5 . 1.5)
     }
 %     \context
 %     {
@@ -88,10 +88,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 82 4)
-      }
+    \tempo 4 = 82
     }
 
 

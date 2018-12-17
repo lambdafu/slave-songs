@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 	\tupletDown
@@ -40,21 +40,21 @@ melody =
 	{
 	    \repeat volta 2
 	    {
-		\times 2/3 { f'8^\markup { CHORUS } f' a' } a' a' |
+		\tuplet 3/2 { f'8^\markup { CHORUS } f' a' } a' a' |
 		g'8 f' g'4 |
-		\times 2/3 { f'8 a' g' } f'8 g' | f'8 f' f'4^\markup { FINE }
+		\tuplet 3/2 { f'8 a' g' } f'8 g' | f'8 f' f'4^\markup { FINE }
 	    }
-	    r4 \times 2/3 { f'8^\markup { SOLO } a' c'' } | f''8 f'' f''4 |
-	    \times 2/3 { e''8 e'' e'' } d'' e'' | d''8 c'' c''4 |
-	    r8 c''8 \times 2/3 { d'' d'' d'' } | c''8 c'' f''4 |
-	    \times 2/3 { f'8 f' g' } e' f' | d'8 f' c'4^\markup { D. C. }
+	    r4 \tuplet 3/2 { f'8^\markup { SOLO } a' c'' } | f''8 f'' f''4 |
+	    \tuplet 3/2 { e''8 e'' e'' } d'' e'' | d''8 c'' c''4 |
+	    r8 c''8 \tuplet 3/2 { d'' d'' d'' } | c''8 c'' f''4 |
+	    \tuplet 3/2 { f'8 f' g' } e' f' | d'8 f' c'4^\markup { D. C. }
 	    \bar "||"
 	}
     }
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	Mo dé -- jà rou -- lé tout la côte
 	Pan -- cor ouar par -- eil belle La -- yotte.
@@ -82,10 +82,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
     
@@ -37,7 +37,7 @@ melody =
     \clef violin
     \key es \major
     
-    \override Stem #'neutral-direction = #1 
+    \override Stem.neutral-direction = #1 
     \partial 4 es'8 g' | bes'8. <g' bes'>16 bes'8 <bes' c''>8 |
     bes'8 r g' bes' | c''2 | bes'8 r \bar "||" \break
     
@@ -48,10 +48,10 @@ melody =
     g'4.( f'8) | es'4 \bar "||"
   }
   
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     \set stanza = "1."
     Mich -- ael row de boat a -- shore, Hal -- le -- lu -- jah!
@@ -75,10 +75,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

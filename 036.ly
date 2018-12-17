@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
     
@@ -38,17 +38,17 @@ melody =
     \key a \major
 
     \tupletUp
-    \times 2/3 { cis''8 e'' cis'' } e''8 e'' | cis''16 a'8. r4 |
+    \tuplet 3/2 { cis''8 e'' cis'' } e''8 e'' | cis''16 a'8. r4 |
     d'16 d'8. fis'8. fis'16 | b'4 r |
     %% EDITED: Put the accent below so it doesn't conflict with the tuplet.
-    \times 2/3 { b'8 d''_> b' } d''8 b' | gis'16[ b'] e'8 r4 |
+    \tuplet 3/2 { b'8 d''_> b' } d''8 b' | gis'16[ b'] e'8 r4 |
     d'8 d' e'8. e'16 | a'4 r4 \bar "||"
   }
   
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     Fi -- er, my Sav -- iour, fi -- er,
     Sa -- tan's camp a -- fire;
@@ -73,10 +73,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

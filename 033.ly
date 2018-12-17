@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
 
@@ -43,18 +43,18 @@ melody =
     %% EDITED: Make an in-measure ine brak here, and added a || bar.
     c''16 c'' a' a' g'8 \bar "||" \break 
     \partial 8 d'' | e''16 e'' c'' c'' 
-    <g' \tweak #'font-size #-4 c''>8
-    <c'' \tweak #'font-size #-4 g'>16
-    <c'' \tweak #'font-size #-4 g'>16 |
+    <g' \tweak font-size #-4 c''>8
+    <c'' \tweak font-size #-4 g'>16
+    <c'' \tweak font-size #-4 g'>16 |
     a'16 a' g' g' e'8 r |
     a'4 g'8. f'16 |
     e'16 e' d' d' c'8 \bar "||"
   }
 
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     \set stanza = "1."
     O rock o' ju -- bi -- lee, poor fal -- len soul,¹
@@ -80,10 +80,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

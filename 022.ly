@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 % FIXME: can't switch it off for the book.
 %\header
@@ -30,7 +30,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
 
@@ -40,28 +40,28 @@ melody =
 
     {
       bes'4 bes'8 bes'16 c''16 |
-      \override Stem #'neutral-direction = #1 
+      \override Stem.neutral-direction = #1 
       bes'8. as'16 g'8 bes'8 |
       bes'16 bes' bes' bes' es''8
-      \override Stem #'neutral-direction = #-1
+      \override Stem.neutral-direction = #-1
       bes' |
-      \override Stem #'neutral-direction = #1 
+      \override Stem.neutral-direction = #1 
       bes'8( as') g' r |
       \break
       as'4 as'8 as'16 bes' | as'8. g'16 f'8 as' |
-      \override Stem #'neutral-direction = #-1
+      \override Stem.neutral-direction = #-1
       as'16 as' as' as' c''8 bes' |
-      \override Stem #'neutral-direction = #1 
+      \override Stem.neutral-direction = #1 
       bes'8( as') g' r |
       \break
-      \override Stem #'neutral-direction = #-1
+      \override Stem.neutral-direction = #-1
       bes'4 bes'8 bes'16 c'' |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       bes'8. as'16 g'8 bes'8 |
       bes'16 bes' bes' bes' es''8
-      \override Stem #'neutral-direction = #-1
+      \override Stem.neutral-direction = #-1
       bes' |
-      \override Stem #'neutral-direction = #1 
+      \override Stem.neutral-direction = #1 
       bes'8( as') g' bes' |
       \break
 
@@ -70,9 +70,9 @@ melody =
       << { \stemUp c''16[ bes'] \stemNeutral } << \\ c''8 >> >> as'8 |
       g'4 r8 g' | g'4 r8 bes' |
       \break
-      \override Stem #'neutral-direction = #-1 
+      \override Stem.neutral-direction = #-1 
       c''8. bes'16 as'8 g' | f' r as' f' |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       f'8 f' as' bes' | c''8. d''16 es''8 c''8 |
       \break
       bes'8. as'16 g'8 f' | es'4 r |
@@ -81,17 +81,17 @@ melody =
       es'8 es' es' r |
       \break
       f'8 f' f' r | g'8 g' g' r |
-      \override Stem #'neutral-direction = #-1
+      \override Stem.neutral-direction = #-1
       bes'8 bes' bes'16 c''8. | es'8 es' es'8. es'16 |
       \break
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       f'16 f' f' f' bes'8 g' | es'4 es'8 r | \bar "||"
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     John, John, wid de ho -- ly or -- der,¹
     Sit -- tin' on de gol -- den or -- der;
@@ -125,10 +125,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 82 4)
-      }
+    \tempo 4 = 82
     }
 
 

@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 % FIXME: can't switch it off for the book.
 %\header
@@ -30,7 +30,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
 
@@ -39,13 +39,13 @@ melody =
     \key as \major
 
     {
-      \override Stem #'neutral-direction = #1 
+      \override Stem.neutral-direction = #1 
       \partial 4 es'8 g' |
       as'8 as' as' as' as' as' f'[ es'] |
       as'4 as'8.[ f'16] es'4 g'8 as' |
       bes'8 bes' bes' bes' bes' bes' as'[ \stemUp <bes' des''>] \stemNeutral |
       c''4 bes' as' as'8 bes' | c''8 c'' c'' as' c''16 es''~ es''4 c''8 |
-      \override Stem #'neutral-direction = #-1 
+      \override Stem.neutral-direction = #-1 
       es''4 c''8.[ as'16] bes'4 c''8. bes'16 |
       as'8 as' f' es'
       %% FIXME: Merge note heads.
@@ -53,10 +53,10 @@ melody =
       as'2 r4 \bar "||"
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     I am hunt -- in' for a ci -- ty, to stay a -- while,
     I am hunt -- in' for a ci -- ty, to stay a -- while,
@@ -81,10 +81,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 90 4)
-      }
+    \tempo 4 = 90
     }
 
 

@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
     
@@ -41,9 +41,9 @@ melody =
       \partial 8 a'8 |
       d''4 d'' | cis''8 e''4 cis''8 | d''8 cis'' b'4 |
       a'4 cis''8 e'' | d''4 b'8 d'' | cis''4 a'8 cis'' |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       b'4 << e'4 << \\ \set fontSize = #'-4 \stemUp e''4 >> >>  |
-      << { \once \override Stem #'transparent = ##t e'8
+      << { \once \override Stem.transparent = ##t e'8
 	   \set fontSize = #'-4 \stemDown a' a' a'
 	   \set fontSize = #'0 \stemNeutral }
 	 << \\ \set fontSize = #'0 \stemUp { e'4 r }
@@ -51,19 +51,19 @@ melody =
       | \bar "||"
       \break
       a'4. b'8 |
-      << { \once \override Stem #'transparent = ##t a'8
+      << { \once \override Stem.transparent = ##t a'8
 	   \set fontSize = #'-4 \stemDown a'16 a' a'8 a'
 	   \set fontSize = #'0 \stemNeutral }
 	 << \\ \set fontSize = #'0 \stemUp { a'4 r } >> >>
       
       | a'4. fis'8 |
-      << { \once \override Stem #'transparent = ##t e'8
+      << { \once \override Stem.transparent = ##t e'8
 	   \set fontSize = #'-4 \stemDown a'16 a' a'8 a'
 	   \set fontSize = #'0 }
 	 << \\ \set fontSize = #'0 \stemUp { e'4 r } >> >> |
       a'4 d'' |
       %% FIXME: Overriding neutral-direction doesn't work here...
-      \once \override Stem #'direction = #1
+      \once \override Stem.direction = #1
       b'4
       << g'4 << \\ \set fontSize = #'-4 \stemDown g''4 >> >> |
       << fis'4 << \\ \set fontSize = #'-4 \stemDown fis''4 >> >>
@@ -72,10 +72,10 @@ melody =
       r8 \bar "||"
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     What make ole Sa -- tan da fol -- low me so?
     Sa -- tan hain't nottin' at all for to do wid¹ me.
@@ -100,10 +100,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 82 4)
-      }
+    \tempo 4 = 82
     }
 
 

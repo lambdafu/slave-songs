@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
      \context Voice
     {
 	\set Staff.midiInstrument = "acoustic grand"
-	\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
 	\autoBeamOff
 
@@ -41,17 +41,17 @@ melody =
 	g'16 g' g'8 g' bes'16 bes' | bes'16 bes' bes'8 bes' c''16 c'' | \break
 	c''16 c'' a'8 f' a'16 a' | c''16 c'' c''8 c''16 bes' g'8 | \break
 	c''4 c''16 bes' g'8 | 
-	<< { \once \override Stem #'transparent = ##t f'8
+	<< { \once \override Stem.transparent = ##t f'8
 	     \set fontSize = #'-4 \stemDown c''8 c'' c''
 	     \set fontSize = #'0 \stemNeutral }
 	   << \\ \set fontSize = #'0 \stemUp { f'4 r } >> >>
 	\bar "||"
     }
 
-    \lyricsto "" \new Lyrics
-    {
-        \override LyricText #'font-size = #0
-        \override StanzaNumber #'font-size = #-1
+    \new Lyrics
+    \lyricsto "" {
+        \override LyricText.font-size = #0
+        \override StanzaNumber.font-size = #-1
 
 	\set stanza = "1."
 	Rock o' my soul in de bo -- som of A -- bra -- ham,
@@ -76,10 +76,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

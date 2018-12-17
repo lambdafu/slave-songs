@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.0"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
     
     \autoBeamOff
     
@@ -40,7 +40,7 @@ melody =
     \repeat volta 2
     {
       \partial 8 b'8 | c''8 b' c'' d'' | b'4 r8 g'8 | a'8 g' a'
-      \once \override Stem #'neutral-direction = #1
+      \once \override Stem.neutral-direction = #1
       b' |
       a'4 r8 b' |
       \break
@@ -50,18 +50,18 @@ melody =
     \break
     \repeat volta 2
     {
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       d'16 d' | d'16 d' e'8 g' a' | b'8 b'16 b' b' a' g'8 |
       a'8 a'16 a' a' g' e'8 | g'8 g'16 g' g' e' d'8 |
       d'8 e' g' a' | b'8 b'16 b' b' a' g' b' |
-      \override Stem #'neutral-direction = #-1
+      \override Stem.neutral-direction = #-1
       d''8 b' a' g' | g'4 r8
     }
   }
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     I wait up -- on de Lord,
     I wait up -- on de Lord,
@@ -90,10 +90,7 @@ melody =
 
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 4)
-      }
+    \tempo 4 = 80
     }
 
 

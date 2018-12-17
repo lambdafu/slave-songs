@@ -16,7 +16,7 @@
 % Creative Commons, 543 Howard Street, 5th Floor,
 % San Francisco, CA 94105-3013  United States
 
-\version "2.10.5"
+\version "2.21.0"
 
 %\header
 %{
@@ -29,7 +29,7 @@ melody =
   \context Voice
   {
     \set Staff.midiInstrument = "acoustic grand"
-    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(0 . 0)
+    \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 	
     \autoBeamOff
 
@@ -42,7 +42,7 @@ melody =
       \partial 4 a'4 |
       c''4 a' c''8 c'' | d''4 bes' d'' | c''4 a' a' | g'2 e'4 |
       f'4 f' bes'8 d'' | c''4 c'' a' |
-      \override Stem #'neutral-direction = #1
+      \override Stem.neutral-direction = #1
       bes'4 a' g' f'2
     }
     \break
@@ -54,10 +54,10 @@ melody =
     }
   }
 
-  \lyricsto "" \new Lyrics
-  {
-    \override LyricText #'font-size = #0
-    \override StanzaNumber #'font-size = #-1
+  \new Lyrics
+  \lyricsto "" {
+    \override LyricText.font-size = #0
+    \override StanzaNumber.font-size = #-1
 
     Je -- hov -- iah, Hal -- le -- lu -- jah,
     De Lord is per -- wide,¹
@@ -84,10 +84,7 @@ melody =
     
     
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 160 4)
-      }
+    \tempo 4 = 160
     }
 
 

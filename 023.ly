@@ -31,7 +31,7 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
     \autoBeamOff
 
     \time 2/4
@@ -51,7 +51,7 @@ melody =
     \override StanzaNumber.font-size = #-1
 
 %% EDITED: I like it better with stem down.
-%% \override Stem.neutral-direction = #1 
+%% \override Stem.neutral-direction = #1
     \set stanza = "1."
     I saw de beam in my sis -- ter's¹ eye,
     Can't saw de beam in mine;
@@ -73,7 +73,7 @@ melody =
   \new Staff { \unfoldRepeats \melody }
 
 % Tempo is about 4=100 to 4=120.
-  
+
   \midi {
     \tempo 4 = 90
     }

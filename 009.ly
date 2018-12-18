@@ -30,7 +30,7 @@ melody =
     {
 	\set Staff.midiInstrument = "acoustic grand"
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 2/4
@@ -73,11 +73,11 @@ melody =
     }
 >>
 
-var = 
+var =
 <<
      \context Voice = "var"
     {
-	\set Staff.midiInstrument = "acoustic grand"      
+	\set Staff.midiInstrument = "acoustic grand"
 	\autoBeamOff
 	\time 2/4
 	\clef violin
@@ -123,7 +123,7 @@ var =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 60
     }
@@ -135,7 +135,7 @@ var =
 {
   \new Staff { \unfoldRepeats \var }
 
-  
+
   \midi {
     \tempo 4 = 60
     }

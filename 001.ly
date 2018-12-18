@@ -33,7 +33,7 @@ melody =
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
 
     \autoBeamOff
- 
+
     \time 2/4
     \clef violin
     \key d \major
@@ -90,8 +90,8 @@ left-margin = 0\cm }
   \score
   {
     \new Staff { \unfoldRepeats \melody }
-    
-    
+
+
   \midi {
     \tempo 4 = 65
     }

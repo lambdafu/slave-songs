@@ -30,7 +30,7 @@ melody =
     {
 	\set Staff.midiInstrument = "acoustic grand"
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 4/4
@@ -48,7 +48,7 @@ melody =
 		f'16. as'32 | c''8 c'' des'' des'' c''4. bes'16. g'32 |
 		as'8 as' c'' c'' g'4. f'16. as'32 |
 		c''8 c'' bes' g' as'4. bes'16. g'32 |
-		as'8 f' g' e' f'4 r8 
+		as'8 f' g' e' f'4 r8
 	    }
 	    \break
 	    \partial 1 as'8. g'16 f'8 f' as' as' c''4 |
@@ -95,7 +95,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 80
     }

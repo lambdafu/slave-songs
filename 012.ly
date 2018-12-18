@@ -30,13 +30,13 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
     \autoBeamOff
-    
+
     \time 2/4
     \clef violin
     \key d \major
-    
+
     {
       \partial 8 a'8 |
       d''4 d'' | cis''8 e''4 cis''8 | d''8 cis'' b'4 |
@@ -47,7 +47,7 @@ melody =
 	   \set fontSize = #'-4 \stemDown a' a' a'
 	   \set fontSize = #'0 \stemNeutral }
 	 << \\ \set fontSize = #'0 \stemUp { e'4 r }
-	    \\ \set fontSize = #'-4 d''4 >> >> 
+	    \\ \set fontSize = #'-4 d''4 >> >>
       | \bar "||"
       \break
       a'4. b'8 |
@@ -55,7 +55,7 @@ melody =
 	   \set fontSize = #'-4 \stemDown a'16 a' a'8 a'
 	   \set fontSize = #'0 \stemNeutral }
 	 << \\ \set fontSize = #'0 \stemUp { a'4 r } >> >>
-      
+
       | a'4. fis'8 |
       << { \once \override Stem.transparent = ##t e'8
 	   \set fontSize = #'-4 \stemDown a'16 a' a'8 a'
@@ -81,7 +81,7 @@ melody =
     Sa -- tan hain't nottin' at all for to do wid¹ me.
     "(Run" see -- "ker.)"
     Hold your light, "(Sis" -- ter Ma -- "ry,²)"
-    Hold your light, "(See" -- ker turn "back,)" 
+    Hold your light, "(See" -- ker turn "back,)"
     Hold your light on Ca -- naan shore.
   }
 >>
@@ -98,7 +98,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 82
     }

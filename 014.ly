@@ -30,16 +30,16 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-    
+
     \autoBeamOff
-    
+
     \time 2/4
     \clef violin
     \key c \major
-    
+
     {
       \partial 8 c''8 |
-      e''4 c'' | d''4 e'' | 
+      e''4 c'' | d''4 e'' |
       %% FIXME: Merge note heads, make down stems smaller.
       << { \stemUp a'4 a'8 g'8  \stemNeutral }
 	 << \\ { \autoBeamOff \stemDown a'8 a'4 g'8 } >> >> |
@@ -87,7 +87,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 82
     }

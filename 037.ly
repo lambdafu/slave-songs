@@ -30,13 +30,13 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
     \autoBeamOff
-    
+
     \time 2/4
     \clef violin
     \key f \major
-    
+
     \override Stem.neutral-direction = #1
     \repeat volta 2
     {
@@ -78,7 +78,7 @@ melody =
     De sun give a light in de heaven all round,
     De sun give a light in de heaven all round,
     Why don't you give up de world?
-    
+
     My brud -- der, don't you give up de world?
     My brud -- der, don't you give up de world?
     My brud -- der, don't you give up de world?
@@ -99,7 +99,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 80
     }

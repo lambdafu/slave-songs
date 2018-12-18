@@ -30,7 +30,7 @@ melody =
     {
 	\set Staff.midiInstrument = "acoustic grand"
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 3/4
@@ -49,7 +49,7 @@ melody =
 
 	\set stanza = "1."
 	Jer -- dan's mills a -- grin -- ding, Jer -- dan's a -- hay;
-	Jer -- dan's mills a -- grin -- ding, Jer -- dan's a -- hay.	
+	Jer -- dan's mills a -- grin -- ding, Jer -- dan's a -- hay.
     }
 >>
 
@@ -65,7 +65,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 100
     }

@@ -30,13 +30,13 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-    
+
     \autoBeamOff
-    
+
     \time 2/4
     \clef violin
     \key g \major
-    
+
     \repeat volta 2
     {
       \partial 8 b'8 | c''8 b' c'' d'' | b'4 r8 g'8 | a'8 g' a'
@@ -67,7 +67,7 @@ melody =
     I wait up -- on de Lord,
     I wait up -- on de Lord, my God,
     who take a -- way de sin of the world.
-    
+
     \set stanza = "1."
     If you want to find Je -- sus, go in the wil -- der -- ness,
     Go in de wil -- der -- ness, go in de wil -- der ness,
@@ -88,7 +88,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 80
     }

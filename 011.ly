@@ -30,13 +30,13 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
     \autoBeamOff
-    
+
     \time 2/4
     \clef violin
     \key es \major
-	
+
     \repeat volta 2
     {
       \partial 8 bes'8 |
@@ -54,7 +54,7 @@ melody =
       es'16 f'16 |
       g'8 g' g' g' | g'8
       << { \stemUp bes'4 g'16 g'16 \stemNeutral }
-	 << \\ { \autoBeamOff \set fontSize = #'-4 \stemDown g'8 g'8 
+	 << \\ { \autoBeamOff \set fontSize = #'-4 \stemDown g'8 g'8
 		 \set fontSize = #'0 g'16 g'16 } >> >> |
       as'8 as' as' as' | as'8
       << { \stemUp bes'4 as'16 as'16 \stemNeutral }
@@ -76,7 +76,7 @@ melody =
     Dere's a meet -- ing here to -- night,
     \repeat fold 2 {} \alternative { { Oh! Dere's a }
 				     { \override LyricText.font-size = #0 "(Brudder" To -- "ny,)" } }
-    meet -- ing here to -- night, 
+    meet -- ing here to -- night,
     \repeat fold 2 {} \alternative { { Oh! Dere's a }
 				     { \override LyricText.font-size = #0 "(Sister" Ri -- "na,)" } }
     meet -- ing here to -- night, I hope to meet a -- gain.
@@ -95,7 +95,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 82
     }

@@ -30,17 +30,17 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
     \autoBeamOff
 
     \time 2/4
     \clef violin
     \key f \major
-	
+
     \repeat volta 2
     {
       \partial 4 a'8 c'' |
-      d''4. 
+      d''4.
       \stemUp <a' \tweak font-size #-4 c''>8 \stemNeutral
       d''8 c'' a' f'16 f' | g'16 g' f'8 g'16 a'8 g'16 |
       g'4 a'8 c'' |
@@ -63,7 +63,7 @@ melody =
       f'16 f' c'8 d'16 f'8 f'16 | f'4 r8 \bar "||"
     }
   }
-  
+
   \new Lyrics
   \lyricsto "" {
     \override LyricText.font-size = #0
@@ -86,15 +86,15 @@ melody =
   \score
   {
     \new Staff { \melody }
-    
+
     \layout { indent = 0.0 }
   }
-  
+
   \score
   {
     \new Staff { \unfoldRepeats \melody }
-    
-    
+
+
   \midi {
     \tempo 4 = 82
     }

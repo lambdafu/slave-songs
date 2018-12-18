@@ -30,7 +30,7 @@ melody =
     {
 	\set Staff.midiInstrument = "acoustic grand"
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 2/4
@@ -42,11 +42,11 @@ melody =
 	    \partial 8 b'8 | b'16 b' b' b' g'8 g' |
 
 	    b'8 d'' << { \stemUp c''8
-			       \set fontSize = #'-4 
+			       \set fontSize = #'-4
 			       c'' |
 			       \once \override NoteHead.transparent = ##t
 			       \once \override Stem.transparent = ##t g'16
-			       \set fontSize = #'-4 
+			       \set fontSize = #'-4
 			 c''16 c'' c'' c'' a'8
 			 \set fontSize = #'0 }
 		       << \\ { \slurDown
@@ -105,7 +105,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 80
     }

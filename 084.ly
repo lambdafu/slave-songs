@@ -30,7 +30,7 @@ melody =
     {
 	\set Staff.midiInstrument = "acoustic grand"
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 3/4
@@ -59,8 +59,8 @@ melody =
 	O come my breth -- ren and sis -- ters too,
 	We're gwine to join the heav -- enly crew;
 
-	O hal -- le -- lu, 
-	O hal -- le -- lu, 
+	O hal -- le -- lu,
+	O hal -- le -- lu,
 	O hal -- le -- lu -- jah to the Lord.
     }
     \new Lyrics
@@ -87,7 +87,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 120
     }

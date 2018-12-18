@@ -30,22 +30,22 @@ melody =
     {
 	\set Staff.midiInstrument = "acoustic grand"
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 2/4
 	\clef violin
 	\key g \minor
-	
+
 	{
-	    \partial 8 g'8 | g'4 g'8. g'16 | 
+	    \partial 8 g'8 | g'4 g'8. g'16 |
 	    << { \once \override Stem.transparent = ##t f'4
 		 \set fontSize = #'-4 \stemDown f'16 f' f'
 		 \set fontSize = #'0 \stemNeutral }
 	       << \\ \set fontSize = #'0 \stemUp { f'4 r8 } >> >>
 	    %% FIXME: Yuck, yuck.
 	    \partial 8 f'8 | bes'4 bes'8. bes'16 |
-	    << { \once \override Stem.transparent = ##t a'4 
+	    << { \once \override Stem.transparent = ##t a'4
 		 \set fontSize = #'-4 \stemDown c''16 a'[ g']
 		 \set fontSize = #'0 \stemNeutral }
 	       << \\ \set fontSize = #'0 \stemUp { a'4 r8 } >> >>
@@ -80,7 +80,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 82
     }

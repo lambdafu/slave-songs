@@ -30,7 +30,7 @@ melody =
     {
 	\set Staff.midiInstrument = "acoustic grand"
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 4/4
@@ -49,9 +49,9 @@ melody =
 		{ \tuplet 3/2 { c''8 b' a' } b'8. g'16
 		  c''8. c''16 c''8. c''16 }
 	    }
-	    d''8. d''16 c''8. c''16 b'4 g'8. g'16 | 
+	    d''8. d''16 c''8. c''16 b'4 g'8. g'16 |
 	    \tuplet 3/2 { c''8 b' a' } b'8. g'16 c''8. c''16 c''8. c''16 |
-	    d''8. d''16 c''8. c''16 b'4 g'8. g'16 | 
+	    d''8. d''16 c''8. c''16 b'4 g'8. g'16 |
 	    \tuplet 3/2 { c''8 b' a' } b'8. g'16 c''2^\markup { D. C. }
 	    %% FIXME: What does that mean?
 	    \set Score.repeatCommands = #'(end-repeat)
@@ -84,7 +84,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 100
     }

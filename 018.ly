@@ -30,9 +30,9 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
     \autoBeamOff
-    
+
     \time 2/4
     \clef violin
     %% Could also be C major with blue note on 3rd and 7th.
@@ -72,7 +72,7 @@ melody =
   \new Staff { \unfoldRepeats \melody }
 
 % Tempo is about 4=100 to 4=120.
-  
+
   \midi {
     \tempo 4 = 100
     }

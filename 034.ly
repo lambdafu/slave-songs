@@ -30,9 +30,9 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
     \autoBeamOff
-    
+
     \time 2/4
     \clef violin
     \key f \major
@@ -68,7 +68,7 @@ melody =
       f'8 a' bes' bes' | a'4 g'16 g'8 f'16 | f'4 r4
     }
   }
-  
+
   \new Lyrics
   \lyricsto "" {
     \override LyricText.font-size = #0
@@ -78,7 +78,7 @@ melody =
     Call de na -- tion great and small;
     I look -- ee on de God's right hand,
     When de stars be -- gin to fall.
-    
+
     Oh what a mourn -- in' "(sis" -- "ter),"
     Oh what a mourn -- in' "(brud" -- "der),"
     Oh what a mourn -- in',
@@ -99,7 +99,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 80
     }

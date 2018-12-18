@@ -30,18 +30,18 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
     \autoBeamOff
-    
+
     \time 4/4
     \clef violin
     \key g \major
-    
+
     \repeat volta 2
     {
       b'4 d'' d''2 | c''4 d''2 r4 | fis'4 a' a'2 | fis'4
       <d' \tweak font-size #-4 a'>
-      d'' d'' | 
+      d'' d'' |
       <b' \tweak font-size #-4 d''>2
       <g' \tweak font-size #-4 b'>4.
       g'8 |
@@ -73,7 +73,7 @@ melody =
     Weep no more, Ma -- ry,¹
     Je -- sus rise from de dead,
     Hap -- py² morn -- ing.
-    
+
     Glo -- rious³ morn -- ing,
     Glo -- rious morn -- ing,
     %% EDITED: Sa -- viour changed into Sav -- iour.
@@ -94,7 +94,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 82
     }

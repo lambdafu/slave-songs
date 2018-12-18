@@ -30,13 +30,13 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
     \autoBeamOff
 
     \time 2/4
     \clef violin
     \key fis \minor
-    
+
     \repeat volta 2
     {
       \partial 4*2 cis''4 cis''16 e''8. | cis''16 b' a'
@@ -52,7 +52,7 @@ melody =
 	 << \\ { s32 s32 \set fontSize = #'-4 \stemDown fis'16*3/4 } >> >>
       << { \stemUp \once \override Script.padding = #1
 	   { fis'8\fermata } \stemNeutral }
-	 << \\ { 
+	 << \\ {
 	   %% FIXME: s64 s64 didn't do the trick...
 	   \override NoteHead.transparent = ##t
 	   \override Stem.transparent = ##t
@@ -103,7 +103,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 82
     }

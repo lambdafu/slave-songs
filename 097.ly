@@ -30,7 +30,7 @@ melody =
     {
 	\set Staff.midiInstrument = "acoustic grand"
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 2/4
@@ -60,7 +60,7 @@ melody =
 	\set stanza = "1."
 	Some seek de Lord and they don't seek him right,
 	Pray all day and sleep all night;
-	And I'll thank God, al -- most o -- ver, 
+	And I'll thank God, al -- most o -- ver,
 	al -- most o -- ver, al -- most o -- ver, "(My" "Lord)"
 	And I'll thank God, al -- most o -- ver.
     }
@@ -78,7 +78,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 80
     }

@@ -30,13 +30,13 @@ melody =
     {
 	\set Staff.midiInstrument = "acoustic grand"
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 2/4
 	\clef violin
 	\key es \major
-	
+
 	{
 	    \partial 4 es'8 g' |
 	    bes'4 bes'8. g'16 | bes'8 es'' g' bes' | es''4 es''8. bes'16 |
@@ -67,7 +67,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 82
     }

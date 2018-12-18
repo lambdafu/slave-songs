@@ -30,7 +30,7 @@ melody =
     {
 	\set Staff.midiInstrument = "acoustic grand"
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 2/4
@@ -54,7 +54,7 @@ melody =
 	    g'4 a'8. g'16 |
 	    \set Score.repeatCommands = #'((volta "1."))
 	    d''4.
-	    b'8^"D.C."	
+	    b'8^"D.C."
 	    %% FIXME: Doesn't seem to work right if just before the bar.
 	    \set Score.repeatCommands = #'((volta #f))
 	    \bar "||"
@@ -92,7 +92,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 120
     }

@@ -37,7 +37,7 @@ melody =
 	\clef violin
 	\key g \minor
 % FIXME: Isn't this really just g major with blue notes?
-	
+
 	{
 	    g'4 c'' c'' c''8 b' | c''4 c'' c''( bes') |
 	    g'4 c''8 c'' c''4 b' | c''4( bes') r4. g'8 |
@@ -81,7 +81,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 102
     }

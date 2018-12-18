@@ -30,13 +30,13 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-    
+
     \autoBeamOff
-    
+
     \time 2/4
     \clef violin
     \key bes \major
-    
+
     \repeat volta 2
     {
       r8 f' bes' bes' | bes'16 d'' c'' bes' a'8 bes' |
@@ -53,7 +53,7 @@ melody =
       f'4. f'8 | d'8 f' es'' es'' | d''8 d'' c'' c'' | bes'4 r |
     }
   }
-  
+
   \new Lyrics
   \lyricsto "" {
     \override LyricText.font-size = #0
@@ -68,21 +68,21 @@ melody =
     Oh he³ would not let him go.
   }
 >>
-  
-  
+
+
   \score
   {
     \new Staff { \melody }
-    
+
     \layout { indent = 0.0 }
   }
-  
+
   \score
   {
     \new Staff { \unfoldRepeats \melody }
-    
+
     %% Tempo is about 4=100 to 4=120.
-    
+
   \midi {
     \tempo 4 = 96
     }

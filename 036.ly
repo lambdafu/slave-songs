@@ -30,9 +30,9 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
     \autoBeamOff
-    
+
     \time 2/4
     \clef violin
     \key a \major
@@ -44,7 +44,7 @@ melody =
     \tuplet 3/2 { b'8 d''_> b' } d''8 b' | gis'16[ b'] e'8 r4 |
     d'8 d' e'8. e'16 | a'4 r4 \bar "||"
   }
-  
+
   \new Lyrics
   \lyricsto "" {
     \override LyricText.font-size = #0
@@ -71,7 +71,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 80
     }

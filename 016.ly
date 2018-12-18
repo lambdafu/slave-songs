@@ -30,9 +30,9 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
     \autoBeamOff
-    
+
     \time 2/4
     \clef violin
     \key es \major
@@ -54,7 +54,7 @@ melody =
       <g' \tweak font-size #-4 bes'>8.
       g'16 |
       as'8 g' f' f' |
-      
+
       %% The transparent stem hides the eight's stem.  The note head
       %% collapses with the one in the other voice (giving a spurious warning).
       %% The result is that we can assign the text as if it were one voice.
@@ -87,7 +87,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 82
     }

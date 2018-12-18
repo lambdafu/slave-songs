@@ -1294,7 +1294,7 @@ The pitch has generally been accommodated to voices of medium range.
 \begin{extra}
   [This spiritual probably extends from South Carolina to Florida, and
     is one of the best known and noblest of the songs.]
-  
+
   [The following variation appears above bars 4--6 in the original
     print. - Ed.]
 
@@ -1306,14 +1306,14 @@ The pitch has generally been accommodated to voices of medium range.
         \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1)
 
         \autoBeamOff
-	       
+
         \clef violin
         \key d \major
         \time 2/4
 
         \set Score.currentBarNumber = #4
         %%\override Score.BarNumber  #'padding = #3
-	       
+
         a'4( f') \bar "|" g'4 g'8 a' \bar "|" f'4 d'8 f' \bar "|"
       }
       \new Lyrics \lyricsto "" {
@@ -1360,7 +1360,7 @@ The pitch has generally been accommodated to voices of medium range.
 
 \item[3.]
   De trumpet sound in de oder bright land.\footnote[3]{World.}
-  
+
 \item[4.]
   My name is called and I must go.
 
@@ -1400,9 +1400,9 @@ The pitch has generally been accommodated to voices of medium range.
           {
 	    \set Staff.midiInstrument = "acoustic grand"
             \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	    \autoBeamOff
-	    
+
 	    \time 2/4
 	    \clef violin
 	    %% EDITED: Key changed to G major from G minor.
@@ -1445,7 +1445,7 @@ The pitch has generally been accommodated to voices of medium range.
 	  }
 	  >>
       }
-      
+
       \layout { indent = 0.0 }
     }
   \end{lilypond}
@@ -1627,13 +1627,13 @@ some soul.
       I can't stay behind. \\
       Can't stay behind, my dear, \\
       I can't stay behind!
-      
+
     \item[]
       ``O, my fader is gone! \&c.
 
     \item[]
       ``O, de angels are gone! \&c.
-      
+
     \item[]
       ``O, I'se been on de road!  I'se been on de road! \\
       I'se been on de road into heaven, my Lord! \\
@@ -1642,7 +1642,7 @@ some soul.
       Room in dar, in de heaven, my Lord! \\
       I can't stay behind!''
     \end{stanza}
-    
+
     Lt.~Col.~Trowbridge is of opinion that it was brought from
     Florida, as he first heard it in Dec, 1862, from a boat-load of
     Florida soldiers brought up by Lt.~Col.~Billings.  It was not
@@ -1698,9 +1698,9 @@ some soul.
       \context Voice
       {
         \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1)
-	       
+
 	\autoBeamOff
-	   
+
 	\clef violin
 	\key e \minor
 	\time 2/4
@@ -1774,7 +1774,7 @@ I cast my sins in de middle of de sea, Ah! \&c.
         \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1)
 
 	\autoBeamOff
-	   
+
 	\clef violin
 	\key g \major
 	\time 2/4
@@ -1834,9 +1834,9 @@ I cast my sins in de middle of de sea, Ah! \&c.
 	{
 	  \set Staff.midiInstrument = "acoustic grand"
           \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	  \autoBeamOff
-	  
+
 	  \time 2/4
 	  \clef violin
 	  \key d \major
@@ -1946,13 +1946,13 @@ I cast my sins in de middle of de sea, Ah! \&c.
 	{
 	  \set Staff.midiInstrument = "acoustic grand"
           \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	  \autoBeamOff
-	  
+
 	  \time 2/4
 	  \clef violin
 	  \key c \major
-	  
+
           {
 	    \partial 8 g'8 |
 	    g'8 g'8 g'8. g'16 | a'8 d'' c'' r |
@@ -2179,13 +2179,13 @@ I cast my sins in de middle of de sea, Ah! \&c.
   \context Voice
   {
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1)
-    
+
     \autoBeamOff
-    
+
     \clef violin
     \key g \major
     \time 2/4
-    
+
     b'8 a'16 g' b'8 g' | b'8 g'16 g' e'8 g' |
   }
   \new Lyrics \lyricsto "" {
@@ -2265,7 +2265,7 @@ I cast my sins in de middle of de sea, Ah! \&c.
            \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1)
 
 	   \autoBeamOff
-	   
+
 	   \clef violin
 	   \key f \major
 	   \time 2/4
@@ -2458,7 +2458,7 @@ I cast my sins in de middle of de sea, Ah! \&c.
     {
 	\set Staff.midiInstrument = "acoustic grand"
         \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 4/4
@@ -2696,7 +2696,7 @@ I cast my sins in de middle of de sea, Ah! \&c.
     {
 	\set Staff.midiInstrument = "acoustic grand"
      \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 2/4
@@ -3059,7 +3059,7 @@ Trumpet sound for you and me.
     {
 	\set Staff.midiInstrument = "acoustic grand"
 	\override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 2/4
@@ -3095,8 +3095,8 @@ shown by a comparison with No.~93 to be one of the most widely spread
 of all the African hymns.  It is hard to explain every word of the
 introduction, but ``long time get over crosses'' is of course the
 ``long time waggin' o' er de crossin'{}'' of the Virginia hymn.]
-    
-  
+
+
 \newpage
 \section{Bell da ring.}
 \thispagestyle{empty}
@@ -3303,7 +3303,7 @@ The following words are sung to the same tune:
     {
 	\set Staff.midiInstrument = "acoustic grand"
      \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 4/4
@@ -3389,7 +3389,7 @@ of ``bayou.'']
     {
 	\set Staff.midiInstrument = "acoustic grand"
      \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 2/4
@@ -3547,7 +3547,7 @@ of ``bayou.'']
     {
 	\set Staff.midiInstrument = "acoustic grand"
      \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 6/8
@@ -3597,7 +3597,7 @@ of ``bayou.'']
     {
 	\set Staff.midiInstrument = "acoustic grand"
      \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 2/8
@@ -3607,9 +3607,9 @@ of ``bayou.'']
 	g'8 g'16. a'32 | f'8 r |
 	g'8 g'16. a'32 | f'8 r |
 	\break
-	
+
 	bes'8 bes'16. bes'32 |
-	<< { \once \override Stem #'transparent = ##t a'16 
+	<< { \once \override Stem #'transparent = ##t a'16
 	  \set fontSize = #'-4 \stemDown c''16 a' f'
 	  \set fontSize = #'0 \stemNeutral }
 	<< \\ \set fontSize = #'0 \stemUp { a'8 r8 } >> >> |
@@ -3710,7 +3710,7 @@ of ``bayou.'']
     {
 	\set Staff.midiInstrument = "acoustic grand"
      \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 2/4
@@ -3776,7 +3776,7 @@ of ``bayou.'']
     {
 	\set Staff.midiInstrument = "acoustic grand"
         \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 2/4
@@ -4152,7 +4152,7 @@ of ``bayou.'']
     {
 	\set Staff.midiInstrument = "acoustic grand"
      \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 4/4
@@ -4579,7 +4579,7 @@ of ``bayou.'']
     {
 	\set Staff.midiInstrument = "acoustic grand"
      \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
 	\autoBeamOff
 
 	\time 4/4
@@ -4855,7 +4855,7 @@ of ``bayou.'']
 
   \footnotetext[1]{Sister, etc.}
 \end{song}
-	
+
 \newpage
 \section{I'm going home.}
 \thispagestyle{empty}
@@ -5379,7 +5379,7 @@ of ``bayou.'']
 
 \begin{stanza}
 \item[2.]
-  Jean Babet, mon ami,\\ 
+  Jean Babet, mon ami,\\
   Si vous couri par en haut,\\
   Vous mand\'e belle Layotte\\
   Cadeau la li t\'e promi mouin.
@@ -5611,6 +5611,6 @@ would enhance the value or the interest of this collection.
 Communications may be addressed to Mr.~W.~P.~Garrison, Office of
 \emph{The Nation} newspaper, New York City.
 
-\textsc{November}, 1867. 
+\textsc{November}, 1867.
 
 \end{document}

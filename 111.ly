@@ -36,7 +36,7 @@ melody =
 	\time 4/4
 	\clef violin
 	\key g \minor
-	
+
 	{
 	    \partial 4 d''4 |
 	    es''4 es'' d''4. bes'8 | c''8 g'4. r2 |
@@ -70,7 +70,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 102
     }

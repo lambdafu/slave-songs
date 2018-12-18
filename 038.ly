@@ -30,7 +30,7 @@ melody =
   {
     \set Staff.midiInstrument = "acoustic grand"
     \override Staff.VerticalAxisGroup.minimum-Y-extent = #'(0 . 0)
-	
+
     \autoBeamOff
 
     \time 2/4
@@ -57,7 +57,7 @@ melody =
       bes'8 bes' g'16 g' es' es' | f'8 <g' f'>8 es'4
     }
   }
-  
+
   \new Lyrics
   \lyricsto "" {
     \override LyricText.font-size = #0
@@ -68,7 +68,7 @@ melody =
     %% EDITED: Changed ';' at the end to ','.
     Heaven bell a -- ring, I know de road,
     Je -- sus sit -- tin' on de wa -- ter -- side.
-    
+
     Do come a -- long, do let us go,
     Do come a -- long, do let us go,
     Do come a -- long, do let us go,
@@ -89,7 +89,7 @@ melody =
 {
   \new Staff { \unfoldRepeats \melody }
 
-  
+
   \midi {
     \tempo 4 = 80
     }

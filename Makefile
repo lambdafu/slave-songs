@@ -39,10 +39,10 @@ all: slave-songs.pdf $(addsuffix .pdf, $(FILES))
 %.pdf: %.ly
 	lilypond $<
 
-slave-songs.pdf: slave-songs.tex $(addsuffix .ly, $(FILES))
+slave-songs.pdf: slave-songs.lytex $(addsuffix .ly, $(FILES))
 	rm -fR out
 	mkdir -p out
-	lilypond-book --output=out/ --psfonts slave-songs.tex
+	lilypond-book --output=out/ --psfonts slave-songs.lytex
 	(cd out; latex slave-songs.tex)
 	(cd out; latex slave-songs.tex)
 	(cd out; dvips -t a5 -Ppdf -h slave-songs.psfonts slave-songs.dvi)
